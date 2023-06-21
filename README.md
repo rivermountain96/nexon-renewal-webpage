@@ -1,24 +1,40 @@
 # NEXON RENEWAL PROJECT
 
----
+<br>
+
+<br>
 
 ## 구현시작일
 
 - 2023년 6월 20일
 
+<br>
+
 ## 팀이름
+
+<br>
 
 - Marathon
 
+<br>
+
 ## 팀원
+
+<br>
 
 - 이현정
 - 이은서
 - 이강산
 - 한지희
 
-## 스택
+<br>
 
+## language
+
+<br>
+
+- HTML5
+- CSS3
 - Javascript
 
 ---
@@ -29,7 +45,10 @@
 
 <br>
 
- <img src="https://velog.velcdn.com/images/hazel123/post/f9b6b1ee-6bcc-4d4d-be95-cc569b40efae/image.png">
+<img src="https://velog.velcdn.com/images/hazel123/post/f9b6b1ee-6bcc-4d4d-be95-cc569b40efae/image.png" width="500px">
+
+<br>
+<br>
 
 ## 파트별 구현
 
