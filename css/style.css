@@ -1,19 +1,58 @@
 /* HEADER */
-
+.main-tt {
+  padding-top: 71px;
+  text-align: center;
+}
+.main-tt > a {
+  width: 242px;
+  height: 42px;
+  background-image: url("../images/nexon-logo.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -9999rem;
+}
 /* NAV-BAR */
-
+.nav {
+  position: relative;
+}
+.nav ul:first-child {
+  position: absolute;
+  right: 0;
+  bottom: 115%;
+}
+.nav .line {
+  padding: 0 10px;
+}
+.nav ul li {
+  display: inline-block;
+  position: relative;
+}
+.nav .pc {
+  position: absolute;
+  bottom: 70%;
+  right: 80px;
+}
+.nav ul:first-child li a {
+  font-size: 17px;
+}
+.login {
+  margin-left: 10px;
+}
+.menu-bar {
+  padding-top: 81px;
+  padding-bottom: 33px;
+}
+.menu-bar li {
+  padding-left: 198px;
+}
+.menu-bar > li:first-child {
+  padding-left: 0px;
+}
 /* MAIN-01 CAROUSEL */
-
 /* MAIN-02 RECOMMENDED-GAMES */
-
 /* MAIN-03 NEW-GAMES */
-
 /* MAIN-04 BANNER */
-
 /* MAIN-05 ALL-GAMES */
-
 /* MAIN-06 RECOMMENDED-VIDEO */
-
 /* FOOTER-01  */
-
 /* FOOTER-02 */
