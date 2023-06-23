@@ -1,7 +1,7 @@
 @import url(reset.css);
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 
-.contaniner {
+.container {
   width: 1280px;
   margin: 0 auto;
 }

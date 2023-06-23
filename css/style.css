@@ -5,15 +5,25 @@
 /* MAIN-01 CAROUSEL */
 
 /* MAIN-02 RECOMMENDED-GAMES */
+.rc{
+    width: 1280px;
+    margin: 0 auto;
+}
 .slide-wrapper-rc{
-    position: relative;    
+    width:1280px;
+    margin: 0 autor;
+    height: 404px;
+    position: relative;  
 }
-.slide-rc{
-    display: inline-block;
+
+.slide-container-rc li{
+    float: left;
 }
-.slide-container-rc a{
-    position: absolute;
-    top:0;
+
+.slide-container-rc::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .slide-rc1 a{
@@ -28,24 +38,23 @@
 .slide-rc4 a{
     left: 75%;
 }
+/* li에 slide-re 다시 클래스명 주기 */
 .slide-rc1 a img{
-    background-image: url(/img/cartrider_ex.png);
-} /* 현재 임시 카트라이더 이미지만 넣음*/
+    background-image: url(/img/FIFA.png);
+}
 .slide-rc2 a img{
-    background-image: url(/img/cartrider_ex.png);
+    background-image: url(/img/cartrider.png);
 }
 .slide-rc3 a img{
-    background-image: url(/img/cartrider_ex.png);
+    background-image: url(/img/Maplestory.png);
 }
 .slide-rc4 a img{
-    background-image: url(/img/cartrider_ex.png);
+    background-image: url(/img/DF.png);
 }
 .slide-container-rc a img{
-    width: 150px;
-    height: 120px;
-}
-.slide-container-rc .name-rc{
-    display: inline-block;
+    width: 305px;
+    height: 290px;
+    background-repeat: no-repeat;
 }
 /* MAIN-03 NEW-GAMES */
 
