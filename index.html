@@ -25,47 +25,51 @@
 </head>
 <body>
     <!-- 이은서 구현 ALL-GAMES CAROUSEL & LIST -->
-    <section>
-        <h2 class="main-stt">전체게임</h2>
-        <!-- font-weight: 700 -->
-
-        <form class="field">
-            <label for="searchform" class="hidden">초성검색</label>
-            <input type="text" id="searchform" placeholder="초성으로 게임검색" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
-
-        <button>슬라이드로 보기</button>
-        <button>전체게임 보기</button>
+    <section class="big-pd all-game">
+        <div class="all-game-header">
+          <h2 class="main-stt">전체게임</h2>
+          <form class="field">
+              <label for="searchform" class="hidden">초성검색</label>
+              <input type="text" id="searchform" placeholder="초성으로 게임검색" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+  
+        </div>
 
         <div class="tag-list-wrapper">
-            <ul class="tag-list">
-                <li>Windows</li>
-                <li>MacOS</li>
-                <li>얼리스테이지</li>
-                <li>Steam</li>
-                <li>Android</li>
-                <li>iOS</li>
-                <li>PlayStation</li>
-                <li>XBOX</li>
-                <li>SWITCH</li>
-                <li>RPG</li>
-                <li>액션 RPG</li>
-                <li>AOS/MOBA</li>
-                <li>FPS</li>
-                <li>캐주얼</li>
-                <li>스포츠</li>
-                <li>PVP</li>
-                <li>SOCIAL</li>
-                <li>전략</li>
-                <li>이벤트</li>
+          <button class="see type-slide content-stt mono-g2">슬라이드로 보기</button>
+          <button class="see type-all content-stt mono-g2">전체게임 보기</button>
+            <ul class="tag-list cf">
+              <li class="tag-list-1">
+                  <li class="tag">Windows</li>
+                  <li class="tag">MacOS</li>
+                  <li class="tag">얼리스테이지</li>
+                  <li class="tag">Steam</li>
+                  <li class="tag">Android</li>
+                  <li class="tag">iOS</li>
+                  <li class="tag">PlayStation</li>
+                  <li class="tag">XBOX</li>
+                  <li class="tag">SWITCH</li>
+              </li>
+             <li class="tag-list-2">
+                  <li class="tag">RPG</li>
+                  <li class="tag">액션 RPG</li>
+                  <li class="tag">AOS/MOBA</li>
+                  <li class="tag">FPS</li>
+                  <li class="tag">캐주얼</li>
+                  <li class="tag">스포츠</li>
+                  <li class="tag">PVP</li>
+                  <li class="tag">SOCIAL</li>
+                  <li class="tag">전략</li>
+                  <li class="tag">이벤트</li>
+             </li>
             </ul>
         </div>
 
         <div class="event-banner">
-            <span>EVENT</span>
-            <a href="">넥슨 X 현대카드 캐시충전 이벤트!</a>
-            <i class="fa-solid fa-cedi-sign"></i>
+            <span class="content-stt blue-4-bg">EVENT</span>
+            <a href="" class="content-stt mono-g2">넥슨 X 현대카드 캐시충전 이벤트!</a>
+            <div class="circle"><i class="fa-solid fa-cedi-sign blue-b4"></i></div>
         </div>
 
         <div class="slide-wrapper slide-view">
