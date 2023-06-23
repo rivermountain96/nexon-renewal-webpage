@@ -6,82 +6,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>nexon-renewal-webpage</title>
 </head>
 <body>
-    <!-- 이현정 구현 시작 HEADER & NAV BAR & MAIN-01-CAROUSEL -->
-    <header>
-        <div>
-          <h1>
-            <a href="#">Nexon</a>
-          </h1>
+    <!-- 이은서 구현 ALL-GAMES CAROUSEL & LIST -->
+    <section class="big-pd all-game">
+        <div class="all-game-header">
+          <h2 class="main-stt">전체게임</h2>
+          <form class="field">
+              <label for="searchform" class="hidden">초성검색</label>
+              <input type="text" id="searchform" placeholder="초성으로 게임검색" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+  
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="">넥슨캐시</a><span class="">/</span><a href="">피시방</a
-              ><span class="">/</span> <a href="">회원가입</a>
-            </li>
-            <li>
-              <a href="">로그인</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="">전체게임</a>
-            </li>
-            <li>
-              <a href="">추천게임</a>
-            </li>
-            <li>
-              <a href="">신규게임</a>
-            </li>
-            <li>
-              <a href="">추천영상</a>
-            </li>
-            <li>
-              <a href="">전체서비스</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section>
-          <div class="slide-wrapper">
+
+        <div class="tag-list-wrapper">
+          <button class="see type-slide content-stt mono-g2">슬라이드로 보기</button>
+          <button class="see type-all content-stt mono-g2">전체게임 보기</button>
+            <ul class="tag-list cf">
+              <li class="tag-list-1">
+                  <li class="tag">Windows</li>
+                  <li class="tag">MacOS</li>
+                  <li class="tag">얼리스테이지</li>
+                  <li class="tag">Steam</li>
+                  <li class="tag">Android</li>
+                  <li class="tag">iOS</li>
+                  <li class="tag">PlayStation</li>
+                  <li class="tag">XBOX</li>
+                  <li class="tag">SWITCH</li>
+              </li>
+             <li class="tag-list-2">
+                  <li class="tag">RPG</li>
+                  <li class="tag">액션 RPG</li>
+                  <li class="tag">AOS/MOBA</li>
+                  <li class="tag">FPS</li>
+                  <li class="tag">캐주얼</li>
+                  <li class="tag">스포츠</li>
+                  <li class="tag">PVP</li>
+                  <li class="tag">SOCIAL</li>
+                  <li class="tag">전략</li>
+                  <li class="tag">이벤트</li>
+             </li>
+            </ul>
+        </div>
+
+        <div class="event-banner">
+            <span class="content-stt blue-4-bg">EVENT</span>
+            <a href="" class="content-stt mono-g2">넥슨 X 현대카드 캐시충전 이벤트!</a>
+            <div class="circle"><i class="fa-solid fa-cedi-sign blue-b4"></i></div>
+        </div>
+
+        <div class="slide-wrapper slide-view">
             <ul class="slide-container">
+              <li>
+                <span class="page-num">
+                  4/45
+                </span>
+              </li>
               <li class="slide1">
-                <img src="" alt="" />
+                <li class="slide1-1">
+                  <!-- img: background-image 로 처리 -->
+                  <div class="contents">
+                    <h3 class="content-tt">던전앤파이터</h3>
+                    <label for="bl-tag">PC 게임</label>
+                    <label for="bl-tag">액션 RPG</label>
+                  </div>
+                </li>
+                <li class="slide1-2">
+                  <!-- img: background-image 로 처리 -->
+                  <div class="contents">
+                    <h3 class="content-tt">메이플스토리</h3>
+                    <label for="bl-tag">PC 게임</label>
+                    <label for="bl-tag">RPG</label>
+                  </div>
+                </li>
+                <li class="slide1-3">
+                  <!-- img: background-image 로 처리 -->
+                  <div class="contents">
+                    <h3 class="content-tt">FIFA 온라인 4/h3>
+                    <label for="bl-tag">모바일</label>
+                    <label for="bl-tag">PC 게임</label>
+                    <label for="bl-tag">스포츠</label>
+                  </div>
+                </li>
+                <li class="slide1-4">
+                  <!-- img: background-image 로 처리 -->
+                  <div class="contents">
+                    <h3 class="content-tt">블루 아카이브</h3>
+                    <label for="bl-tag">PC 게임</label>
+                    <label for="bl-tag">수집형 RPG</label>
+                  </div>
+                </li>
               </li>
             </ul>
-          </div>
-        </section>
-    <!-- 이현정 구현 끝 -->
 
-    <!-- 이강산 구현 시작 RECOMMENDED & NEW GAMES CAROUSEL -->
-        <section>추천게임</section>
-        <section>신규게임</section>
-    <!-- 이강산 구현 끝 -->
+            <div class="chev-wrap left">
+              <button class="chev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            </div>
+        
+            <div class="chev-wrap right">
+              <button class="chev-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
 
-    <!-- 한지희 구현 BANNER -->
-        <section>배너광고</section>
-    <!-- 한지희 구현 끝 -->
+        <ul class="tag-view">
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+        </ul>
 
-    <!-- 이은서 구현 ALL-GAMES CAROUSEL & LIST -->
-        <section>전체게임</section>
+        <ul class="all-view">
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+          <li>
+            <div class="gameImg"> </div>
+              <img src="" alt="">
+              <h3 class="content-tt">데이브 더 다이버</h3>
+              <div class="gameAttribute">
+                <span class="gameGenre">어드벤처 RPG</span>
+                <span class="gameDevice">PC 게임</span>
+                <span class="gameSystem">Mac OS</span>
+              </div>
+          </li>
+        </ul>
+        <p class="pager"></p>
+        <div>
+          <span class="page-num">
+            12/45
+          </span>
+        </div>
+    </section>
     <!-- 이은서 구현 끝 -->
-
-    <!-- 한지희 구현 RECOMMENED-VIDEO & FOOTER-01 -->
-        <section>추천영상</section>
-    </main>
-    <footer>
-        <div>전체서비스</div>
-    <!-- 한지희 구현 끝 -->
-
-    <!-- 이은서 구현 FOOTER-02 -->
-        <div>넥슨푸터</div>
-      </footer>
-    <!-- 이은서 구현 끝 -->
-  
     <script src="js/main.js"></script>
 </body>
 </html>
