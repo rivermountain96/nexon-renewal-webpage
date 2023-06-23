@@ -12,7 +12,11 @@
 
 /* MAIN-05 ALL-GAMES */
 .all-game{
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 1280px;
+>>>>>>> 3dd740a1e72210484f199b55d10a70cbe73a2cef
 }
 
 .all-game-header{
