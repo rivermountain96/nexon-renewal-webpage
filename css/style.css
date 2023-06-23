@@ -12,13 +12,13 @@
   text-indent: -9999rem;
 }
 /* NAV-BAR */
-.nav {
+header {
   position: relative;
 }
 .nav ul:first-child {
   position: absolute;
   right: 0;
-  bottom: 115%;
+  top: 73px;
 }
 .nav .line {
   padding: 0 10px;
@@ -26,12 +26,14 @@
 .nav ul li {
   display: inline-block;
   position: relative;
+  font-weight: bold;
 }
 .nav .pc {
   position: absolute;
   bottom: 70%;
   right: 80px;
 }
+
 .nav ul:first-child li a {
   font-size: 17px;
 }
@@ -44,6 +46,10 @@
 }
 .menu-bar li {
   padding-left: 198px;
+}
+
+.menu-bar li:hover a {
+  color: #1b64da;
 }
 .menu-bar > li:first-child {
   padding-left: 0px;
