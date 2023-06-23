@@ -42,34 +42,40 @@ body {
   font-size: 3.375rem;
   line-height: 1.2em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .main-stt {
   font-size: 2.25rem;
   line-height: 1.3em;
   color: #191f28;
+  font-weight: 700;
 }
 
 .content-tt {
   font-size: 1.5rem;
   line-height: 1.6em;
   color: #191f28;
+  font-weight: 700;
 }
 
 .content-stt {
   font-size: 1.25rem;
   line-height: 1.6em;
   color: #4593fc;
+  font-weight: 700;
 }
 
 .content-desc-bl {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5em;
+  font-weight: 700;
 }
 
 .content-desc-re {
   line-height: 1.5em;
+  font-weight: 400;
 }
 
 .content-desc-li {

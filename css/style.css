@@ -5,7 +5,48 @@
 /* MAIN-01 CAROUSEL */
 
 /* MAIN-02 RECOMMENDED-GAMES */
+.slide-wrapper-rc{
+    position: relative;    
+}
+.slide-rc{
+    display: inline-block;
+}
+.slide-container-rc a{
+    position: absolute;
+    top:0;
+}
 
+.slide-rc1 a{
+    left: 0;
+}
+.slide-rc2 a{
+    left: 25%;
+}
+.slide-rc3 a{
+    left: 50%;
+}
+.slide-rc4 a{
+    left: 75%;
+}
+.slide-rc1 a img{
+    background-image: url(/img/cartrider_ex.png);
+} /* 현재 임시 카트라이더 이미지만 넣음*/
+.slide-rc2 a img{
+    background-image: url(/img/cartrider_ex.png);
+}
+.slide-rc3 a img{
+    background-image: url(/img/cartrider_ex.png);
+}
+.slide-rc4 a img{
+    background-image: url(/img/cartrider_ex.png);
+}
+.slide-container-rc a img{
+    width: 150px;
+    height: 120px;
+}
+.slide-container-rc .name-rc{
+    display: inline-block;
+}
 /* MAIN-03 NEW-GAMES */
 
 /* MAIN-04 BANNER */
