@@ -15,7 +15,7 @@
 header {
   position: relative;
 }
-.nav ul:first-child {
+.nav > ul:first-child {
   position: absolute;
   right: 0;
   top: 73px;
@@ -23,7 +23,7 @@ header {
 .nav .line {
   padding: 0 10px;
 }
-.nav ul li {
+.nav > ul > li {
   display: inline-block;
   position: relative;
   font-weight: bold;
@@ -43,17 +43,71 @@ header {
 .menu-bar {
   padding-top: 81px;
   padding-bottom: 33px;
+  position: relative;
 }
-.menu-bar li {
+.menu-bar > ul {
+  border: 1px solid tomato;
+}
+.menu-bar > li {
   padding-left: 198px;
 }
 
-.menu-bar li:hover a {
+.menu-bar li:hover > a {
   color: #1b64da;
+}
+
+.menu-bar li:hover:first-child .menu-bar-imgsboxwrap {
+  display: block;
 }
 .menu-bar > li:first-child {
   padding-left: 0px;
 }
+
+/* navbar hover imgs */
+.menu-bar-imgsboxwrap {
+  position: absolute;
+  top: 70px;
+  left: -20px;
+  width: 1312px;
+  box-sizing: border-box;
+  padding: 55px;
+  border-top: 5px solid #4593fc;
+  /* display: none; */
+}
+
+.menu-bar-imgsbox {
+  width: 238px;
+  float: left;
+}
+
+.menu-bar-imgsbox > li {
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 40px;
+  margin-bottom: 13px;
+}
+
+.menu-bar-imgsbox li a {
+  display: block;
+}
+
+.menu-bar-imgsbox a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  float: left;
+  display: block;
+}
+.menu-bar-imgsbox li a span:nth-child(1) {
+  /* display: inline-block; */
+}
+
+.menu-bar-imgsbox li a span:nth-child(2) {
+  display: inline-block;
+  margin-left: 10px;
+  /* float: right; */
+}
+
 /* MAIN-01 CAROUSEL */
 /* MAIN-02 RECOMMENDED-GAMES */
 /* MAIN-03 NEW-GAMES */
