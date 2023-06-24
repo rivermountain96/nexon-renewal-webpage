@@ -32,6 +32,7 @@
 }
 .slide-container-rc a{
     z-index: -1;
+    margin-bottom: 0;
 }
 .slide-rc1 a{
     left: 0;
@@ -65,8 +66,16 @@
     background-size: cover;
     z-index: 3;
 }
-.slide-container-rc > li div{
-    background: transparent;
+.name-rc,
+.explain-rc{
+    padding:20px 0 0 20px;
+}
+.slide-container-rc .name-explain{
+    border: none;
+    height: 114px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .slide-container-rc .event-rc{
@@ -80,6 +89,9 @@
     border-radius: 10px;
     text-align: center;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
 
 
