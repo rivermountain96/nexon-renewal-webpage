@@ -41,15 +41,20 @@ header {
   margin-left: 10px;
 }
 .menu-bar {
-  padding-top: 81px;
-  padding-bottom: 33px;
+  margin-top: 81px;
+  display: block;
   position: relative;
 }
 .menu-bar > ul {
-  border: 1px solid tomato;
+  box-sizing: border-box;
 }
 .menu-bar > li {
   padding-left: 198px;
+}
+
+.menu-bar > li > a {
+  display: block;
+  padding-bottom: 33px;
 }
 
 .menu-bar li:hover > a {
