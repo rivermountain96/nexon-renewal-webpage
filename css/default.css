@@ -1,14 +1,44 @@
-.banner{
+.bannerWrapper{
   background-image: url(../images/banner_bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 365px;
 }
-.banner p{
-  margin: 0 auto;
+.bannerWrapper .banner-video{
   width: 1280px;
-  border: 1px solid red;
+  margin: 0 auto;
   height: 365px;
+  display: flex;
+  /* position: relative; */
+  justify-content: right;
+  align-items: center;
+}
+/* .bannerWrapper .banner-video iframe{
+  position: absolute;
+  top: 100%;right: 0; 
+} */
+
+.videoWrapper h2{
+  padding-top: 48px;
+}
+.videoWrapper li{
+  width: 385px;
+  height: 407px;
+  float: left;
+  margin-right: 60px;
+}
+.videoWrapper li div:first-child{
+  width: 385px;
+  height: 304px;
+}
+.videoWrapper li div:last-child{
+  background-color: #f1f1f1;
+}
+.videoWrapper li:last-child{
+  margin-right: 0px;
+}
+.allService p:first-child{
+  font-weight: bold;
 }
