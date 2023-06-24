@@ -56,14 +56,17 @@ header {
   color: #1b64da;
 }
 
-.menu-bar li:hover:first-child .menu-bar-imgsboxwrap {
+.menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
+  display: block;
+}
+.menu-bar li:hover:last-child > .menu-bar-imgsboxwrap1 {
   display: block;
 }
 .menu-bar > li:first-child {
   padding-left: 0px;
 }
 
-/* navbar hover imgs */
+/* 전체게임 navbar hover imgs */
 .menu-bar-imgsboxwrap {
   position: absolute;
   top: 70px;
@@ -72,7 +75,8 @@ header {
   box-sizing: border-box;
   padding: 55px;
   border-top: 5px solid #4593fc;
-  /* display: none; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .menu-bar-imgsbox {
@@ -106,6 +110,37 @@ header {
   display: inline-block;
   margin-left: 10px;
   /* float: right; */
+}
+
+/*  전체서비스 navbar hover */
+.menu-bar-imgsboxwrap1 {
+  position: absolute;
+  top: 70px;
+  right: -50px;
+  width: 211px;
+  box-sizing: border-box;
+  padding: 50px;
+  border-top: 5px solid #4593fc;
+  /* border: 1px solid red; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.menu-bar-imgsbox1 {
+  width: 111px;
+  float: left;
+}
+
+.menu-bar-imgsbox1 > li {
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 40px;
+  margin-bottom: 13px;
+}
+
+.menu-bar-imgsbox1 li a {
+  display: block;
+  text-align: center;
 }
 
 /* MAIN-01 CAROUSEL */
