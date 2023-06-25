@@ -8,6 +8,7 @@
 .recommend-game{
     width: 1280px;
     margin: 0 auto;
+    position: relative;
 }
 .recommend-game > h2{
     padding-bottom: 36px;
@@ -77,6 +78,13 @@
     position: relative;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
+.slide-container-rc li:hover img{
+    transform: translateY(-5px);
+}
+.slide-container-rc li:hover .name-explain{
+    box-shadow: 18px 18px 15px rgba(0, 0, 0, .2);
+    transform: translateY(-5px);
+}
 /*event tag는 hidden 속성 적용시 사라짐*/
 .slide-container-rc .event-rc{
     float: right;
@@ -93,8 +101,21 @@
     bottom: 15px;
     right: 15px;
 }
-
-
+.controls{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.chev-btn .left{
+    position: absolute;
+    right: 100%;
+}
+.chev-wrap .left i{
+    position: absolute;
+}
+.chev-wrap .right i{
+    position: absolute;
+}
 /* MAIN-03 NEW-GAMES */
 
 /* MAIN-04 BANNER */
