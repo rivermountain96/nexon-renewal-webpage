@@ -11,6 +11,7 @@
 /* MAIN-04 BANNER */
 
 /* MAIN-05 ALL-GAMES */
+
 .all-game{
     width: 1280px;
     margin: 0 auto;
@@ -135,6 +136,21 @@
     height: 450px;
 }
 
+.page-num{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 30px;
+    line-height: 33px;
+    border-radius: 16.5px;
+}
+
+.slide-wrapper > .page-num{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    z-index: 10;
+}
+
 .slide-container{
     position:absolute;
     width: 100%;
@@ -245,29 +261,34 @@
     transform: translateX(50%);
 }
 
-.tag-view{
+.tag-view-wrapper{
     position: absolute;
     top: 0%;
 }
-.tag-view > li > .tag-view-game{
-    position: absolute;
+
+.game-card{
     width: 308px;
     height: 409px;
     background-color: #fff;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+    float: left;
+    margin:0 16px 16px 0;
+    position: relative;
 }
 
-.tag-view > li > .tag-view-game:after{
-    content:'';
-    width: 100%;
+.game-card:nth-child(4n){
+    margin-right:0;
+}
+
+.game-card > img{
+    width: 308px;
     height: 265px;
     position:absolute;
     top:0;
     left:0;
-    background-image: url("https://velog.velcdn.com/images/sungegun/post/1ec07e3e-1bc2-4376-8cd8-3eca65982e25/image.png");
 }
 
-.tag-view > li> .tag-view-game > .ta-wrapper{
+.game-card > .ta-wrapper{
     position: absolute;
     bottom:0;
     left:0;
@@ -278,37 +299,64 @@
     box-sizing: border-box;
 }
 
-.tag-view > li> .tag-view-game > .ta-wrapper > .game-title{
+.game-card > .ta-wrapper > .game-title{
     font-weight: 600;
     top:0;
     left:0;
 }
 
-.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > *{
-    position: absolute;
+.game-card > .ta-wrapper > *{
     font-weight: 600;
-    font-size: 14px;
 }
-.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameGenre{
+.game-card > .ta-wrapper > .gameGenre{
     top: 65px;
     left: 30px;
 }
 
-.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameSystem{
-    bottom: 30px;
-    right: 30px;
+.game-card > .ta-wrapper > .gameAttribute > span{
+    float: right;
 }
 
-.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameDevice{
-    bottom: 30px;
-    right: 30px;
-    transform: translateX(-100%);
-    margin-right: 10px;
+.game-card > .ta-wrapper > .gameAttribute > span+span{
+    margin-right: 20px;
+}
+
+.all-view-wrapper{
+    position: absolute;
+    top:0;
+}
+
+#counterstrikeonline{
+    letter-spacing: -1px;
 }
 
 
+.all-view-wrapper > .pager {
+    text-align: center;
+    margin: 46px auto auto 0;
+}
 
+.all-view-wrapper > .pager a {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
 
+.all-view-wrapper > .pager a+a{
+    margin-left: 30px;
+}
+
+.all-view-wrapper > .pager a.active {
+    background: #3182f6;
+}
+
+.all-view-wrapper > .page-num{
+    position: absolute;
+    bottom:0;
+    right:0;
+}
 /* MAIN-06 RECOMMENDED-VIDEO */
 
 /* FOOTER-01  */
