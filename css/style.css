@@ -13,6 +13,7 @@
 /* MAIN-05 ALL-GAMES */
 .all-game{
     width: 1280px;
+    margin: 0 auto;
 }
 
 .all-game-header{
@@ -34,10 +35,12 @@
 .tag-list-wrapper{
     position:relative;
     width: 1280px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
 }
 
 .see{
-    background-color: #eeeeee;
+    background-color: #fff;
     width: 230px;
     line-height: 50px;
     border-top-right-radius: 15px;
@@ -45,6 +48,12 @@
     font-weight: 600;
     box-sizing: border-box;
     position: absolute;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.see.active{
+    background-color: #eeeeee;
 }
 
 .see.type-slide{
@@ -79,6 +88,7 @@
     width: 1280px;
     border-radius: 35px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .event-banner span{
@@ -119,7 +129,6 @@
     position: relative;
     width: 100%;
     height: 450px;
-    overflow: hidden;
 }
 
 .slide-container{
@@ -132,7 +141,7 @@
     left: 0;
 }
 
-.slide-container > li{
+.slide-container > .slide1{
     position: absolute;
     top: 0;
     height: 100%;
@@ -144,21 +153,94 @@
     list-style: none;
 }
 
-.slide1-1{
+.slide-container> .slide1:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.slide-container> .s1{
+    left:0;
+}
+
+.slide-container> .s2{
+    left:320px;
+}
+
+.slide-container> .s3{
+    left:640px;
+}
+
+.slide-container> .s4{
+    left:960px;
+}
+
+.slide-container > .slide1 > .contents > *{
+    position:absolute;
+    color:#fff;
+}
+
+.slide-container > .slide1 > .contents > .content-tt{
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+}
+
+.slide-container > .slide1 > .contents > .tag-container{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 64px;
+    bottom:0;
+}
+
+.slide-container > .slide1 > .contents > .tag-container > label{
+    background-color: rgba(0, 0, 0, .5);
+    line-height: 33px;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 16.5px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.slide-container > .slide1 > .contents > .tag-container > label+label{
+    margin-left: 10px;
+}
+
+.slide1.s1{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/fd4d269d-b87e-406e-8a39-4106bb916c2b/image.png");
 }
 
-.slide1-2{
+.slide1.s2{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/6e1facbf-9e6b-464a-bc20-6d273ffcbbab/image.png");
 }
 
-.slide1-3{
+.slide1.s3{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/dae2fd14-30b5-4a78-940c-24800db3671a/image.png");
 }
 
-.slide1-4{
+.slide1.s4{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/59d200d8-167f-4297-b23a-45892aa1d455/image.png");
 }
+
+.chev-wrap{
+    position:absolute;
+    top:50%;
+    transform: translate(-50%);
+}
+
+.chev-wrap.left{
+    right: calc(100% + 30px);
+}
+.chev-wrap.right{
+    left: calc(100% + 30px);
+    transform: translateX(50%);
+}
+
 /* MAIN-06 RECOMMENDED-VIDEO */
 
 /* FOOTER-01  */
