@@ -159,6 +159,122 @@ header {
 }
 
 /* MAIN-01 CAROUSEL */
+
+.mainslide-wrapper {
+  position: relative;
+  /* height: 500px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mainslide-container {
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in;
+  height: 500px;
+}
+
+.mainslide {
+  float: left;
+  position: relative;
+  /* height: 500px; */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  list-style: none;
+}
+
+.mainslide1 {
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/b58a4d6d-b538-4279-9bbd-be7c66514479/image.png);
+}
+
+/* .mainslide1 {
+  background-image: url(../images/main-carousel-img01.png);
+} */
+
+.mainslide2 {
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/6b468855-8cfc-459a-ac79-1cdbbcccf542/image.png);
+}
+
+.mainslide3 {
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/95987b1e-fe04-4090-ad18-5f0062274564/image.png);
+}
+
+.mainslide4 {
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/23347899-5a9e-46cc-a579-1f2a045372a3/image.png);
+}
+
+.mainslide5 {
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/27a4688a-2d88-4a99-ae3d-e57b12478492/image.png);
+}
+
+
+.mainslide-wrapper .chev-wrap.left,
+.mainslide-wrapper .chev-wrap.right {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+}
+
+.right {
+  right: 228px;
+}
+
+.left {
+  left: 228px;
+}
+
+.pager {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 1280px;
+  height: 54px;
+  margin: 0 auto 25px;
+  background-color: #000;
+  border-radius: 35px;
+  opacity: 0.7;
+}
+
+
+.pager a {
+  display: inline-block;
+  width: 150px;
+  height: 54px;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.pager > a > span > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 9px;
+}
+
+.pager > a > span:nth-child(2) {
+  /* float: left; */
+  position: absolute;
+  top: calc(50% - 16px);
+  left: 47px;
+  height: 32px;
+  color: rgba(250, 250, 250, 0.5);
+}
+
+.pager a.active > span:nth-child(2) {
+  color: rgba(250, 250, 250, 1);
+  font-weight: bold;
+}
 /* MAIN-02 RECOMMENDED-GAMES */
 /* MAIN-03 NEW-GAMES */
 /* MAIN-04 BANNER */
