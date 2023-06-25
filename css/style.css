@@ -125,6 +125,10 @@
     transform: translate(-50%,-50%);
 }
 
+.view-wrapper{
+    position: relative;
+}
+
 .slide-wrapper{
     position: relative;
     width: 100%;
@@ -240,6 +244,70 @@
     left: calc(100% + 30px);
     transform: translateX(50%);
 }
+
+.tag-view{
+    position: absolute;
+    top: 0%;
+}
+.tag-view > li > .tag-view-game{
+    position: absolute;
+    width: 308px;
+    height: 409px;
+    background-color: #fff;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tag-view > li > .tag-view-game:after{
+    content:'';
+    width: 100%;
+    height: 265px;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: url("https://velog.velcdn.com/images/sungegun/post/1ec07e3e-1bc2-4376-8cd8-3eca65982e25/image.png");
+}
+
+.tag-view > li> .tag-view-game > .ta-wrapper{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 308px;
+    height: 145px;
+    background-color: #fff;
+    padding: 30px 30px;
+    box-sizing: border-box;
+}
+
+.tag-view > li> .tag-view-game > .ta-wrapper > .game-title{
+    font-weight: 600;
+    top:0;
+    left:0;
+}
+
+.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > *{
+    position: absolute;
+    font-weight: 600;
+    font-size: 14px;
+}
+.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameGenre{
+    top: 65px;
+    left: 30px;
+}
+
+.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameSystem{
+    bottom: 30px;
+    right: 30px;
+}
+
+.tag-view > li> .tag-view-game > .ta-wrapper > .gameAttribute > .gameDevice{
+    bottom: 30px;
+    right: 30px;
+    transform: translateX(-100%);
+    margin-right: 10px;
+}
+
+
+
 
 /* MAIN-06 RECOMMENDED-VIDEO */
 
