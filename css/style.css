@@ -64,7 +64,7 @@ header {
 .menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
   display: block;
 }
-.menu-bar li:hover:last-child > .menu-bar-imgsboxwrap1 {
+.menu-bar li:hover:last-child > .menu-bar-allservice {
   display: block;
 }
 .menu-bar > li:first-child {
@@ -80,8 +80,11 @@ header {
   box-sizing: border-box;
   padding: 55px;
   border-top: 5px solid #4593fc;
+  background-color: #fbfbfb;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
   display: none;
+
 }
 
 .menu-bar-imgsbox {
@@ -91,20 +94,21 @@ header {
 
 .menu-bar-imgsbox > li {
   width: 100%;
-  /* border: 1px solid blue; */
   height: 40px;
   margin-bottom: 13px;
 }
 
 .menu-bar-imgsbox li a {
   display: block;
+  position: relative;
+
 }
 
 .menu-bar-imgsbox a img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  float: left;
+  /* float: left; */
   display: block;
 }
 .menu-bar-imgsbox li a span:nth-child(1) {
@@ -112,38 +116,44 @@ header {
 }
 
 .menu-bar-imgsbox li a span:nth-child(2) {
-  display: inline-block;
-  margin-left: 10px;
+  /* display: inline-block;
+  margin-left: 10px; */
   /* float: right; */
+  position: absolute;
+  top: 0;
+  left: 42px;
+  line-height: 32px;
 }
 
 /*  전체서비스 navbar hover */
-.menu-bar-imgsboxwrap1 {
+.menu-bar-allservice {
   position: absolute;
   top: 70px;
   right: -50px;
   width: 211px;
   box-sizing: border-box;
   padding: 50px;
-  border-top: 5px solid #4593fc;
   /* border: 1px solid red; */
+  border-top: 5px solid #4593fc;
+  background-color: #fbfbfb;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: none;
+  z-index: 10;
 }
 
-.menu-bar-imgsbox1 {
+.menu-bar-allservicebox {
   width: 111px;
   float: left;
 }
 
-.menu-bar-imgsbox1 > li {
+.menu-bar-allservicebox > li {
   width: 100%;
   /* border: 1px solid blue; */
   height: 40px;
   margin-bottom: 13px;
 }
 
-.menu-bar-imgsbox1 li a {
+.menu-bar-allservicebox  li a {
   display: block;
   text-align: center;
 }
