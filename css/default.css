@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  /* width: 100%; */
   height: 365px;
 }
 .bannerWrapper .banner-video{
@@ -11,49 +10,32 @@
   margin: 0 auto;
   height: 365px;
   display: flex;
-  /* position: relative; */
   justify-content: right;
   align-items: center;
 }
-/* .bannerWrapper .banner-video iframe{
-  position: absolute;
-  top: 100%;right: 0; 
-} */
-
-.videoWrapper h2{
-  padding-top: 48px;
-}
 .videoWrapper li{
-  width: 388px;
-  height: 407px;
   float: left;
-  margin-right: 58px;
   text-align: center;
-  padding-bottom: 47px;
-}
-.videoWrapper li div:first-child{
-  width: 385px;
-  height: 304px;
-  padding: 15px;
-}
-.videoWrapper li .video-underline{
   background-color: #f1f1f1;
-  padding: 30px;
+  border-radius: 10px;
 }
-.videoWrapper li .video-underline p{
+.videoWrapper li + li{
+  margin-left: 59.5px;
+}
+.videoWrapper li figcaption{
   font-size: 20px;
+  font-weight: bold;
+  text-align: left;
   padding-bottom: 20px;
-}
-.videoWrapper li:last-child{
-  margin-right: 0px;
+  padding: 30px 0 20px 30px;
 }
 .videoWrapper img{
-  width: 100%;
+  border: 18px solid rgba(69, 147, 252, 0.7);
 }
 .video-btn{
   padding: 15px 30px;
   background-color: #4593fc;
-  display: inline-block;
+  margin-bottom: 30px;
   border-radius: 5px;
 }
 .video-btn a{
@@ -61,8 +43,12 @@
   font-size: 16px;
   color: #fff;
 }
+.allService{
+  margin-top: 72px;
+}
 .allService .allService-first-Line{
   background: rgba(176, 184, 193, 0.3);
+  margin-top: 48px;
 }
 .allService .allService-second-Line{
   background: rgba(176, 184, 193, 0.4);
