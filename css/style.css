@@ -17,15 +17,15 @@
     padding-bottom: 24px;
 }
 .slide-wrapper-rc{
-    width:1280px;
-    margin: 0 auto;
     height: 404px;
     position: relative;  
 }
-
+.slide-container-rc{
+    box-sizing: border-box;
+}
 .slide-container-rc > li{
     float: left;
-    width: 305px;
+    /* width: 305px; */
     box-sizing: border-box;
     
 }
@@ -80,10 +80,12 @@
     right: 15px;
 }
 .left {
-    left: -5%;
+    left: -30px;
+    transform:translateX(-100%);
 } 
 .right{
-    right:-5%;
+    right: -30px;
+    transform:translateX(100%);
 }
 .chev-wrap{
     position: absolute;
@@ -117,6 +119,10 @@
 .slide-container-new li + li{
     margin-left: 16px;
 }
+/* .slide-container-new li img:hover{
+    background: #000;;
+} */
+
 .slide-new1{
     left: 0%;
 }
@@ -141,6 +147,13 @@
 .slide-new3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
 } */
+.slide-container-new li:hover img{
+    content: '지금 즉시';
+    opacity: 0.5;
+    background: #000
+
+}
+
 .slide-container-new .name-genre{
     border: none;
     height: 114px;
@@ -171,6 +184,15 @@
     bottom: 23px;
     right: 20px;
 }
+figcaption{
+    position:absolute;
+    left:50%; top:50%; right:50%; bottom:50%;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    text-align:center;
+    line-height:128px;
+    transition:0.5s;
+    overflow:hidden;}
 /* MAIN-04 BANNER */
 
 /* MAIN-05 ALL-GAMES */
