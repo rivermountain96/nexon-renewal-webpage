@@ -1,5 +1,5 @@
 /* HEADER */
-.main-tt {
+ .main-tt {
   padding-top: 71px;
   text-align: center;
 }
@@ -27,6 +27,11 @@ header {
   display: inline-block;
   position: relative;
   font-weight: bold;
+}
+
+.nav > ul:first-child>  li > a:hover:first-child,
+.nav > ul:first-child>  li > a:hover:nth-child(5){
+    color:#1b64da;
 }
 .nav .pc {
   position: absolute;
@@ -57,7 +62,7 @@ header {
   padding-bottom: 33px;
 }
 
-.menu-bar li:hover > a {
+.menu-bar  li:hover > a {
   color: #1b64da;
 }
 
@@ -193,9 +198,6 @@ header {
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/b58a4d6d-b538-4279-9bbd-be7c66514479/image.png");
 }
 
-/* .mainslide1 {
-  background-image: url(../images/main-carousel-img01.png);
-} */
 
 .mainslide2 {
   background-image: url(https://velog.velcdn.com/images/hyunny123/post/6b468855-8cfc-459a-ac79-1cdbbcccf542/image.png);
@@ -247,24 +249,22 @@ header {
 .pager a {
   display: inline-block;
   width: 200px;
+ 
   height: 54px;
-  margin: 0 10px;
+  margin: 10px 10px 0px 10px;
   cursor: pointer;
-  position: relative;
+
 }
 
 .pager > a > span > img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  display: block;
-  margin-top: 9px;
+  margin-right:10px;
 }
 
 .pager > a > span:nth-child(2) {
-  /* float: left; */
-  position: absolute;
-  top: calc(50% - 16px);
+vertical-align: 9px;
   left: 47px;
   height: 32px;
   color: rgba(250, 250, 250, 0.5);
