@@ -178,6 +178,16 @@ body {
   box-shadow: inset 0px 0px 15px rgba(69, 147, 252, 0.4);
 }
 
+.field:hover:after{
+  content:'';
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+}
+
 /* chevron */
 
 .chev-btn {

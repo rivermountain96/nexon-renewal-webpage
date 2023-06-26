@@ -25,7 +25,7 @@
 </head>
 <body>
     <!-- 이은서 구현 ALL-GAMES CAROUSEL & LIST -->
-    <section class="big-pd all-game">
+    <section class="all-game">
         <div class="all-game-header">
           <h2 class="main-stt">전체게임</h2>
           <form class="field">
@@ -37,9 +37,9 @@
         </div>
 
         <div class="tag-list-wrapper">
-          <button class="see type-slide active content-stt mono-g2">슬라이드로 보기</button>
-          <button class="see type-all content-stt mono-g2">전체게임 보기</button>
-            <div class="tag-list cf">
+          <a href="#slide-view" class="see type-slide active content-stt mono-g2">슬라이드로 보기</a>
+          <a href="#all-view" class="see type-all content-stt mono-g2">전체게임 보기</a>
+            <div class="tag-list">
               <ul class="tag-list-1">
                   <li class="tag">Windows</li>
                   <li class="tag">MacOS</li>
@@ -73,11 +73,11 @@
         </div>
         <div class="view-wrapper">
   
-          <div class="slide-wrapper slide-view hidden">
+          <div class="slide-wrapper slide-view active" id="slide-view">
                   <span class="page-num content-stt">
                     4 / 45
                   </span>
-              <ul class="slide-container slide1">
+              <ul class="slide-container slide1 active">
                   <li class="slide slide1 s1">
                     <div class="contents">
                       <h3 class="content-tt">던전앤파이터</h3>
@@ -536,7 +536,7 @@
               </div>
           </div>
 
-          <div class="tag-view-wrapper hidden">
+          <div class="tag-view-wrapper" id="tag-view">
             <ul class="tag-view cf">
               <li class="game-card">
                 <img src="https://velog.velcdn.com/images/sungegun/post/1ec07e3e-1bc2-4376-8cd8-3eca65982e25/image.png" alt="" id="davethediver">
@@ -552,13 +552,12 @@
             </ul>
           </div>
   
-        <div class="all-view-wrapper">
+        <div class="all-view-wrapper" id="all-view">
             <ul class="all-view cf">
-             <li class="all-view-1p">
+              <li class="all-view-1p active">
               <ul>
-                
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a3029f72-5c8e-402f-a47d-fb3447ada677/image.png" alt="" id="dongeonandfighter">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/a3029f72-5c8e-402f-a47d-fb3447ada677/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">던전앤파이터</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
@@ -568,7 +567,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/4ed701dd-4079-4b22-9711-55f26896aab3/image.png" alt="" id="maplestory">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/4ed701dd-4079-4b22-9711-55f26896aab3/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">메이플스토리</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
@@ -578,7 +577,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/3fc2b579-db7d-4ab8-b389-7efe63b5f281/image.png" alt="" id="FIFAONLINE4">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/3fc2b579-db7d-4ab8-b389-7efe63b5f281/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">FIFA 온라인 4</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
@@ -588,7 +587,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d0011823-c3d7-4b4c-9df9-5f82e3e6e114/image.png" alt="" id="FIFAmobile">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/d0011823-c3d7-4b4c-9df9-5f82e3e6e114/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">FIFA 모바일</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
@@ -598,7 +597,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/f53da2a5-3ec8-4441-bc77-ccccdf1487f0/image.png" alt="" id="bluearchive">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/f53da2a5-3ec8-4441-bc77-ccccdf1487f0/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">블루 아카이브</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">수집형 RPG</span>
@@ -608,7 +607,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/c120984d-00e3-4c4b-ae0b-54d85beb4160/image.png" alt="" id="maplestoryM">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/c120984d-00e3-4c4b-ae0b-54d85beb4160/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">메이플스토리 M</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
@@ -618,7 +617,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d573972d-b1cc-43e8-a5a5-b3393344c2f3/image.png" alt="" id="dongeonandfighterM">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/d573972d-b1cc-43e8-a5a5-b3393344c2f3/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">던전앤파이터 모바일</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
@@ -628,7 +627,7 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a7a2d854-a912-4331-954f-486046a4e239/image.png" alt="" id="hit2">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/a7a2d854-a912-4331-954f-486046a4e239/image.png" alt="">
                     <div class="ta-wrapper">
                       <h3 class="game-title content-tt">히트2</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
@@ -650,7 +649,7 @@
                   <li class="game-card">
                     <img src="https://velog.velcdn.com/images/sungegun/post/0b27a958-055b-4aef-a5cb-1c5dc14e6018/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="yeon">바람의나라: 연</h3>
+                      <h3 class="game-title content-tt">바람의나라: 연</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
@@ -660,7 +659,7 @@
                   <li class="game-card">
                     <img src="https://velog.velcdn.com/images/sungegun/post/91a12fc7-d721-4681-b67f-09f27351a46c/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="suddenattack">서든어택</h3>
+                      <h3 class="game-title content-tt">서든어택</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
@@ -682,9 +681,9 @@
              <li class="all-view-2p">
               <ul>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a3029f72-5c8e-402f-a47d-fb3447ada677/image.png" alt="" id="dongeonandfighter">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/97687ec5-0635-461d-a740-394b9cb315e4/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터</h3>
+                      <h3 class="game-title content-tt">마비노기 영웅전</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
@@ -692,69 +691,19 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/4ed701dd-4079-4b22-9711-55f26896aab3/image.png" alt="" id="maplestory">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/c62babee-698b-4a78-b4dd-807ac1ba8c22/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/3fc2b579-db7d-4ab8-b389-7efe63b5f281/image.png" alt="" id="FIFAONLINE4">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 온라인 4</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d0011823-c3d7-4b4c-9df9-5f82e3e6e114/image.png" alt="" id="FIFAmobile">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
+                      <h3 class="game-title content-tt">카트라이더 러쉬플러스</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">레이싱</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/f53da2a5-3ec8-4441-bc77-ccccdf1487f0/image.png" alt="" id="bluearchive">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/e233792b-ac7d-4d26-911a-954b2ce08797/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">블루 아카이브</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">수집형 RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/c120984d-00e3-4c4b-ae0b-54d85beb4160/image.png" alt="" id="maplestoryM">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리 M</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d573972d-b1cc-43e8-a5a5-b3393344c2f3/image.png" alt="" id="dongeonandfighterM">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a7a2d854-a912-4331-954f-486046a4e239/image.png" alt="" id="hit2">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">히트2</h3>
+                      <h3 class="game-title content-tt">V4</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
@@ -762,19 +711,29 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/5d1af042-ba2d-43c3-918e-16affe35dac4/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/fae6affc-f74d-44a1-ab55-448b0848191c/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="counterstrikeonline">카운터 스트라이크 온라인</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
+                      <h3 class="game-title content-tt">엘소드</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">ACTION RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/0b27a958-055b-4aef-a5cb-1c5dc14e6018/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/bfa66117-d5ce-49e6-b07a-bc733aff394a/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="yeon">바람의나라: 연</h3>
+                      <h3 class="game-title content-tt">나이트 워커</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">액션 MMORPG</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/f7e5cf18-c7a0-4240-bbd0-4f8551e80813/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">프리시아 전기</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
@@ -782,20 +741,60 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/91a12fc7-d721-4681-b67f-09f27351a46c/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/7dd02606-0cc3-4939-9944-634c18480d2e/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="suddenattack">서든어택</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
+                      <h3 class="game-title content-tt">바람의나라</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/b6c5b0b8-f89b-4128-ada6-6c63480b2d14/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/53cf8041-ede8-4877-9712-cd812e0d14df/image.png" alt="" id="hit2">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" >마비노기</h3>
+                      <h3 class="game-title content-tt">테일즈위버</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/80f17cb2-7746-4b79-ad4d-8638b9ff6730/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">크레이지 아케이드</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">캐주얼</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/662c3a57-16fc-4355-9be0-4d674e60ed80/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">어둠의 전설</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/39141233-7f30-44b1-8412-b9c9155dd465/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">카트라이더: 드리프트</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">레이싱</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일/스위치 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/f0a3d8b3-453b-4e75-917f-a6fcf49909e1/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">클로저스</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">ACTION RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
@@ -806,19 +805,19 @@
              <li class="all-view-3p">
               <ul>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a3029f72-5c8e-402f-a47d-fb3447ada677/image.png" alt="" id="dongeonandfighter">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/0e502863-453f-4e5f-ae34-741d1fa91a8a/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
+                      <h3 class="game-title content-tt">사이퍼즈</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">AOS/MOBA</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/4ed701dd-4079-4b22-9711-55f26896aab3/image.png" alt="" id="maplestory">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/f68e1054-b972-490f-8b70-41bd7d40255c/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리</h3>
+                      <h3 class="game-title content-tt">아스가르드</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
@@ -826,100 +825,100 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/3fc2b579-db7d-4ab8-b389-7efe63b5f281/image.png" alt="" id="FIFAONLINE4">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/d4645290-8dbf-43c0-9b11-54a5f0e995aa/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 온라인 4</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d0011823-c3d7-4b4c-9df9-5f82e3e6e114/image.png" alt="" id="FIFAmobile">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/f53da2a5-3ec8-4441-bc77-ccccdf1487f0/image.png" alt="" id="bluearchive">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">블루 아카이브</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">수집형 RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/c120984d-00e3-4c4b-ae0b-54d85beb4160/image.png" alt="" id="maplestoryM">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리 M</h3>
+                      <h3 class="game-title content-tt">메이플스토리2</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
                       <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d573972d-b1cc-43e8-a5a5-b3393344c2f3/image.png" alt="" id="dongeonandfighterM">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a7a2d854-a912-4331-954f-486046a4e239/image.png" alt="" id="hit2">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">히트2</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/5d1af042-ba2d-43c3-918e-16affe35dac4/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="counterstrikeonline">카운터 스트라이크 온라인</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
-                      <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/0b27a958-055b-4aef-a5cb-1c5dc14e6018/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/58b8e79b-ba7b-4c38-9fa3-a461bbfdd584/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="yeon">바람의나라: 연</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/91a12fc7-d721-4681-b67f-09f27351a46c/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="suddenattack">서든어택</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/b6c5b0b8-f89b-4128-ada6-6c63480b2d14/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" >마비노기</h3>
+                      <h3 class="game-title content-tt">일랜시아</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/663f36d2-ef3e-483f-a993-a5ce51f6785c/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">버블파이터</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">캐주얼</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/9e451942-50a2-49a0-bb75-02b4ec8d2571/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">메이플스토리 월드</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">샌드박스</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/aee746f0-846b-40d2-a4b9-da3a6ecca706/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">고질라 디펜스 포스</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">전략</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/5a7d5042-236c-4114-b5c5-22bf273b12f8/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">던전앤파이터 듀얼</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">대전격투</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC/스위치 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/98fcf092-3f43-4b64-ae92-7b16081943d4/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">THE FINALS</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">팀 기반 FPS</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/492fe9b9-5410-4f40-a667-828d225917ef/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">넥슨타운: NEXONTOWN</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">소셜</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/46949439-dc73-4766-bf5c-9716fffdb8db/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt" id="suddenattack">FACEPLAY</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">영상놀이 플랫폼</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/72857343-3779-4d37-87bd-0a3326e961d3/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">데이브 더 다이버</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">어드벤처 RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
@@ -930,19 +929,59 @@
              <li class="all-view-4p">
               <ul>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a3029f72-5c8e-402f-a47d-fb3447ada677/image.png" alt="" id="dongeonandfighter">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/a0be45a8-53c0-4df9-a51a-a8b68e20041a/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
+                      <h3 class="game-title content-tt">베일드 엑스퍼트</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">TPS</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/4ed701dd-4079-4b22-9711-55f26896aab3/image.png" alt="" id="maplestory">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/9c917eed-a687-44a2-95cb-6d095da413c4/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리</h3>
+                      <h3 class="game-title content-tt">워헤이븐</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">PVP 액션</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/ca6ff7b4-feb6-451b-9934-b22a5fd76b6c/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">퍼센트 디센던트</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">루트슈터</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/12543984-76c3-46cf-ab41-e0ade284693c/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">그랜드체이스 클래식</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">ACTION RPG</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/86d2ea77-f74b-47b4-bda7-29e81403482b/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">테일즈런너</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">캐주얼</span>
+                      <div class="gameAttribute">
+                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="game-card">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/1cf47217-9917-43cc-a57a-72aed85799a1/image.png" alt="">
+                    <div class="ta-wrapper">
+                      <h3 class="game-title content-tt">파이널판타지14</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
@@ -950,100 +989,30 @@
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/3fc2b579-db7d-4ab8-b389-7efe63b5f281/image.png" alt="" id="FIFAONLINE4">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/043b0ec5-052f-4868-8000-1a3a164069e2/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 온라인 4</h3>
+                      <h3 class="game-title content-tt">프리스타일2</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
                       <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d0011823-c3d7-4b4c-9df9-5f82e3e6e114/image.png" alt="" id="FIFAmobile">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">FIFA 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">스포츠</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/f53da2a5-3ec8-4441-bc77-ccccdf1487f0/image.png" alt="" id="bluearchive">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">블루 아카이브</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">수집형 RPG</span>
-                      <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/c120984d-00e3-4c4b-ae0b-54d85beb4160/image.png" alt="" id="maplestoryM">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/345e25c9-9152-40d4-a4a0-66b850ab2b91/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">메이플스토리 M</h3>
+                      <h3 class="game-title content-tt">아키에이지</h3>
                         <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
                       <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/d573972d-b1cc-43e8-a5a5-b3393344c2f3/image.png" alt="" id="dongeonandfighterM">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">던전앤파이터 모바일</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">액션 RPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/a7a2d854-a912-4331-954f-486046a4e239/image.png" alt="" id="hit2">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt">히트2</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/5d1af042-ba2d-43c3-918e-16affe35dac4/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="counterstrikeonline">카운터 스트라이크 온라인</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
-                      <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>
                     </div>
                   </li>
                   <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/0b27a958-055b-4aef-a5cb-1c5dc14e6018/image.png" alt="">
+                    <img src="https://velog.velcdn.com/images/sungegun/post/646db00d-ccfd-4952-aac5-b28e2736fe12/image.png" alt="">
                     <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="yeon">바람의나라: 연</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">MMORPG</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC/모바일 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/91a12fc7-d721-4681-b67f-09f27351a46c/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" id="suddenattack">서든어택</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">FPS</span>
-                      <div class="gameAttribute">
-                        <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="game-card">
-                    <img src="https://velog.velcdn.com/images/sungegun/post/b6c5b0b8-f89b-4128-ada6-6c63480b2d14/image.png" alt="">
-                    <div class="ta-wrapper">
-                      <h3 class="game-title content-tt" >마비노기</h3>
-                        <span class="gameGenre mono-g3 content-desc-sm">RPG</span>
+                      <h3 class="game-title content-tt">드래곤네스트</h3>
+                        <span class="gameGenre mono-g3 content-desc-sm">ACTION RPG</span>
                       <div class="gameAttribute">
                         <span class="gameDevice mono-g3 content-desc-sm">PC 게임</span>
                       </div>

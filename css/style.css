@@ -14,7 +14,7 @@
 
 .all-game{
     width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto 96px auto;
 }
 
 .all-game-header{
@@ -37,7 +37,7 @@
     position:relative;
     width: 1280px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 999;
+    margin-bottom: 50px;
 }
 
 .see{
@@ -49,8 +49,12 @@
     font-weight: 600;
     box-sizing: border-box;
     position: absolute;
-    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, .15);
+    text-align: center;
+}
+
+.see:hover{
+    color:#3182f6;
 }
 
 .see.active{
@@ -69,19 +73,21 @@
 }
 
 .tag-list{
+    text-align: center;
     background-color: #eeeeee;
     width: 100%;
-    padding: 20px 10px 0px 30px;
+    padding: 20px 20px 20px 20px;
     box-sizing: border-box;
-    margin-bottom: 50px;
-}
-.tag-list li{
-    float: left;
-    text-align: center;
+    position: relative;
 }
 
-.tag-list li+li{
-    margin: 0 0 20px 20px;
+.tag-list li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 20px 10px;
+}
+.tag-list-2 li{
+    margin-bottom: 0;
 }
 
 .event-banner{
@@ -90,6 +96,21 @@
     border-radius: 35px;
     position: relative;
     margin-bottom: 50px;
+}
+
+.event-banner:hover{
+    background-color: rgba(176, 184, 193, .4);
+}
+
+.event-banner:hover > span{
+    background-color: #1b64da;
+}
+
+.event-banner:hover > .circle{
+    border: 3px solid #1b64da;
+}
+.event-banner:hover > .circle > i{
+    color:#1b64da;
 }
 
 .event-banner span{
@@ -108,7 +129,7 @@
 .event-banner .circle{
     width: 38.4px;
     height: 38.4px;
-    border: 3px solid #439ccf;
+    border: 3px solid #4593fc;
     text-align: center;
     line-height: 32.4px;
     box-sizing: border-box;
@@ -136,6 +157,14 @@
     height: 450px;
 }
 
+.slide-wrapper, .tag-view-wrapper, .all-view-wrapper{
+    display: none;
+}
+.slide-wrapper.active, .tag-view-wrapper.active, .all-view-wrapper.active{
+    display: block;
+}
+
+
 .page-num{
     color:#fff;
     background-color: rgba(0, 0, 0, 0.3);
@@ -148,7 +177,7 @@
     position: absolute;
     top:30px;
     right: 30px;
-    z-index: 10;
+    z-index: 11;
 }
 
 .slide-container{
@@ -159,6 +188,11 @@
     padding:0;
     transition: left 0.5s ease-in;
     left: 0;
+    display: none;
+}
+
+.slide-container.active{
+    display: block;
 }
 
 .slide-container > .slide{
@@ -171,6 +205,12 @@
     /* background-position: center center; */
     background-size: contain;
     list-style: none;
+    transition: 0.3s ease-in;
+}
+
+.slide-container > .slide:hover{
+    transform: scale(104%);
+    z-index: 10;
 }
 
 .slide-container> .slide:after{
@@ -399,6 +439,7 @@
     float: left;
     margin:0 16px 16px 0;
     position: relative;
+    overflow: hidden;
 }
 
 .game-card:nth-child(4n){
@@ -411,6 +452,16 @@
     position:absolute;
     top:0;
     left:0;
+    object-fit: cover;
+    transition: 0.3s ease-in;
+}
+
+.game-card:hover > img{
+    transform: scale(1.1);
+}
+
+.game-card:hover > .ta-wrapper > .game-title{
+    color:#3182f6;
 }
 
 .game-card > .ta-wrapper{
@@ -428,6 +479,8 @@
     font-weight: 600;
     top:0;
     left:0;
+    letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .game-card > .ta-wrapper > *{
@@ -451,11 +504,6 @@
     top:0;
 }
 
-#counterstrikeonline{
-    letter-spacing: -1px;
-}
-
-
 .all-view-wrapper > .pager {
     text-align: center;
     margin: 46px auto auto 0;
@@ -477,10 +525,22 @@
     background: #3182f6;
 }
 
+.all-view-wrapper > .pager a:hover {
+    background: #3182f6;
+}
+
 .all-view-wrapper > .page-num{
     position: absolute;
     bottom:0;
     right:0;
+}
+
+.all-view > li{
+    display: none;
+}
+
+.all-view > li.active{
+    display: block;
 }
 /* MAIN-06 RECOMMENDED-VIDEO */
 
