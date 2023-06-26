@@ -19,13 +19,18 @@ function setSlide() {
 
     slides.forEach((item, idx) => {
       item.style.width = `${slideWidth}px`;
+      let url = item.getAttribute("data-url");
+      let title = item.getAttribute("data-title");
+      console.log(url)
+      console.log(title)
+
       pagerHTML += `<a href="">
       <span>
         <img
-          src="https://velog.velcdn.com/images/hyunny123/post/e143d1e1-e0af-4dda-8c63-e9c2274bf298/image.png"
+          src=${url}
         />
       </span>
-      <span>FACEPLAY</span>
+      <span>${title}</span>
     </a>
     `;
     });

@@ -190,7 +190,7 @@ header {
 }
 
 .mainslide1 {
-  background-image: url(https://velog.velcdn.com/images/hyunny123/post/b58a4d6d-b538-4279-9bbd-be7c66514479/image.png);
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/b58a4d6d-b538-4279-9bbd-be7c66514479/image.png");
 }
 
 /* .mainslide1 {
@@ -210,9 +210,8 @@ header {
 }
 
 .mainslide5 {
-  background-image: url(https://velog.velcdn.com/images/hyunny123/post/27a4688a-2d88-4a99-ae3d-e57b12478492/image.png);
+  background-image: url(https://velog.velcdn.com/images/hyunny123/post/84b7948b-a4af-4518-b754-585eaa23755c/image.png);
 }
-
 
 .mainslide-wrapper .chev-wrap.left,
 .mainslide-wrapper .chev-wrap.right {
@@ -247,7 +246,7 @@ header {
 
 .pager a {
   display: inline-block;
-  width: 150px;
+  width: 200px;
   height: 54px;
   margin: 0 10px;
   cursor: pointer;
