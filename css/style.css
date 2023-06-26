@@ -17,13 +17,13 @@
     margin: 0 auto 96px auto;
 }
 
-.all-game-header{
+.all-game > .all-game-header{
     width: 100%;
     height: 45px;
     margin-bottom: 100px;
     position: relative;
 }
-.main-stt{
+.all-game > .main-stt{
     font-weight: 600;
 }
 
@@ -33,14 +33,14 @@
     bottom:0;
 }
 
-.tag-list-wrapper{
+.all-game > .tag-list-wrapper{
     position:relative;
     width: 1280px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 50px;
 }
 
-.see{
+.tag-list-wrapper > .see{
     background-color: #fff;
     width: 230px;
     line-height: 50px;
@@ -53,11 +53,11 @@
     text-align: center;
 }
 
-.see:hover{
+.tag-list-wrapper > .see:hover{
     color:#3182f6;
 }
 
-.see.active{
+.tag-list-wrapper > .see.active{
     background-color: #eeeeee;
 }
 
@@ -72,7 +72,7 @@
     bottom:100%;
 }
 
-.tag-list{
+.tag-list-wrapper > .tag-list{
     text-align: center;
     background-color: #eeeeee;
     width: 100%;
@@ -147,11 +147,11 @@
     transform: translate(-50%,-50%);
 }
 
-.view-wrapper{
+.all-game > .m5.view-wrapper{
     position: relative;
 }
 
-.slide-wrapper{
+.all-game > .view-wrapper > .slide-wrapper{
     position: relative;
     width: 100%;
     height: 450px;
@@ -191,15 +191,6 @@
     display: none;
 }
 
-.slide-img{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    transition: 0.3s ease-in
-}
-
 .slide-container.active{
     display: block;
 }
@@ -214,15 +205,27 @@
     /* background-position: center center; */
     background-size: contain;
     list-style: none;
-    transition: 0.3s ease-in;
+    overflow: hidden;
 }
 
-.slide-container > .slide:hover{
-    transform: scale(104%);
-    z-index: 10;
+.slide-img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in
+}
+
+.slide-container > .slide:hover > .slide-img{
+    transform: scale(105%);
 }
 
 .slide-container> .slide:after{
+    position: absolute;
+    z-index: 1;
+    left:0;
+    top:0;
     content: '';
     display: block;
     width: 100%;
@@ -249,6 +252,7 @@
 .slide-container > .slide > .contents > *{
     position:absolute;
     color:#fff;
+    z-index: 2;
 }
 
 .slide-container > .slide > .contents > .content-tt{
@@ -284,140 +288,140 @@
     white-space: nowrap;
 }
 
-.slide1.s1{
+.slide1.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/fd4d269d-b87e-406e-8a39-4106bb916c2b/image.png");
 }
-.slide1.s2{
+.slide1.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/6e1facbf-9e6b-464a-bc20-6d273ffcbbab/image.png");
 }
-.slide1.s3{
+.slide1.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/dae2fd14-30b5-4a78-940c-24800db3671a/image.png");
 }
-.slide1.s4{
+.slide1.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/4421f83d-9082-450d-b834-8fe1aff148a1/image.png");
 }
-.slide2.s1{
+.slide2.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/3588ab7e-ae6d-4c60-9ac3-49d3fd2db949/image.png");
 }
-.slide2.s2{
+.slide2.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/235b6cf6-b806-4329-8b6b-082d610e2bd9/image.png");
 }
-.slide2.s3{
+.slide2.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/67758ae0-4ebc-4a7a-9fe3-caf24fd15d78/image.png");
 }
-.slide2.s4{
+.slide2.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/efedd996-3306-4e4f-9302-3338ca03d4db/image.png");
 }
-.slide3.s1{
+.slide3.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/77c6c745-a13d-4940-a33f-91f0b0ff20e5/image.png");
 }
-.slide3.s2{
+.slide3.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/3ced81fa-f9ea-42d7-9db0-5f912023b73c/image.png");
 }
-.slide3.s3{
+.slide3.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/6eb2396d-d47a-4ca8-bcc6-7699245320e6/image.png");
 }
-.slide3.s4{
+.slide3.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/aa98b32b-a9e9-488b-8a14-65da1383e765/image.png");
 }
-.slide4.s1{
+.slide4.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1d43da59-807a-4ec7-8dce-f3361d5d0839/image.png");
 }
-.slide4.s2{
+.slide4.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/f5a640ff-5ba6-4936-b2e6-4eccaf56c82d/image.png");
 }
-.slide4.s3{
+.slide4.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/a6a6c089-060a-44fd-8ba4-3066ee62ded4/image.png");
 }
-.slide4.s4{
+.slide4.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/36892b61-6042-4ec8-9c87-f4000b312c77/image.png");
 }
-.slide5.s1{
+.slide5.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/a72c60f0-780f-4552-b113-576d8d8fbbbc/image.png");
 }
-.slide5.s2{
+.slide5.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/9727a2da-7393-4008-9189-ab94a43e509e/image.png");
 }
-.slide5.s3{
+.slide5.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/b1edd95c-7ab0-40af-8c6b-05aa670b424a/image.png");
 }
-.slide5.s4{
+.slide5.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/43663036-a1b0-4977-a2aa-c5e0c05f603b/image.png");
 }
-.slide6.s1{
+.slide6.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/3692e261-9bf0-408d-8d22-5b85d9eb42ee/image.png");
 }
-.slide6.s2{
+.slide6.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/5a2fbd1e-defb-458b-bacb-a1cce5155c34/image.png");
 }
-.slide6.s3{
+.slide6.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/7388cd40-3e96-471e-a046-51c382e7a24d/image.png");
 }
-.slide6.s4{
+.slide6.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/762ab1f6-c618-45c7-b761-ab5859411ac6/image.png");
 }
-.slide7.s1{
+.slide7.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/bae219ff-c23f-4f7e-9c7e-46d1389eed2c/image.png");
 }
-.slide7.s2{
+.slide7.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/30b0b3eb-798e-479b-98bb-b9b17f52cba2/image.png");
 }
-.slide7.s3{
+.slide7.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/ed623660-5eee-45df-893f-869dc6ea2f27/image.png");
 }
-.slide7.s4{
+.slide7.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/494269f3-6385-4a09-8c9a-5bc540f0e34f/image.png");
 }
-.slide8.s1{
+.slide8.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/0d2c91f8-645b-4701-93ef-ba4a12d7b5e0/image.png");
 }
-.slide8.s2{
+.slide8.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/0b887f5d-4e3b-4e60-8f0c-27241d328ab4/image.png");
 }
-.slide8.s3{
+.slide8.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/9815c532-7f88-4dcc-8025-e37841019286/image.png");
 }
-.slide8.s4{
+.slide8.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/a92e328b-018b-4e45-9050-805b16959999/image.png");
 }
 
-.slide9.s1{
+.slide9.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/2b9b5cbe-794b-44a6-8d1b-a803e29c2128/image.png");
 }
-.slide9.s2{
+.slide9.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/5b160c06-0c6f-4dd7-a5c0-63cf80093ba1/image.png");
 }
-.slide9.s3{
+.slide9.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/72331210-2d26-468b-8a77-f0bfd10b28ff/image.png");
 }
-.slide9.s4{
+.slide9.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/08876727-fe67-47e5-a89d-dd8d7901bfb0/image.png");
 }
-.slide10.s1{
+.slide10.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/b09e5596-6202-40ed-aae6-32c004fc977d/image.png");
 }
-.slide10.s2{
+.slide10.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/8100259d-852c-4d73-928d-63c992da14ac/image.png");
 }
-.slide10.s3{
+.slide10.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1b864350-0f89-47e0-8514-f678e4845320/image.png");
 }
-.slide10.s4{
+.slide10.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/57f8d286-dbe4-4cb3-8d25-202991bf2d88/image.png");
 }
-.slide11.s1{
+.slide11.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/33b45473-610b-4a6b-a4d2-1616161105ae/image.png");
 }
-.slide11.s2{
+.slide11.s2 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/dd84087f-0da0-433a-838d-18810b04e2fb/image.png");
 }
-.slide11.s3{
+.slide11.s3 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/a9e5b2e4-7229-4789-8658-c90c45a760f0/image.png");
 }
-.slide11.s4{
+.slide11.s4 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/d96ba958-14e6-42d5-bb28-6e22d34cca59/image.png");
 }
-.slide12.s1{
+.slide12.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
 }
 
