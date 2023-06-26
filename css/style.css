@@ -61,7 +61,7 @@
 }
 .slide-container-rc li:hover .name-explain{
     box-shadow: 18px 18px 15px rgba(0, 0, 0, .2);
-    transform: translateY(-5px);
+    transform: translateY(-5px);        
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .slide-container-rc .event-rc{
@@ -79,6 +79,7 @@
     bottom: 15px;
     right: 15px;
 }
+/*chev-wrap 삭제여부*/
 .left {
     left: -30px;
     transform:translateX(-100%);
@@ -113,24 +114,9 @@
     box-sizing: border-box;
     width: 415px;
 } */
-.slide-container-new li{
-    float: left;
-}
+
 .slide-container-new li + li{
     margin-left: 16px;
-}
-/* .slide-container-new li img:hover{
-    background: #000;;
-} */
-
-.slide-new1{
-    left: 0%;
-}
-.slide-new2{
-    left: 50%;
-}
-.slide-new1{
-    left: 100%;
 }
 .slide-container-new a img{
     width: 415px;
@@ -147,13 +133,6 @@
 .slide-new3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
 } */
-.slide-container-new li:hover img{
-    content: '지금 즉시';
-    opacity: 0.5;
-    background: #000
-
-}
-
 .slide-container-new .name-genre{
     border: none;
     height: 114px;
@@ -184,15 +163,50 @@
     bottom: 23px;
     right: 20px;
 }
-figcaption{
-    position:absolute;
-    left:50%; top:50%; right:50%; bottom:50%;
+
+.slide-container-new li{
+    float: left;
+    position: relative;
+    
+}
+
+.slide-container-new{
+    position: absolute;
+
+}
+
+.slide-container-new figcaption{
+    width: 100%;
+    /* height: 252px; */
+    height: 69%;
+    position: absolute;
+    opacity: 1;
+    text-align:center;
+    line-height:15px;
+    display: none;
+    overflow: hidden;
+}
+.slide-container-new > li:hover figcaption{
+    top:0%;
+    bottom:0%; left:0; right:0;
     background:rgba(0,0,0,0.8);
     color:#fff;
-    text-align:center;
-    line-height:128px;
-    transition:0.5s;
-    overflow:hidden;}
+    line-height: 2rem;
+    display: block;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    animation: move 0.3s;
+    animation-fill-mode:both;
+}
+@keyframes move {
+    from {transform: translateY(10%);opacity: 0;}
+    to {transform: translateY(0%); opacity: 1;}
+}
+.slide-container-new li:hover .name-genre{
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
+}
+
 /* MAIN-04 BANNER */
 
 /* MAIN-05 ALL-GAMES */
