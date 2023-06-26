@@ -27,27 +27,22 @@
     float: left;
     width: 305px;
     box-sizing: border-box;
+    
 }
 .slide-container-rc li + li{
     margin-left: 16px;
 }
-.slide-rc1 a img{
-    background-image: url(/nexon-renewal-webpage/img/FIFA.png);
+.slide-container-rc img{
+    object-fit:cover;
 }
-.slide-rc2 a img{
-    background-image: url(/nexon-renewal-webpage/img/cartrider.png);
-}
-.slide-rc3 a img{
-    background-image: url(/nexon-renewal-webpage/img/Maplestory.png);
-}
-.slide-rc4 a img{
-    background-image: url(/nexon-renewal-webpage/img/SuddenAttank.png);
-}
+
+
 .slide-container-rc a img{
     width: 305px;
     height: 290px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s;
 }
 .name-rc,
 .explain-rc{
@@ -59,6 +54,7 @@
     box-sizing: border-box;
     position: relative;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
+    transition: 0.3s;
 }
 .slide-container-rc li:hover img{
     transform: translateY(-5px);
@@ -83,20 +79,16 @@
     bottom: 15px;
     right: 15px;
 }
-.controls{
+.left {
+    left: -5%;
+} 
+.right{
+    right:-5%;
+}
+.chev-wrap{
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-}
-.chev-btn .left{
-    position: absolute;
-    right: 100%;
-}
-.chev-wrap .left i{
-    position: absolute;
-}
-.chev-wrap .right i{
-    position: absolute;
 }
 /* MAIN-03 NEW-GAMES */
 .new-game{
@@ -113,10 +105,14 @@
     height: 252px;
     position: relative;  
 }
-.slide-contanier-new > li{
+
+/* .slide-contanier-new > li{
     float: left;
     box-sizing: border-box;
     width: 415px;
+} */
+.slide-container-new li{
+    float: left;
 }
 .slide-container-new li + li{
     margin-left: 16px;
@@ -131,12 +127,12 @@
     left: 100%;
 }
 .slide-container-new a img{
+    width: 415px;
     height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 3;
 }
-.slide-new1 a img{
+/* .slide-new1 a img{
     background-image: url(/nexon-renewal-webpage/img/VeildeExpert.png);
 }
 .slide-new2 a img{
@@ -144,7 +140,7 @@
 }
 .slide-new3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
-}
+} */
 .slide-container-new .name-genre{
     border: none;
     height: 114px;
@@ -153,16 +149,27 @@
     position: relative;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
-.name-new,
-.explain-new{
+.name-new{
     padding:20px 0 0 20px;
 }
-
-
 .name-new,
 .genre-new,
 .device-new{
     text-transform: uppercase;
+}
+.slide-container-new .genre-new{
+    position: absolute;
+    bottom:23px;
+    left: 26px;
+}
+.slide-container-new .device-new{
+    float: right;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 23px;
+    right: 20px;
 }
 /* MAIN-04 BANNER */
 
