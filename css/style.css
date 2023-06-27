@@ -1043,6 +1043,7 @@ vertical-align: 9px;
   background-position: center center;
   background-repeat: no-repeat;
   height: 365px;
+  margin-bottom: 96px;
 }
 .bannerWrapper .banner-video{
   width: 1280px;
@@ -1066,7 +1067,9 @@ vertical-align: 9px;
   bottom: 0;
   left: 0;
 }
-
+.videoWrapper ul{
+    margin-top: 48px;
+}
 .videoWrapper li{
   float: left;
   text-align: center;
@@ -1101,12 +1104,6 @@ vertical-align: 9px;
   font-size: 16px;
   color: #fff;
 }
-/* .allService{
-  margin:0 auto;
-  width: 100%;
-} */
-
-
 .allService .allService-first-Line{
   background: rgba(176, 184, 193, 0.3);
   margin-top: 48px;
