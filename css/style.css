@@ -1,9 +1,9 @@
 /* HEADER */
- .main-tt {
+ header.main-tt {
   padding-top: 71px;
   text-align: center;
 }
-.main-tt > a {
+header.main-tt > a {
   width: 242px;
   height: 42px;
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/d0b3ab6a-afbb-40f8-aae1-e4678bebdf45/image.png");
@@ -1131,4 +1131,82 @@ vertical-align: 9px;
 }
 .allService dl dd{
   line-height: 2.19em;
+
 }
+
+/* footer -2 */
+
+.containerWrap {
+    width: 100%;
+  }
+  
+  .footerwrap {
+    padding-top: 76px;
+    padding-bottom: 67px;
+  }
+  
+  .footer-logo.main-tt > a {
+    width: 200px;
+    height: 35px;
+    background-image: url("https://velog.velcdn.com/images/hyunny123/post/dc64f981-21a8-4dc2-bfa4-0410e69723b4/image.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999rem;
+  }
+  
+  .footer-logowrap {
+    /* float: left; */
+  }
+  .snsnlangs {
+    /* float: right; */
+  }
+  
+  .snswrap {
+    float: left;
+    width: 400px;
+    height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+  }
+  .langswrap {
+    float:left;
+    width: 290px;
+    height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+  }
+  
+  .langswrap span {
+    display: inline-block;
+    padding: 0px 15px;
+  }
+  .footer-info {
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 35px;
+  }
+  
+  .footer-info > li {
+    box-sizing: border-box;
+    float: left;
+    list-style: none;
+    margin-left: 33px;
+  }
+  
+  .footer-info > li:first-child {
+    margin-left: 0px;
+  }
+  
+  .footer-info > li:hover a {
+    color: #4593fc;
+  }
+  
+  address {
+    font-weight: 300;
+    letter-spacing: 0.02rem;
+  }
