@@ -14,10 +14,19 @@
 /* NAV-BAR */
 header {
   position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+.nav{
+  text-align: center;
+}
+.nav> ul{
+  display: inline-block;
+  vertical-align: top;
 }
 .nav > ul:first-child {
   position: absolute;
-  right: 0;
+  right:0;
   top: 73px;
 }
 .nav .line {
