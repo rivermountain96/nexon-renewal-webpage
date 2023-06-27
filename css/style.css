@@ -16,39 +16,37 @@
 .recommend-game > p{
     padding-bottom: 24px;
 }
-.slide-wrapper-rc{
+.rc-slide-wrapper{
     height: 404px;
     position: relative;  
 }
-.slide-container-rc{
+.rc-slide-container{
     box-sizing: border-box;
 }
-.slide-container-rc > li{
+.rc-slide-container > li{
     float: left;
     /* width: 305px; */
     box-sizing: border-box;
     
 }
-.slide-container-rc li + li{
+.rc-slide-container li + li{
     margin-left: 16px;
 }
-.slide-container-rc img{
+.rc-slide-container img{
     object-fit:cover;
 }
-
-
-.slide-container-rc a img{
+.rc-slide-container a img{
     width: 305px;
     height: 290px;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.3s;
 }
-.name-rc,
-.explain-rc{
+.rc-name,
+.rc-explain{
     padding:20px 0 0 20px;
 }
-.slide-container-rc .name-explain{
+.rc-slide-container .name-explain{
     border: none;
     height: 114px;
     box-sizing: border-box;
@@ -56,15 +54,15 @@
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
     transition: 0.3s;
 }
-.slide-container-rc li:hover img{
+.rc-slide-container li:hover img{
     transform: translateY(-5px);
 }
-.slide-container-rc li:hover .name-explain{
+.rc-slide-container li:hover .name-explain{
     box-shadow: 18px 18px 15px rgba(0, 0, 0, .2);
     transform: translateY(-5px);        
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
-.slide-container-rc .event-rc{
+.rc-slide-container .rc-event{
     float: right;
     width: 50px;
     display: block;
@@ -102,38 +100,38 @@
 .new-game > h2{
     padding-bottom: 56px;
 }
-.slide-wrapper-new{
+.new-slide-wrapper{
     width:1280px;
     margin: 0 auto;
     height: 252px;
     position: relative;  
 }
 
-/* .slide-contanier-new > li{
+/* .new-slide-contanier > li{
     float: left;
     box-sizing: border-box;
     width: 415px;
 } */
 
-.slide-container-new li + li{
+.new-slide-container li + li{
     margin-left: 16px;
 }
-.slide-container-new a img{
+.new-slide-container a img{
     width: 415px;
     height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .slide-new1 a img{
+/* .new-slide1 a img{
     background-image: url(/nexon-renewal-webpage/img/VeildeExpert.png);
 }
-.slide-new2 a img{
+.new-slide2 a img{
     background-image: url(/nexon-renewal-webpage/img/DF.png);
 }
-.slide-new3 a img{
+.new-slide3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
 } */
-.slide-container-new .name-genre{
+.new-slide-container .name-genre{
     border: none;
     height: 114px;
     width: 415px;
@@ -141,20 +139,20 @@
     position: relative;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
-.name-new{
+.new-name{
     padding:20px 0 0 20px;
 }
-.name-new,
-.genre-new,
-.device-new{
+.new-name,
+.new-genre,
+.new-device{
     text-transform: uppercase;
 }
-.slide-container-new .genre-new{
+.new-slide-container .new-genre{
     position: absolute;
     bottom:23px;
     left: 26px;
 }
-.slide-container-new .device-new{
+.new-slide-container .new-device{
     float: right;
     line-height: 20px;
     text-align: center;
@@ -164,18 +162,18 @@
     right: 20px;
 }
 
-.slide-container-new li{
+.new-slide-container li{
     float: left;
     position: relative;
     
 }
 
-.slide-container-new{
+.new-slide-container{
     position: absolute;
 
 }
 
-.slide-container-new figcaption{
+.new-slide-container figcaption{
     width: 100%;
     /* height: 252px; */
     height: 69%;
@@ -186,7 +184,7 @@
     display: none;
     overflow: hidden;
 }
-.slide-container-new > li:hover figcaption{
+.new-slide-container > li:hover figcaption{
     top:0%;
     bottom:0%; left:0; right:0;
     background:rgba(0,0,0,0.8);
@@ -203,7 +201,7 @@
     from {transform: translateY(10%);opacity: 0;}
     to {transform: translateY(0%); opacity: 1;}
 }
-.slide-container-new li:hover .name-genre{
+.new-slide-container li:hover .name-genre{
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
 }
 
