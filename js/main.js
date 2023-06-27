@@ -1,3 +1,4 @@
+/* 이현정 구현 부분*/ 
 /* main carousel */
 
 let slideWrapper = document.querySelector(".mainslide-wrapper");
@@ -100,6 +101,16 @@ slideWrapper.addEventListener("mouseover", () => {
 slideWrapper.addEventListener("mouseout", () => {
   autoSlide();
 });
+
+/* 이현정 구현 부분 종료*/ 
+
+/* 이강산 구현 부분 */ 
+
+/* 이강산 구현 부분 종료*/ 
+
+
+/* 이은서 구현 부분 */ 
+
 // main5 start
 
 // let main5SWrapper = document.querySelector('.main5-slide-wrapper'),
@@ -113,3 +124,5 @@ slideWrapper.addEventListener("mouseout", () => {
 //     main5SlideWidth = `1280px`;
 
 // main5 done
+
+/* 이은서 구현 부분 종료*/ 
