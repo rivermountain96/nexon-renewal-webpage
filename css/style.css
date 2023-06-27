@@ -410,21 +410,29 @@ vertical-align: 9px;
 .new-slide3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
 } */
+.new-slide-wrapper{
+  margin-bottom: 96px;
+  height: 348px;
+}
 .new-slide-container .name-genre{
+    padding: 25px 28px;
     border: none;
-    height: 114px;
+    height: 96px;
     width: 415px;
     box-sizing: border-box;
     position: relative;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
-.new-name{
-    padding:20px 0 0 20px;
-}
+
 .new-name,
 .new-genre,
 .new-device{
     text-transform: uppercase;
+    position: absolute;
+}
+.new-slide-container .new-name{
+  left:0;
+  top:0;
 }
 .new-slide-container .new-genre{
     position: absolute;
@@ -1034,6 +1042,7 @@ vertical-align: 9px;
 /* FOOTER-01  */
 /* FOOTER-02 */
 .bannerWrapper{
+  width:100%;
   background-image: url('https://ifh.cc/g/A0yQqd.jpg');
   background-size: cover;
   background-position: center center;
@@ -1062,6 +1071,7 @@ vertical-align: 9px;
   bottom: 0;
   left: 0;
 }
+
 .videoWrapper li{
   float: left;
   text-align: center;
@@ -1096,15 +1106,20 @@ vertical-align: 9px;
   font-size: 16px;
   color: #fff;
 }
-.allService{
-  margin-top: 72px;
-}
+/* .allService{
+  margin:0 auto;
+  width: 100%;
+} */
+
+
 .allService .allService-first-Line{
   background: rgba(176, 184, 193, 0.3);
   margin-top: 48px;
+  width: 100%;
 }
 .allService .allService-second-Line{
   background: rgba(176, 184, 193, 0.4);
+  width: 100%;
 }
 .allService li{
   float: left;
