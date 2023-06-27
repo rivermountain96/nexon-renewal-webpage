@@ -184,6 +184,7 @@ header {
 }
 
 .mainslide-container {
+    /* position:relative; */
   margin: 0;
   padding: 0;
   transition: transform 0.5s ease-in;
@@ -228,17 +229,11 @@ header {
 .mainslide-wrapper .chev-wrap.right {
   position: absolute;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   z-index: 999;
 }
 
-.right {
-  right: 228px;
-}
 
-.left {
-  left: 228px;
-}
 
 .pager {
   position: absolute;
@@ -358,7 +353,7 @@ vertical-align: 9px;
 }
 /*chev-wrap 삭제여부*/
 .left {
-    left: -30px;
+    left: 0px;
     transform:translateX(-100%);
 } 
 .right{
@@ -907,20 +902,20 @@ vertical-align: 9px;
 .main5-slide-container > .slide12.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
 }
-
-.main5-chev-wrap{
+/* 
+.chev-wrap{
     position:absolute;
     top:50%;
     transform: translate(-50%);
 }
 
-.main5-chev-wrap.left{
+.chev-wrap.left{
     right: calc(100% + 30px);
 }
-.main5-chev-wrap.right{
+.chev-wrap.right{
     left: calc(100% + 30px);
     transform: translateX(50%);
-}
+} */
 
 .tag-view-wrapper{
     position: absolute;
