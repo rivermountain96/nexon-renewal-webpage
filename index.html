@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!-- fontawesome -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-     crossorigin="anonymous"
-     referrerpolicy="no-referrer"
-   />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize.min.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>nexon-renewal-webpage</title>
   </head>
   <body >
@@ -585,10 +593,124 @@
       </section>
       <!-- 이현정 구현 끝 -->
 
-      <!-- 이강산 구현 시작 RECOMMENDED & NEW GAMES CAROUSEL -->
-      <section>추천게임</section>
-      <section>신규게임</section>
-      <!-- 이강산 구현 끝 -->
+    <!-- 이강산 구현 시작 RECOMMENDED & NEW GAMES CAROUSEL -->
+    <!-- RECOMMNED GAMES -->
+        <section class="recommend-game big-pd">
+            <h2 class="main-stt">추천게임</h2>
+            <p class="content-stt">#지금 가장 많이 접속하고 있는</p>
+              <div class="rc-slide-wrapper">
+                <ul class="rc-slide-container cf">
+                  <li class="rc-slides slide1">
+                    <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/6aa0e207-dd39-4307-8e84-8a8f6e0da1cc/image.png">
+                    <div class="name-explain cf">
+                      <span class="rc-name content-tt">FIFA 온라인 4</span><br>
+                      <span class="rc-explain content-desc-re">새로운 축구를 경험하라</span>
+                      <span class="rc-event">event</span>
+                    </div>
+                  </a>
+                  </li>
+                  <li class="rc-slide2">
+                    <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/38479660-fbc6-444b-8cfc-0267498ed93c/image.png">
+                      <div class="name-explain cf">
+                        <span class="rc-name content-tt">카트라이더 러쉬플러스</span><br>
+                        <span class="rc-explain content-desc-re">친구와 짜릿한 레이싱 한판?</span>
+                        <span class="rc-event">event</span>
+                      </div>
+                    </a>
+                  <li class="rc-slide3">
+                    <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/e46fe21d-9fea-47a7-b7a1-3be98a0810a1/image.png">
+                      <div class="name-explain cf">
+                        <span class="rc-name content-tt">메이플스토리</span><br>
+                        <span class="rc-explain content-desc-re">용사님과 함께한 20주년을 추억하며</span>
+                        <span class="rc-event">event</span>
+                      </div>
+                    </a>
+                  <li class="rc-slide4">
+                    <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/a9b6f164-6974-4223-84a3-429f379a20e8/image.png">
+                      <div class="name-explain cf">
+                        <span class="rc-name content-tt">서든어택</span><br>
+                        <span class="rc-explain content-desc-re">대한민국 No.1 FPS</span>
+                        <span class="rc-event">event</span>
+                      </div>
+                    </a>  
+                  </li>
+                </ul>
+                <div class="chev-wrap left">
+                  <button class="chev-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+                </div>
+                <div class="chev-wrap right">
+                  <button class="chev-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
+              <!-- <div class="controls-wrapper-rc"> -->
+                <!-- <div class="controls"> -->
+                  <!-- <div class="chev-wrap left">
+                    <button class="chev-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+                  </div>
+                  <div class="chev-wrap right">
+                    <button class="chev-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div> -->
+                <!-- </div> -->
+              <!-- </div> -->
+        </section>
+        <!-- NEW GAMES -->
+        <section class="new-game">
+          <h2 class="main-stt">신규게임</h2>
+          <div class="new-slide-wrapper">
+            <ul class="new-slide-container cf">
+              <li class="new-slide1">
+                  <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/ac44efe5-3f72-49f5-b923-21654227448b/image.png">
+                    <figcaption>
+                      <p>지금 VX공식친구 추가하고<br>
+                        넥슨캐시 5,000원을 받으세요! </p>
+                    </figcaption>
+                    <div class="name-genre cf">
+                      <span class="new-name content-tt">베일드 익스퍼트</span><br>
+                      <span class="new-genre content-desc-re">tps</span>
+                      <span class="new-device mono-g4">pc</span>
+                    </div>
+                  </a>
+              </li>
+              <li class="slide-new2">
+                <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/666c21fb-47f4-4b0a-b5cd-49fe53c640c7/image.png">
+                  <figcaption>
+                    <p>화끈한 액션쾌감! 오직 이곳에서</p>
+                  </figcaption>  
+                  <div class="name-genre">
+                      <span class="new-name content-tt">던전앤파이터 듀얼</span><br>
+                      <span class="new-genre content-desc-re">대전 액션</span>
+                      <span class="new-device mono-g4">pc / ps5</span>
+                  </div>
+                </a>
+              </li>
+              <li class="slide-new3">
+                <a href=""><img src="https://velog.velcdn.com/images/dlrkdtks7/post/a18d2f02-71fc-4976-9863-d99ee34e0cc2/image.png">
+                  <figcaption>
+                    <p>마음 속 담고싶은 이야기<br>
+                      청춘, 학원, 밀리터리 RPG </p>
+                  </figcaption>  
+                  <div class="name-genre">
+                      <span class="new-name content-tt">블루 아카이브</span><br>
+                      <span class="new-genre content-desc-re">수집형rpg</span>
+                      <span class="new-device mono-g4">mobile</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="chev-wrap left">
+              <button class="chev-btn left">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+            </div>
+            <div class="chev-wrap right">
+              <button class="chev-btn right">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </section>
+    <!-- 이강산 구현 끝 -->
 
       <!-- 한지희 구현 BANNER -->
       <section>배너광고</section>
