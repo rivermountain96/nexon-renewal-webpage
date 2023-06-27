@@ -225,13 +225,13 @@ header {
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/ff4defa6-7506-4886-83e7-492c7a82cd9a/image.png");
 }
 
-.mainslide-wrapper .chev-wrap.left,
+/* .mainslide-wrapper .chev-wrap.left,
 .mainslide-wrapper .chev-wrap.right {
   position: absolute;
   top: 50%;
   transform: translateX(-50%);
   z-index: 999;
-}
+} */
 
 
 
@@ -352,11 +352,11 @@ vertical-align: 9px;
     right: 15px;
 }
 /*chev-wrap 삭제여부*/
-.left {
-    left: 0px;
+.chev-wrap.left {
+    left: -30px;
     transform:translateX(-100%);
 } 
-.right{
+.chev-wrap.right{
     right: -30px;
     transform:translateX(100%);
 }
@@ -377,8 +377,10 @@ vertical-align: 9px;
 .new-slide-wrapper{
     width:1280px;
     margin: 0 auto;
-    height: 252px;
+    /* height: 252px; */
     position: relative;  
+    padding-bottom: 96px;
+    height: 348px;
 }
 
 /* .new-slide-contanier > li{
@@ -405,12 +407,8 @@ vertical-align: 9px;
 .new-slide3 a img{
     background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
 } */
-.new-slide-wrapper{
-  margin-bottom: 96px;
-  height: 348px;
-}
 .new-slide-container .name-genre{
-    padding: 25px 28px;
+    /* padding: 25px 28px; */
     border: none;
     height: 96px;
     width: 415px;
@@ -426,13 +424,12 @@ vertical-align: 9px;
     position: absolute;
 }
 .new-slide-container .new-name{
-  left:0;
-  top:0;
+  left:20px;
+  top: 10px;
 }
 .new-slide-container .new-genre{
-    position: absolute;
     bottom:23px;
-    left: 26px;
+    left: 23px;
 }
 .new-slide-container .new-device{
     float: right;
@@ -452,7 +449,6 @@ vertical-align: 9px;
 
 .new-slide-container{
     position: absolute;
-
 }
 
 .new-slide-container figcaption{
@@ -467,8 +463,8 @@ vertical-align: 9px;
     overflow: hidden;
 }
 .new-slide-container > li:hover figcaption{
-    top:0%;
-    bottom:0%; left:0; right:0;
+    top:0;
+    bottom:0; left:0; right:0;
     background:rgba(0,0,0,0.8);
     color:#fff;
     line-height: 2rem;
