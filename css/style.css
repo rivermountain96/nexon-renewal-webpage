@@ -352,7 +352,7 @@ vertical-align: 9px;
     right: 15px;
 }
 /*chev-wrap 삭제여부*/
-.left {
+/* .left {
     left: 0px;
     transform:translateX(-100%);
 } 
@@ -364,7 +364,7 @@ vertical-align: 9px;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-}
+} */
 /* MAIN-03 NEW-GAMES */
 .new-game{
     width: 1280px;
@@ -627,6 +627,10 @@ vertical-align: 9px;
 
 .all-game > .view-wrapper{
     position: relative;
+}
+
+.main5-big-slide-container{
+    transition: transform .3s ease-in;
 }
 
 .all-game > .view-wrapper > .main5-slide-wrapper{
@@ -902,11 +906,11 @@ vertical-align: 9px;
 .main5-slide-container > .slide12.s1 > .slide-img{
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
 }
-/* 
+
 .chev-wrap{
     position:absolute;
     top:50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
 }
 
 .chev-wrap.left{
@@ -914,8 +918,12 @@ vertical-align: 9px;
 }
 .chev-wrap.right{
     left: calc(100% + 30px);
-    transform: translateX(50%);
-} */
+}
+
+.left.disabled,
+.right.disabled {
+    display: none;
+}
 
 .tag-view-wrapper{
     position: absolute;

@@ -1,6 +1,7 @@
 /* 이현정 구현 부분*/ 
 /* main carousel */
 
+/*
 let slideWrapper = document.querySelector(".mainslide-wrapper");
 let slideContainer = slideWrapper.querySelector(".mainslide-container");
 let slides = slideContainer.querySelectorAll(".mainslide");
@@ -101,6 +102,7 @@ slideWrapper.addEventListener("mouseover", () => {
 slideWrapper.addEventListener("mouseout", () => {
   autoSlide();
 });
+*/
 
 /* 이현정 구현 부분 종료*/ 
 
@@ -113,16 +115,31 @@ slideWrapper.addEventListener("mouseout", () => {
 
 // main5 start
 
-// let main5SWrapper = document.querySelector('.main5-slide-wrapper'),
-//     main5SContainer = main5SWrapper.querySelector('.main5-big-slide-container'),
-//     main5Slides= main5SContainer.querySelectorAll('.main5-slide-container'),
-//     main5slideCount = main5Slides.length,
-//     main5currentSlideIdx = 0,
-//     main5prevBtn = main5SWrapper.querySelector('.main5-chev-wrap.left'),
-//     main5nextBtn = main5SWrapper.querySelector('.main5-chev-wrap.right'),
-//     timer,
-//     main5SlideWidth = `1280px`;
+let slideWrapper = document.querySelector('.main5-slide-wrapper'),
+    slideContainer = slideWrapper.querySelector('.main5-big-slide-container'),
+    slides = slideContainer.querySelectorAll('.main5-slide-container'),
+    slides1 = slideContainer.querySelector('.main5-slide-container:first-child'),
+    slideCount = slides.length,
+    currentSlideIdx = 0,
+    prevBtn = slideWrapper.querySelector('.chev-wrap.left'),
+    nextBtn = slideWrapper.querySelector('.chev-wrap.right'),
+    timer,
+    slideWidth = slides1.offsetWidth;
 
-// main5 done
+    console.log(nextBtn);
+    console.log(prevBtn);
 
-/* 이은서 구현 부분 종료*/ 
+function setSlide() {
+  if(slideCount > 1){
+    let containerWidth = slideWidth * slideCount;
+    
+    slideContainer.style.width = `${containerWidth}px`;
+
+    slides.forEach((item, idx) => {
+      item.style.width = `${slideWidth}px`;
+  });
+};
+}
+setSlide();
+
+console.log(currentSlideIdx);
