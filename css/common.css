@@ -262,10 +262,9 @@ body {
   color: #3182f6;
 }
 
-.tag:focus {
+.tag.clicked {
   background-color: #3182f6;
   color: #fff;
-  box-shadow: 0 0 0 3px #1b64da inset;
 }
 
 /*footer btn*/

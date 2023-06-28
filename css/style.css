@@ -235,7 +235,7 @@ header {
 
 
 
-.pager {
+.mainslide-wrapper .pager {
   position: absolute;
   left: 0;
   right: 0;
@@ -351,12 +351,12 @@ vertical-align: 9px;
     bottom: 15px;
     right: 15px;
 }
-/*chev-wrap 삭제여부*/
-/* .left {
-    left: 0px;
+/* chev-wrap 삭제여부 */
+.chev-wrap.left {
+    left: -30px;
     transform:translateX(-100%);
 } 
-.right{
+.chev-wrap.right{
     right: -30px;
     transform:translateX(100%);
 }
@@ -364,7 +364,8 @@ vertical-align: 9px;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-} */
+}
+
 /* MAIN-03 NEW-GAMES */
 .new-game{
     width: 1280px;
@@ -492,7 +493,7 @@ vertical-align: 9px;
 
 .all-game{
     width: 1280px;
-    margin: 0 auto 96px auto;
+    margin: 96px auto;
 }
 
 .all-game > .all-game-header{
@@ -629,14 +630,27 @@ vertical-align: 9px;
     position: relative;
 }
 
-.main5-big-slide-container{
-    transition: transform .3s ease-in;
-}
-
 .all-game > .view-wrapper > .main5-slide-wrapper{
     position: relative;
     width: 100%;
     height: 450px;
+    overflow: hidden;
+}
+.main5-slide-chev-wrap{
+    display: none;
+}
+.main5-slide-chev-wrap.active{
+    display: block;
+}
+
+.main5-big-slide-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    left:0;
+    transition: left .6s ease-in;
 }
 
 .main5-slide-wrapper, .tag-view-wrapper, .all-view-wrapper{
@@ -647,13 +661,16 @@ vertical-align: 9px;
 }
 
 
-.main5-slide-wrapper .page-num{
+.page-num{
     color:#fff;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 0 30px;
     line-height: 33px;
     border-radius: 16.5px;
 }
+
+
+
 
 .main5-slide-wrapper > .page-num{
     position: absolute;
@@ -907,26 +924,13 @@ vertical-align: 9px;
     background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
 }
 
-.chev-wrap{
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-}
-
-.chev-wrap.left{
-    right: calc(100% + 30px);
-}
-.chev-wrap.right{
-    left: calc(100% + 30px);
-}
-
 .left.disabled,
 .right.disabled {
     display: none;
 }
 
 .tag-view-wrapper{
-    position: absolute;
+    position: relative;
     top: 0%;
 }
 
@@ -999,7 +1003,7 @@ vertical-align: 9px;
 }
 
 .all-view-wrapper{
-    position: absolute;
+    position: relative;
     top:0;
 }
 
