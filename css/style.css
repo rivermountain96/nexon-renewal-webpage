@@ -1,9 +1,9 @@
 /* HEADER */
- header.main-tt {
+ header .main-tt {
   padding-top: 71px;
   text-align: center;
 }
-header.main-tt > a {
+header .main-tt > a {
   width: 242px;
   height: 42px;
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/d0b3ab6a-afbb-40f8-aae1-e4678bebdf45/image.png");
@@ -229,8 +229,16 @@ header {
 .mainslide-wrapper .chev-wrap.right {
   position: absolute;
   top: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+  transform: translateY(-50%);
+  z-index:3;
+  
+}
+
+.mainslide-wrapper .chev-wrap.left{
+    left:230px;
+}
+.mainslide-wrapper .chev-wrap.right{
+    right:230px;
 }
 
 
