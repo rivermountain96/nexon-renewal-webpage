@@ -1165,12 +1165,10 @@ header {
 }
 
 .footer-logowrap {
-  /* float: left; */
   position: relative;
   margin-bottom: 30px;
 }
 .snsnlangs {
-  /* float: right; */
   position: absolute;
   top: 8px;
   right: 0;
@@ -1191,6 +1189,12 @@ header {
 .snswrap:hover,
 .langswrap:hover {
   background-color: #2272eb;
+}
+
+.snswrap span:hover i,
+.langswrap span:hover:last-child {
+ transform: translateY(-3px);
+ cursor: pointer;
 }
 
 .snswrap span:first-child {
@@ -1246,25 +1250,3 @@ address {
   letter-spacing: 0.02rem;
 }
 
-.snswrap > span:hover  {
-  top: 0%;
-  bottom: 0%;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  line-height: 2rem;
-  display: block;
-  animation: footer 0.3s;
-  animation-fill-mode: both;
-}
-@keyframes footer {
-  from {
-    transform: translateY(0%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(5%);
-    opacity: 1;
-  }
-}
