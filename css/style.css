@@ -292,19 +292,20 @@ vertical-align: 9px;
 }
 .rc-slide-wrapper{
     height: 404px;
-    position: relative;  
+    position: relative;
+    transition: 0.3s;
 }
 .rc-slide-container{
     box-sizing: border-box;
+    transition: 0.3s;
+    position: relative;
 }
 .rc-slide-container > li{
     float: left;
-    /* width: 305px; */
-    box-sizing: border-box;
-    
+    width: 305px;
 }
 .rc-slide-container li + li{
-    margin-left: 16px;
+    margin-left: 20px;
 }
 .rc-slide-container img{
     object-fit:cover;
@@ -354,16 +355,20 @@ vertical-align: 9px;
 /*chev-wrap 삭제여부*/
 .chev-wrap.left {
     left: -30px;
-    transform:translateX(-100%);
+    transform:translate(-100%, -50%);
 } 
 .chev-wrap.right{
     right: -30px;
-    transform:translateX(100%);
+    transform:translate(100%, -50%);
 }
 .chev-wrap{
     position: absolute;
     top:50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
+}
+#rc-prev.disabled,
+#rc-next.disabled{
+    display: none;
 }
 /* MAIN-03 NEW-GAMES */
 .new-game{
@@ -377,9 +382,8 @@ vertical-align: 9px;
 .new-slide-wrapper{
     width:1280px;
     margin: 0 auto;
-    /* height: 252px; */
     position: relative;  
-    padding-bottom: 96px;
+    /* padding-bottom: 96px; */
     height: 348px;
 }
 
@@ -1039,6 +1043,7 @@ vertical-align: 9px;
   background-position: center center;
   background-repeat: no-repeat;
   height: 365px;
+  margin-top: 96px;
 }
 .bannerWrapper .banner-video{
   width: 1280px;
