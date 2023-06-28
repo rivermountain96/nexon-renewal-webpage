@@ -139,7 +139,7 @@ function moveSlide(num){
   if(CurrentSlideIdx === 0){
     prevBtn.classList.add('disabled');
   } else {
-    prevtBtn.classList.remove('disabled');
+    prevBtn.classList.remove('disabled');
   }
 }
 moveSlide(0);
