@@ -122,7 +122,20 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     slideChev = document.querySelector('.view-wrapper .main5-slide-chev-wrap'),
     allViewWrapper = document.querySelector('.view-wrapper .all-view-wrapper'),
     tagViewWrapper = document.querySelector('.view-wrapper .tag-view-wrapper'),
-    tags = document.querySelectorAll('.tag-list-wrapper .tag-list ul li');
+    tags = document.querySelectorAll('.tag-list-wrapper .tag-list ul li'),
+    allPageNum = allViewWrapper.querySelector('.page-num'),
+    allViewPages = allViewWrapper.querySelectorAll('.all-view > li'),
+    pager = allViewWrapper.querySelector('.pager'),
+    pagerHTML = '',
+    pageCount = allViewPages.length;
+  
+
+allViewPages.forEach(()=>{
+  pagerHTML += `<a href="" class="mono-light2-bg"></a>`;
+})
+
+pager.innerHTML = pagerHTML;
+let pagerBtn = pager.querySelectorAll('a');
     
 seeTypeBtn.forEach((item, idx) => {
   item.addEventListener('click', (e) => {
@@ -172,12 +185,7 @@ let slideContainer = slideWrapper.querySelector('.main5-big-slide-container'),
     timer,
     prevBtn = document.querySelector('.view-wrapper .chev-wrap.left'),
     nextBtn = document.querySelector('.view-wrapper .chev-wrap.right')
-    pageNum = slideWrapper.querySelector('.page-num');
-    
-
-console.log(slides)
-console.log(nextBtn);
-console.log(prevBtn);
+    slidePageNum = slideWrapper.querySelector('.page-num');
 
 
 if(slideCount > 1){
@@ -200,7 +208,7 @@ function moveSlide(num) {
   } else {
     prevBtn.classList.remove('disabled');
   }
-  pageNum.innerText = `${(currentSlideIdx+1)*4} / 45`;
+  slidePageNum.innerText = `${(currentSlideIdx+1)*4} / 45`;
   slides[currentSlideIdx].classList.add('active');
 }
 
