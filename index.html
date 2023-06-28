@@ -47,7 +47,7 @@
               />
             </li>
           </ul>
-          <ul class="menu-bar content-tt">
+          <ul class="menu-bar content-tt" id="tab-menu">
             <li >
               <a href="">전체게임</a>
               <div class="menu-bar-imgsboxwrap content-desc-bl mono-light1-bg">
@@ -515,15 +515,15 @@
             </li>
 
             <li>
-              <a href="">추천게임</a>
+              <a href="#recommend-game">추천게임</a>
             </li>
             <li>
-              <a href="">신규게임</a>
+              <a href="#new-game">신규게임</a>
             </li>
             <li>
-              <a href="">추천영상</a>
+              <a href="#recommend-video">추천영상</a>
             </li>
-            <li class="">
+            <li>
               <a href="">전체서비스</a>
               <div class="menu-bar-allservice content-desc-bl mono-light1-bg">
                 <ul class="menu-bar-allservicebox">
@@ -562,7 +562,7 @@
       </div>
     </header>
      <!-- main carousel -->
-     <main>
+     <main id="tab-contents">
       <section>
         <div class="mainslide-wrapper">
           <ul class="mainslide-container cf">
@@ -596,7 +596,7 @@
 
     <!-- 이강산 구현 시작 RECOMMENDED & NEW GAMES CAROUSEL -->
     <!-- RECOMMNED GAMES -->
-        <section class="recommend-game big-pd">
+        <section class="recommend-game big-pd" id="recommend-game">
             <h2 class="main-stt">추천게임</h2>
             <p class="content-stt">#지금 가장 많이 접속하고 있는</p>
               <div class="rc-slide-wrapper">
@@ -655,7 +655,7 @@
               <!-- </div> -->
         </section>
         <!-- NEW GAMES -->
-        <section class="new-game">
+        <section class="new-game" id="new-game">
           <h2 class="main-stt">신규게임</h2>
           <div class="new-slide-wrapper">
             <ul class="new-slide-container cf">
@@ -1763,7 +1763,7 @@
     <!-- 이은서 구현 끝 -->
 
     <!-- 한지희 구현 RECOMMENDED-VIDEO & FOOTER-01 2023.6.27 version 2 -->
-    <section class="videoWrapper container">
+    <section class="videoWrapper container" id="recommend-video">
       <h2 class="main-stt md-pd">추천영상</h2>
       <figure>
         <ul class="cf">

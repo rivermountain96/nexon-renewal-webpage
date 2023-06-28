@@ -102,6 +102,22 @@ slideWrapper.addEventListener("mouseout", () => {
   autoSlide();
 });
 
+//탭이동 
+let tabMenu = document.querySelectorAll("#tab-menu li a");
+let tabSection = document.querySelectorAll("#tab-contents > section");
+
+tabMenu.forEach((item)=>{
+  item.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let tabTargetId = e.target.getAttribute("href");
+    let tabTargetOST = document.querySelector(tabTargetId).offsetTop;
+    window.scrollTo({left:0, top:tabTargetOST, behavior:"smooth"});
+  });
+});
+
+
+
+
 /* 이현정 구현 부분 종료*/ 
 
 /* 이강산 구현 부분 */ 

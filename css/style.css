@@ -80,6 +80,9 @@ header {
 
 }
 
+
+
+
 .menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
   display: block;
 }
