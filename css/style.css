@@ -43,6 +43,7 @@ header {
 .nav > ul:first-child > li > a:hover:first-child,
 .nav > ul:first-child > li > a:hover:nth-child(5) {
   color: #1b64da;
+
 }
 .nav .pc {
   position: absolute;
@@ -75,6 +76,8 @@ header {
 
 .menu-bar li:hover > a {
   color: #1b64da;
+  font-weight: bold;
+
 }
 
 .menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
@@ -103,6 +106,8 @@ header {
   font-weight: 500;
 }
 
+
+
 .menu-bar-imgsbox {
   width: 238px;
   float: left;
@@ -123,17 +128,10 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  /* float: left; */
   display: block;
-}
-.menu-bar-imgsbox li a span:nth-child(1) {
-  /* display: inline-block; */
 }
 
 .menu-bar-imgsbox li a span:nth-child(2) {
-  /* display: inline-block;
-  margin-left: 10px; */
-  /* float: right; */
   position: absolute;
   top: 0;
   left: 42px;
@@ -148,12 +146,12 @@ header {
   width: 211px;
   box-sizing: border-box;
   padding: 50px;
-  /* border: 1px solid red; */
   border-top: 5px solid #4593fc;
   background-color: #fbfbfb;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: none;
   z-index: 10;
+  font-weight: 500;
 }
 
 .menu-bar-allservicebox {
@@ -163,7 +161,6 @@ header {
 
 .menu-bar-allservicebox > li {
   width: 100%;
-  /* border: 1px solid blue; */
   height: 40px;
   margin-bottom: 13px;
 }
@@ -177,15 +174,12 @@ header {
 
 .mainslide-wrapper {
   position: relative;
-  /* height: 500px; */
   width: 100%;
-  /* margin: 0 auto; */
   overflow: hidden;
   box-sizing: border-box;
 }
 
 .mainslide-container {
-  /* position:relative; */
   margin: 0;
   padding: 0;
   transition: transform 0.5s ease-in;
@@ -1235,7 +1229,7 @@ header {
   box-sizing: border-box;
   float: left;
   list-style: none;
-  margin-left: 33px;
+  margin-left: 32px;
   font-weight: 600;
 }
 
@@ -1250,4 +1244,27 @@ header {
 address {
   font-weight: 300;
   letter-spacing: 0.02rem;
+}
+
+.snswrap > span:hover  {
+  top: 0%;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  line-height: 2rem;
+  display: block;
+  animation: footer 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes footer {
+  from {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(5%);
+    opacity: 1;
+  }
 }
