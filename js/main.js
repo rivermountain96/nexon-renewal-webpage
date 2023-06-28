@@ -116,6 +116,26 @@ tabMenu.forEach((item)=>{
 });
 
 
+//BackToTop
+let btnBtt = document.querySelector("#go-top");
+let scrollAmt = 0;
+
+window.addEventListener("scroll",()=>{
+  scrollAmt = window.scrollY;
+
+  if(scrollAmt > 300){
+    btnBtt.classList.add("active");
+  }else{
+    btnBtt.classList.remove("active");
+  }
+});
+
+btnBtt.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.scrollTo({
+    left:0,top:0, behavior:"smooth"
+  });
+})
 
 
 /* 이현정 구현 부분 종료*/ 

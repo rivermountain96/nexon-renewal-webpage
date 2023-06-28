@@ -1253,3 +1253,31 @@ address {
   letter-spacing: 0.02rem;
 }
 
+/* go-top */
+#go-top{
+  width: 60px;
+  height:60px;
+  border-radius:10px;
+  color:#4593fc;
+  font-size: 36px;
+  box-shadow: 0 3px 10px .15;
+  position:fixed;
+  bottom: 65px;
+  right: 60px;
+  line-height: 60px;
+  text-align:center;
+  background-color:#fbfbfb;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+#go-top:hover{
+  border:3px solid #4593fc;
+}
+
+#go-top.active{
+  opacity:1;
+  visibility:visible;
+}
