@@ -111,6 +111,7 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     slideContainer = slideWrapper.querySelector('.rc-slide-container'), //ul
     slides = slideContainer.querySelectorAll('li'),
     slidesCount = slides.length,
+    slidesPerView = 4,
     slideWidth = 305,
     slideMargin = 20,
     currentSlideIdx = 0,
@@ -118,7 +119,33 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     nextBtn = document.querySelector('#rc-next');
 
 
-//  슬라이드가 일단 있어야겠지? 근데 슬라이드가 하나 이상이니까 조건을 짜서 가로로 배열하는거겠지
+for(let i = 0; i < slidesCount; i++){
+  let cloneSlide = slides[i].cloneNode(true);
+  cloneSlide.classList.add('clone');
+  slideContainer.appendChild(cloneSlide);
+}
+
+for(let i = slidesCount - 1; i >= 0; i--){
+  let cloneSlide = slides[i].cloneNode(true);
+  cloneSlide.classList.add('clone');
+  slideContainer.prepend(cloneSlide);
+}
+
+
+//  슬라이드는 원래 있던 것들만 배치함. 복사본들도 돌아가게끔 해줘야함
+// 그러므로 다시 슬라이드 변수 선언(4개 -> 8개)
+let newSlides = document.querySelectorAll('.rc-slide-container li')
+
+slides.forEach((slide,idx)=>{
+  slide.style.left = `${idx*(slideWidth+slideMargin)}px`;
+});
+
+// 원래 보는시점을 클론 첫번째말고 오리지날 첫번째로 맞춰
+function setSlide(){
+  // ul {transform:translate(-3000px)}
+  let ulMoveAmt = `${slidesCount*(slideWidth + slideMargin)}px`;
+  slideContainer.style.transform = `translateX(${ulMoveAmt})`;
+}
 
 
 
@@ -130,13 +157,25 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
 
 
 
+//슬라이드 이동함수
+function moveSlide(num){
+  slideContainer.style.left = `${-num*(slideWidth+slideMargin)}px`;
+  currentSlideIdx = num;
+
+}
 
 // 좌우컨트롤
+nextBtn.addEventListener('click',()=>{
 
+  moveSlide(currentSlideIdx+1);
 
+});
 
+prevBtn.addEventListener('click',()=>{
 
+  moveSlide(currentSlideIdx-1);
 
+});
 
 
 
