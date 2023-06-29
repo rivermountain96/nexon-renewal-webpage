@@ -111,7 +111,7 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     slideContainer = slideWrapper.querySelector('.rc-slide-container'), //ul
     slides = slideContainer.querySelectorAll('li'),
     slidesCount = slides.length,
-    CurrentSlideIdx = 0,
+    currentSlideIdx = 0,
     prevBtn = document.querySelector('#rc-prev'),
     nextBtn = document.querySelector('#rc-next');
 
@@ -126,17 +126,18 @@ if(slidesCount > 1){
 // 슬라이드 이동 함수
 function moveSlide(num){
   slideContainer.style.left = `${num*-100}%`;
-  CurrentSlideIdx = num;
+  currentSlideIdx = num;
 
   //마지막이면 disabled 클래스명 추가 아니면 제거
-  if(slidesCount - 1 == CurrentSlideIdx){
+  if(currentSlideIdx === slidesCount-1){
     nextBtn.classList.add('disabled');
-  } else {
+  }
+else {
     nextBtn.classList.remove('disabled');
   }
 
   //처음이면
-  if(CurrentSlideIdx === 0){
+  if(currentSlideIdx === 0){
     prevBtn.classList.add('disabled');
   } else {
     prevBtn.classList.remove('disabled');
@@ -148,13 +149,13 @@ moveSlide(0);
 // 좌우버튼으로 슬라이드 넘기기
   nextBtn.addEventListener('click',()=>{
     if(slidesCount - 1 > CurrentSlideIdx){
-    moveSlide(CurrentSlideIdx + 1);
+    moveSlide(currentSlideIdx + 1);
     }
   });
 //이전버튼
   prevBtn.addEventListener('click',()=>{
-    if(CurrentSlideIdx > 0){
-    moveSlide(CurrentSlideIdx - 1);
+    if(currentSlideIdx > 0){
+    moveSlide(currentSlideIdx - 1);
     }
   });
 

@@ -303,6 +303,10 @@ vertical-align: 9px;
 .rc-slide-container > li{
     float: left;
     width: 305px;
+    /* position: absolute; */
+}
+.rc-slide-container li{
+    margin-left: 20px;
 }
 .rc-slide-container li + li{
     margin-left: 20px;
