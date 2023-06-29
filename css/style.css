@@ -297,7 +297,6 @@ vertical-align: 9px;
 }
 .rc-slide-container{
     box-sizing: border-box;
-    transition: 0.3s;
     position: relative;
 }
 .rc-slide-container > li{
@@ -308,8 +307,8 @@ vertical-align: 9px;
 .rc-slide-container li{
     margin-left: 20px;
 }
-.rc-slide-container li + li{
-    margin-left: 20px;
+.rc-slide-container li:nth-child(4n+1){
+    margin-left: 0px;
 }
 .rc-slide-container img{
     object-fit:cover;

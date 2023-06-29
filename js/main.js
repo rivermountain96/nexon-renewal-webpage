@@ -111,53 +111,14 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     slideContainer = slideWrapper.querySelector('.rc-slide-container'), //ul
     slides = slideContainer.querySelectorAll('li'),
     slidesCount = slides.length,
+    slideWidth = 305,
+    slideMargin = 20,
     currentSlideIdx = 0,
     prevBtn = document.querySelector('#rc-prev'),
     nextBtn = document.querySelector('#rc-next');
 
 
 //  슬라이드가 일단 있어야겠지? 근데 슬라이드가 하나 이상이니까 조건을 짜서 가로로 배열하는거겠지
-if(slidesCount > 1){
-  slides.forEach((item,idx)=>{
-    item.style.left = `${idx*100}%`
-  })
-}
-
-// 슬라이드 이동 함수
-function moveSlide(num){
-  slideContainer.style.left = `${num*-100}%`;
-  currentSlideIdx = num;
-
-  //마지막이면 disabled 클래스명 추가 아니면 제거
-  if(currentSlideIdx === slidesCount-1){
-    nextBtn.classList.add('disabled');
-  }
-else {
-    nextBtn.classList.remove('disabled');
-  }
-
-  //처음이면
-  if(currentSlideIdx === 0){
-    prevBtn.classList.add('disabled');
-  } else {
-    prevBtn.classList.remove('disabled');
-  }
-}
-moveSlide(0);
-
-
-// 좌우버튼으로 슬라이드 넘기기
-  nextBtn.addEventListener('click',()=>{
-    if(slidesCount - 1 > CurrentSlideIdx){
-    moveSlide(currentSlideIdx + 1);
-    }
-  });
-//이전버튼
-  prevBtn.addEventListener('click',()=>{
-    if(currentSlideIdx > 0){
-    moveSlide(currentSlideIdx - 1);
-    }
-  });
 
 
 
@@ -170,17 +131,7 @@ moveSlide(0);
 
 
 
-
-  // nextBtn.addEventLister('click',()=>{
-  //   //마지막이 아니라면
-  //   if(slideCount>)
-  //   moveSlide(CurrentSlideIdx + 1);
-  // });
-
-
-
-  
-
+// 좌우컨트롤
 
 
 
