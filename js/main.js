@@ -2,105 +2,223 @@
 /* main carousel */
 
 let mainSlideWrapper = document.querySelector(".mainslide-wrapper");
-let mainSlideContainer = mainSlideWrapper.querySelector(".mainslide-container");
-let mainSlides = mainSlideContainer.querySelectorAll(".mainslide");
+let mainSlideContainer = mainSlideWrapper.querySelector("ul");
+let mainSlides = mainSlideContainer.querySelectorAll("li");
 let mainSlideCount = mainSlides.length;
 let mainCurrentSlideIdx = 0;
 let mainPager = mainSlideWrapper.querySelector(".pager");
 let mainTimer;
 let mainPagerHTML = "";
-let mainslideWidth = document.body.offsetWidth;
+let mainSlideWidth = document.body.offsetWidth;
 let mainPrevBtn = mainSlideWrapper.querySelector("#prev");
 let mainNextBtn = mainSlideWrapper.querySelector("#next");
 
-function mainSetSlide() {
-  if (mainSlideCount > 1) {
-    let mainContainerWidth = mainslideWidth * mainSlideCount;
-    mainSlideContainer.style.width = `${mainContainerWidth}px`;
+// mainSlideContainer.style.width = `${mainSlideCount * mainSlideWidth}px`;
 
-    mainSlides.forEach((item, idx) => {
-      item.style.width = `${mainslideWidth}px`;
-      let url = item.getAttribute("data-url");
-      let title = item.getAttribute("data-title");
-      // console.log(url);
-      // console.log(title);
-
-      mainPagerHTML += `<a href="">
-      <span>
-        <img
-          src=${url}
-        />
-      </span>
-      <span>${title}</span>
-    </a>
-    `;
-    });
-  }
+for (let i = 0; i < mainSlideCount; i++) {
+  let cloneSlide = mainSlides[i].cloneNode(true);
+  cloneSlide.classList.add("clone");
+  mainSlideContainer.appendChild(cloneSlide);
+}
+for (let i = mainSlideCount - 1; i >= 0; i--) {
+  let cloneSlide = mainSlides[i].cloneNode(true);
+  cloneSlide.classList.add("clone");
+  mainSlideContainer.prepend(cloneSlide);
 }
 
-mainSetSlide();
+newSlides = document.querySelectorAll(".mainslide-container li");
 
-mainPager.innerHTML = mainPagerHTML;
-let mainPagerBtn = mainPager.querySelectorAll("a");
+newSlides.forEach((slide, idx) => {
+  slide.style.left = `${idx * mainSlideWidth}px`;
+});
 
-function mainMoveSlide(num) {
-  mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
+function setSlide() {
+  // ul {transform:translateX(-3000px)}
+  let ulMoveAmt = mainSlideWidth * -mainSlideCount + "px";
+  mainSlideContainer.style.transform = `translateX(${ulMoveAmt})`;
+  mainSlideContainer.classList.add("animated");
+}
+setSlide();
+
+function moveSlide(num) {
+  mainSlideContainer.style.left = -num * mainSlideWidth + "px";
   mainCurrentSlideIdx = num;
-  // console.log(mainCurrentSlideIdx);
-
-  updateNav();
+  console.log(mainCurrentSlideIdx);
+  if (
+    mainCurrentSlideIdx == -mainSlideCount ||
+    mainCurrentSlideIdx == mainSlideCount
+  ) {
+    setTimeout(() => {
+      mainSlideContainer.classList.remove("animated");
+      mainSlideContainer.style.left = "0px";
+      mainCurrentSlideIdx = 0;
+    }, 500);
+    setTimeout(() => {
+      mainSlideContainer.classList.add("animated");
+    }, 600);
+  }
+  setPager();
 }
 
-updateNav();
-
-function updateNav() {
-  for (let sl of mainSlides) {
-    sl.classList.remove("active");
-  }
-  mainSlides[mainCurrentSlideIdx].classList.add("active");
-
-  for (let pb of mainPagerBtn) {
-    pb.classList.remove("active");
-  }
-  mainPagerBtn[mainCurrentSlideIdx].classList.add("active");
+function debounce(callback, time) {
+  let slideTrigger = true;
+  return () => {
+    if (slideTrigger) {
+      callback();
+      slideTrigger = false;
+      setTimeout(() => {
+        slideTrigger = true;
+      }, time);
+    }
+  };
 }
 
-mainNextBtn.addEventListener("click", () => {
-  if (mainCurrentSlideIdx < mainSlideCount - 1) {
-    mainMoveSlide(mainCurrentSlideIdx + 1);
-  }
-});
+//좌우 컨트롤
+mainNextBtn.addEventListener(
+  "click",
+  debounce(() => {
+    moveSlide(mainCurrentSlideIdx + 1);
+  }, 500)
+);
+mainPrevBtn.addEventListener(
+  "click",
+  debounce(() => {
+    moveSlide(mainCurrentSlideIdx - 1);
+  }, 500)
+);
 
-mainPrevBtn.addEventListener("click", () => {
-  if (mainCurrentSlideIdx > 0) {
-    mainMoveSlide(mainCurrentSlideIdx - 1);
-  }
-});
-
-mainPagerBtn.forEach((item, idx) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    mainMoveSlide(idx);
-  });
-});
-
-//자동 슬라이드
-function mainAutoSlide() {
-  mainTimer = setInterval(() => {
-    let nextIdx = (mainCurrentSlideIdx + 1) % mainSlideCount;
-    mainMoveSlide(nextIdx);
-  }, 3000);
-}
-
-mainAutoSlide();
+//무한 캐러셀
+let slideinfi = setInterval(() => {
+  moveSlide(mainCurrentSlideIdx + 1);
+}, 5000);
 
 mainSlideWrapper.addEventListener("mouseover", () => {
-  clearInterval(mainTimer);
+  clearInterval(slideinfi);
 });
 
 mainSlideWrapper.addEventListener("mouseout", () => {
-  mainAutoSlide();
+  slideinfi = setInterval(() => {
+    moveSlide(mainCurrentSlideIdx + 1);
+  }, 5000);
 });
+
+//pager
+
+function setPager() {
+  mainSlides.forEach((item, idx) => {
+    let url = item.getAttribute("data-url");
+    let title = item.getAttribute("data-title");
+
+    mainPagerHTML += `<a href="#">
+      <span>
+        <img src="${url}" />
+      </span>
+      <span>${title}</span>
+    </a>`;
+  });
+
+  mainPager.innerHTML = mainPagerHTML;
+
+  let mainPagerBtn = mainPager.querySelectorAll("a");
+
+  mainPagerBtn.forEach((btn, index) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      moveSlide(index - mainSlideCount);
+    });
+  });
+}
+
+setPager();
+
+// function mainSetSlide() {
+//   if (mainSlideCount > 1) {
+//     let mainContainerWidth = mainslideWidth * mainSlideCount;
+//     mainSlideContainer.style.width = `${mainContainerWidth}px`;
+
+//     mainSlides.forEach((item, idx) => {
+//       item.style.width = `${mainslideWidth}px`;
+//       let url = item.getAttribute("data-url");
+//       let title = item.getAttribute("data-title");
+//       // console.log(url);
+//       // console.log(title);
+
+//       mainPagerHTML += `<a href="">
+//       <span>
+//         <img
+//           src=${url}
+//         />
+//       </span>
+//       <span>${title}</span>
+//     </a>
+//     `;
+//     });
+//   }
+// }
+
+// mainSetSlide();
+
+// mainPager.innerHTML = mainPagerHTML;
+// let mainPagerBtn = mainPager.querySelectorAll("a");
+
+// function mainMoveSlide(num) {
+//   mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
+//   mainCurrentSlideIdx = num;
+//   // console.log(mainCurrentSlideIdx);
+
+//   updateNav();
+// }
+
+// updateNav();
+
+// function updateNav() {
+//   for (let sl of mainSlides) {
+//     sl.classList.remove("active");
+//   }
+//   mainSlides[mainCurrentSlideIdx].classList.add("active");
+
+//   for (let pb of mainPagerBtn) {
+//     pb.classList.remove("active");
+//   }
+//   mainPagerBtn[mainCurrentSlideIdx].classList.add("active");
+// }
+
+// mainNextBtn.addEventListener("click", () => {
+//   if (mainCurrentSlideIdx < mainSlideCount - 1) {
+//     mainMoveSlide(mainCurrentSlideIdx + 1);
+//   }
+// });
+
+// mainPrevBtn.addEventListener("click", () => {
+//   if (mainCurrentSlideIdx > 0) {
+//     mainMoveSlide(mainCurrentSlideIdx - 1);
+//   }
+// });
+
+// mainPagerBtn.forEach((item, idx) => {
+//   item.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     mainMoveSlide(idx);
+//   });
+// });
+
+// //자동 슬라이드
+// function mainAutoSlide() {
+//   mainTimer = setInterval(() => {
+//     let nextIdx = (mainCurrentSlideIdx + 1) % mainSlideCount;
+//     mainMoveSlide(nextIdx);
+//   }, 3000);
+// }
+
+// mainAutoSlide();
+
+// mainSlideWrapper.addEventListener("mouseover", () => {
+//   clearInterval(mainTimer);
+// });
+
+// mainSlideWrapper.addEventListener("mouseout", () => {
+//   mainAutoSlide();
+// });
 
 //탭이동
 let tabMenu = document.querySelectorAll("#tab-menu li a");

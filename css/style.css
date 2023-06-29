@@ -127,9 +127,6 @@ header {
   /* float: left; */
   display: block;
 }
-.menu-bar-imgsbox li a span:nth-child(1) {
-  /* display: inline-block; */
-}
 
 .menu-bar-imgsbox li a span:nth-child(2) {
   /* display: inline-block;
@@ -187,17 +184,22 @@ header {
 }
 
 .mainslide-container {
-  /* position:relative; */
+  position: relative;
   margin: 0;
   padding: 0;
-  transition: transform 0.5s ease-in;
+  /* transition: transform 0.5s ease-in; */
   height: 500px;
 }
 
 .mainslide {
-  float: left;
-  position: relative;
+  position: absolute;
+  /* float: left;
+  position: relative; */
   /* height: 500px; */
+  /* left: 0;
+  top: 0; */
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -205,6 +207,10 @@ header {
   background-position: center center;
   background-size: cover;
   list-style: none;
+}
+
+.mainslide.animated {
+  transition: left 0.5s ease-in;
 }
 
 .mainslide1 {
@@ -259,7 +265,6 @@ header {
 .pager a {
   display: inline-block;
   width: 200px;
-
   height: 54px;
   margin: 10px 10px 0px 10px;
   cursor: pointer;
