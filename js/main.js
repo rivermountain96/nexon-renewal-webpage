@@ -220,7 +220,7 @@ if(allslideCount > 1){
   })
 };
 
-function moveSlide(num) {
+function allmoveSlide(num) {
   allslideContainer.style.left = `${-num * 100}%`
   allcurrentSlideIdx = num;
   if (allcurrentSlideIdx === allslideCount - 1) {
@@ -241,31 +241,31 @@ function moveSlide(num) {
   allslides[allcurrentSlideIdx].classList.add('active');
 }
 
-moveSlide(0);
+allmoveSlide(0);
 
 allnextBtn.addEventListener('click', () => {
   if (allcurrentSlideIdx != allslideCount - 1) {
-    moveSlide(allcurrentSlideIdx + 1)
+    allmoveSlide(allcurrentSlideIdx + 1)
   }
 });
 
 allprevBtn.addEventListener('click', () => {
   if (allcurrentSlideIdx > 0) {
-    moveSlide(allcurrentSlideIdx - 1)
+    allmoveSlide(allcurrentSlideIdx - 1)
   }
   if (allcurrentSlideIdx = allslideCount - 1) {
-    moveSlide(0);
+    allmoveSlide(0);
   }
 });
 
-function autoSlide() {
+function allautoSlide() {
   alltimer = setInterval(() => {
     let nextIdx = (allcurrentSlideIdx + 1) % allslideCount;
-    moveSlide(nextIdx);
+    allmoveSlide(nextIdx);
   }, 3000);
 }
 
-autoSlide();
+allautoSlide();
 
 let chevWrapp = document.querySelector('.main5-slide-chev-wrap');
 
@@ -273,11 +273,11 @@ allSlideWrapper.addEventListener('mouseenter', () => {
   clearInterval(alltimer);
 });
 allSlideWrapper.addEventListener('mouseleave', () => {
-  autoSlide();
+  allautoSlide();
 });
 chevWrapp.addEventListener('mouseenter', () => {
   clearInterval(alltimer);
 });
 chevWrapp.addEventListener('mouseleave', () => {
-  autoSlide();
+  allautoSlide();
 });
