@@ -127,15 +127,57 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     allViewPages = allViewWrapper.querySelectorAll('.all-view > li'),
     pager = allViewWrapper.querySelector('.pager'),
     pagerHTML = '',
-    pageCount = allViewPages.length;
+    pageCount = allViewPages.length,
+    currentPageIdx = 0;
+    
+console.log(currentPageIdx);
   
-
-allViewPages.forEach(()=>{
+allViewPages.forEach((page) => {
   pagerHTML += `<a href="" class="mono-light2-bg"></a>`;
 })
 
 pager.innerHTML = pagerHTML;
-let pagerBtn = pager.querySelectorAll('a');
+
+let pagerBtns = pager.querySelectorAll('a');
+
+function movepage(numb) {
+  currentPageIdx = numb;
+  for (let page of allViewPages) {
+    page.classList.remove('active');
+  } allViewPages[currentPageIdx].classList.add('active');
+  if (currentPageIdx == 3) {
+    allPageNum.innerText = `45 / 45`;
+  } else {
+    allPageNum.innerText = `${ (numb+1) * 12} / 45`;
+  }
+}
+movepage(0);
+
+pagerBtns.forEach((pagerBtn, idx) => {
+  pagerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    movepage(idx)
+    })
+})
+
+// pagerBtns.forEach((pagerBtn, idx) => {
+//   let currentPageIdx = `${idx+1}`;
+//   pagerBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     allViewPages.forEach((page) => {
+//       page.classList.remove('active');
+//     })
+//     allViewPages[idx].classList.add('active');
+//   })
+// })
+
+console.log(currentPageIdx);
+
+// if (currentSlideIdx == 11) {
+//   slidePageNum.innerText = `45 / 45`;
+// } else {
+//   slidePageNum.innerText = `${(currentSlideIdx + 1) * 4} / 45`;
+// }
     
 seeTypeBtn.forEach((item, idx) => {
   item.addEventListener('click', (e) => {
@@ -147,18 +189,22 @@ seeTypeBtn.forEach((item, idx) => {
   })
 })
 
-seeTypeSlide.addEventListener('click', () => {
-  slideWrapper.classList.add('active');
-  slideChev.classList.add('active');
+function activeMaster() {
+  slideWrapper.classList.remove('active');
+  slideChev.classList.remove('active');
   allViewWrapper.classList.remove('active');
   tagViewWrapper.classList.remove('active');
+};
+
+seeTypeSlide.addEventListener('click', () => {
+  activeMaster();
+  slideWrapper.classList.add('active');
+  slideChev.classList.add('active');
 })
 
 seeTypeAll.addEventListener('click', () => {
+  activeMaster();
   allViewWrapper.classList.add('active');
-  slideWrapper.classList.remove('active');
-  slideChev.classList.remove('active');
-  tagViewWrapper.classList.remove('active');
 })
 
 tags.forEach((tag) => {
@@ -167,15 +213,14 @@ tags.forEach((tag) => {
       tag.classList.remove('clicked');
     }
     e.currentTarget.classList.add('clicked');
-    slideWrapper.classList.remove('active');
-    slideChev.classList.remove('active');
-    allViewWrapper.classList.remove('active');
+    activeMaster();
     tagViewWrapper.classList.add('active');
     seeTypeBtn.forEach(item => {
       item.classList.remove('active');
     })
   })
 })
+
 
 let slideContainer = slideWrapper.querySelector('.main5-big-slide-container'),
     slides = slideContainer.querySelectorAll('.main5-slide-container'),
@@ -197,7 +242,6 @@ if(slideCount > 1){
 function moveSlide(num) {
   slideContainer.style.left = `${-num * 100}%`
   currentSlideIdx = num;
-  console.log(currentSlideIdx);
   if (currentSlideIdx === slideCount - 1) {
     nextBtn.classList.add('disabled');
   } else {
@@ -208,7 +252,11 @@ function moveSlide(num) {
   } else {
     prevBtn.classList.remove('disabled');
   }
-  slidePageNum.innerText = `${(currentSlideIdx+1)*4} / 45`;
+  if (currentSlideIdx == 11) {
+    slidePageNum.innerText = `45 / 45`;
+  } else {
+    slidePageNum.innerText = `${(currentSlideIdx + 1) * 4} / 45`;
+  }
   slides[currentSlideIdx].classList.add('active');
 }
 

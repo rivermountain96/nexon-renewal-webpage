@@ -530,6 +530,7 @@ vertical-align: 9px;
     position: absolute;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, .15);
     text-align: center;
+    transition: 0.3s ease-in;
 }
 
 .tag-list-wrapper > .see:hover{
@@ -575,6 +576,7 @@ vertical-align: 9px;
     border-radius: 35px;
     position: relative;
     margin-bottom: 50px;
+    transition: 0.3s ease-in;
 }
 
 .event-banner:hover{
@@ -769,7 +771,7 @@ vertical-align: 9px;
     bottom:0;
 }
 
-.main5-slide-container > .main5-slide > .contents > .tag-container > label{
+.main5-slide-container > .main5-slide > .contents > .tag-container > span{
     background-color: rgba(0, 0, 0, .5);
     line-height: 33px;
     display: inline-block;
@@ -779,7 +781,7 @@ vertical-align: 9px;
     font-size: 14px;
 }
 
-.main5-slide-container > .main5-slide > .contents > .tag-container > label+label{
+.main5-slide-container > .main5-slide > .contents > .tag-container > span+span{
     margin-left: 10px;
 }
 
@@ -1018,6 +1020,7 @@ vertical-align: 9px;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
+    transition: 0.3s ease-in;
 }
 
 .all-view-wrapper > .pager a+a{
