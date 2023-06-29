@@ -1042,32 +1042,42 @@ vertical-align: 9px;
   background-repeat: no-repeat;
   height: 365px;
   margin-bottom: 96px;
-  
 }
-.bannerWrapper > div{
-  
-  position: relative;
-  /* display: flex;
-  justify-content: right;
-  align-items: center;
-  position: relative;
-  padding-top: 53.11% */
+.bannerWrapper figure{
+    position: relative;
+    height: 100%;
 }
-.bannerWrapper .banner-video{
-  position: absolute;background: #1b64da;
-  background: rgba(0, 0, 0, 1);
-  transition: 0.3s;
-  top: 50%;
-  
+.bannerWrapper figure iframe{
+    position: absolute;
+    top: 50%;
+    right:0;
+    transform: translateY(-50%);
+    vertical-align: top;
+    border-radius: 10px;
+    transition: .3s;
 }
-.bannerWrapper iframe:hover :after{
-  background: rgba(0, 0, 0, 0.7);
-  content:"";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.bannerWrapper figure iframe.active{
+    filter: brightness(0.7);
+}
+.bannerWrapper figure div:after{
+    content: "";
+    /* width: 18px;height: 20px; */
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    border-style:solid;
+    border-width:8px 11px;
+    border-color: transparent transparent transparent #fff;
+}
+.bannerWrapper figure div{
+    width: 68px;
+    height: 48px;
+    background-color: #c00;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+    border-radius: 15px;
 }
 /* MAIN-06 RECOMMENDED-VIDEO */
 .videoWrapper ul{
