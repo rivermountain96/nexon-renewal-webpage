@@ -105,82 +105,99 @@
 /* 이현정 구현 부분 종료*/ 
 
 /* 이강산 구현 부분 */ 
-
+/* recommend game */
 // 변수 지정
-let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
-    slideContainer = slideWrapper.querySelector('.rc-slide-container'), //ul
-    slides = slideContainer.querySelectorAll('li'),
-    slidesCount = slides.length,
-    slidesPerView = 4,
-    slideWidth = 305,
-    slideMargin = 20,
-    currentSlideIdx = 0,
-    prevBtn = document.querySelector('#rc-prev'),
-    nextBtn = document.querySelector('#rc-next');
+let rcSlideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
+    rcSlideContainer = rcSlideWrapper.querySelector('.rc-slide-container'), //ul
+    rcSlides = rcSlideContainer.querySelectorAll('li'),
+    rcSlidesCount = rcSlides.length,
+    rcSlidesPerView = 4,
+    rcSlideWidth = 305,
+    rcSlideMargin = 16,
+    rcCurrentSlideIdx = 0,
+    rcPrevBtn = document.querySelector('#rc-prev'),
+    rcNextBtn = document.querySelector('#rc-next');
 
 //슬라이드 가로 너비지정
+rcSlideContainer.style.width = `${rcSlidesCount*(rcSlideWidth+rcSlideMargin)}px`;
 
-slideContainer.style.width = `${slidesCount*(slideWidth+slideMargin)}px`;
-
-for(let i = 0; i < slidesCount; i++){
-  let cloneSlide = slides[i].cloneNode(true);
-  cloneSlide.classList.add('clone');
-  slideContainer.appendChild(cloneSlide);
-}
-
-for(let i = slidesCount - 1; i >= 0; i--){
-  let cloneSlide = slides[i].cloneNode(true);
-  cloneSlide.classList.add('clone');
-  slideContainer.prepend(cloneSlide);
-}
-
-
-//  슬라이드는 원래 있던 것들만 배치함. 복사본들도 돌아가게끔 해줘야함
-// 그러므로 다시 슬라이드 변수 선언(4개 -> 8개)
-let newSlides = document.querySelectorAll('.rc-slide-container li')
-
-slides.forEach((slide,idx)=>{
-  slide.style.left = `${idx*(slideWidth+slideMargin)}px`;
-});
-
-// // 원래 보는시점을 클론 첫번째말고 오리지날 첫번째로 맞춰
-// function setSlide(){
-//   // ul {transform:translate(-3000px)}
-//   let ulMoveAmt = `${slidesCount*(slideWidth + slideMargin)}px`;
-//   slideContainer.style.transform = `translateX(${ulMoveAmt})`;
+// if(rcSlidesCount > 1){
+//   rcSlides.forEach((rcslide,idx)=>{
+//     rcslide.style.left = `${idx*(rcSlideWidth + rcSlideMargin)}px`
+//   });
 // }
-// setSlide();
-
-
-
-
-
-
-
-
-
 
 //슬라이드 이동함수
-function moveSlide(num){
-  slideContainer.style.left = `${-num*(slideWidth+slideMargin)}px`;
-  currentSlideIdx = num;
+function rcMoveSlide(num){
+  rcSlideContainer.style.left = `${-num*(rcSlideWidth + rcSlideMargin)}px`;
+  rcCurrentSlideIdx = num;
+  console.log(rcCurrentSlideIdx);
+  if (rcCurrentSlideIdx === rcSlidesCount - 1) {
+    rcNextBtn.classList.add('disabled');
+  } else {
+    rcNextBtn.classList.remove('disabled');
+  };
 
+  if(rcCurrentSlideIdx === 0){
+    rcPrevBtn.classList.add('disabled');
+  } else {
+    rcPrevBtn.classList.remove('disabled');
+  }
 }
 
 // 좌우컨트롤
-nextBtn.addEventListener('click',()=>{
-
-  moveSlide(currentSlideIdx+1);
-
+rcNextBtn.addEventListener('click',()=>{
+  rcMoveSlide(rcCurrentSlideIdx+1);
 });
-
-prevBtn.addEventListener('click',()=>{
-
-  moveSlide(currentSlideIdx-1);
-
+rcPrevBtn.addEventListener('click',()=>{
+  rcMoveSlide(rcCurrentSlideIdx-1);
 });
+rcMoveSlide(0);
+/* new game */
+let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
+  newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
+  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li');
+  newSlidesCount = newSlides.length,
+  newCurrentSlideIdx = 0,
+  newSlideMargin = 14,
+  newSlideWidth = 415,
+  newSlidePerView = 3,
+  newPrevBtn = document.querySelector('#new-prev'),
+  newNextBtn = document.querySelector('#new-next');
+  
+//슬라이드 가로 너비지정
+newSlideContainer.style.width = `${newSlidesCount*(newSlideWidth + newSlideMargin)}px`;
 
+// if(newSlidesCount > 1){
+//   newSlides.forEach((newSlide,Idx)=>{
+//     newSlide.style.left = `${Idx*(newSlideWidth + newSlideMargin)}px`;
+//   });
+// }
 
+//슬라이드 이동함수
+function newMoveSlide(num){
+  newSlideContainer.style.left = `${-num*(newSlideWidth + newSlideMargin)}px`;
+  newCurrentSlideIdx = num;
+  console.log(newCurrentSlideIdx);
+  if(newCurrentSlideIdx === newSlidesCount - 1){
+    newNextBtn.classList.add('disabled');
+  } else {
+    newNextBtn.classList.remove('disabled');
+  };
+
+  if(newCurrentSlideIdx === 0){
+    newPrevBtn.classList.add('disabled');
+  } else {
+    newPrevBtn.classList.remove('disabled');
+  }
+}
+newNextBtn.addEventListener('click',()=>{
+  newMoveSlide(newCurrentSlideIdx+1);
+});
+newPrevBtn.addEventListener('click',()=>{
+  newMoveSlide(newCurrentSlideIdx-1);
+});
+newMoveSlide(0);
 
 
 /* 이강산 구현 부분 종료*/ 

@@ -291,21 +291,21 @@ vertical-align: 9px;
     padding-bottom: 24px;
 }
 .rc-slide-wrapper{
-    height: 404px;
+    height:440px;
     position: relative;
-    transition: 0.3s;
+    overflow:hidden;
+
 }
 .rc-slide-container{
-    box-sizing: border-box;
-    /* position: relative; */
+    position: absolute;
+    transition: 0.4s ease-in-out;
 }
 .rc-slide-container > li{
     float: left;
     width: 305px;
-    margin-left: 20px;
+    margin-left: 16px;
 }
-.rc-slide-container > li:first-child,
-.rc-slide-container > li:last-child{
+.rc-slide-container > li:first-child{
     margin-left: 0;
 }
 .rc-slide-container img{
@@ -323,18 +323,17 @@ vertical-align: 9px;
     padding:20px 0 0 20px;
 }
 .rc-slide-container .name-explain{
-    border: none;
     height: 114px;
     box-sizing: border-box;
     position: relative;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .1);
     transition: 0.3s;
 }
 .rc-slide-container li:hover img{
     transform: translateY(-5px);
 }
 .rc-slide-container li:hover .name-explain{
-    box-shadow: 18px 18px 15px rgba(0, 0, 0, .2);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
     transform: translateY(-5px);        
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
@@ -367,6 +366,10 @@ vertical-align: 9px;
     top:50%;
     /* transform: translateY(-50%); */
 }
+#rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+}
 #rc-prev.disabled,
 #rc-next.disabled{
     display: none;
@@ -381,21 +384,22 @@ vertical-align: 9px;
     padding-bottom: 56px;
 }
 .new-slide-wrapper{
-    width:1280px;
-    margin: 0 auto;
     position: relative;  
-    /* padding-bottom: 96px; */
-    height: 348px;
+    height: 410px;
+    overflow: hidden;
 }
-
-/* .new-slide-contanier > li{
-    float: left;
-    box-sizing: border-box;
+.new-slide-container{
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+.new-slide-container > li{
+    margin-left: 14px;
     width: 415px;
-} */
-
-.new-slide-container li + li{
-    margin-left: 16px;
+    float:left;
+    position: relative;
+}
+.new-slide-container > li:first-child{
+    margin-left: 0px;
 }
 .new-slide-container a img{
     width: 415px;
@@ -403,15 +407,7 @@ vertical-align: 9px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .new-slide1 a img{
-    background-image: url(/nexon-renewal-webpage/img/VeildeExpert.png);
-}
-.new-slide2 a img{
-    background-image: url(/nexon-renewal-webpage/img/DF.png);
-}
-.new-slide3 a img{
-    background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
-} */
+
 .new-slide-container .name-genre{
     /* padding: 25px 28px; */
     border: none;
@@ -429,8 +425,8 @@ vertical-align: 9px;
     position: absolute;
 }
 .new-slide-container .new-name{
-  left:20px;
-  top: 10px;
+left:20px;
+top: 10px;
 }
 .new-slide-container .new-genre{
     bottom:23px;
@@ -446,20 +442,9 @@ vertical-align: 9px;
     right: 20px;
 }
 
-.new-slide-container li{
-    float: left;
-    position: relative;
-    
-}
-
-.new-slide-container{
-    position: absolute;
-}
-
 .new-slide-container figcaption{
-    width: 100%;
-    /* height: 252px; */
-    height: 69%;
+    width: 415px;
+    height: 260px;
     position: absolute;
     opacity: 1;
     text-align:center;
@@ -485,7 +470,19 @@ vertical-align: 9px;
     to {transform: translateY(0%); opacity: 1;}
 }
 .new-slide-container li:hover .name-genre{
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, .2);
+}
+#new-next{
+    right:-23px;
+    transform: translate(100%, -50%);
+}
+/* #rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+} */
+#new-prev.disabled,
+#new-next.disabled{
+    display: none;
 }
 
 /* MAIN-04 BANNER */
