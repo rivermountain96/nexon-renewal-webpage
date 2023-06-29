@@ -283,3 +283,18 @@ function autoSlide() {
 }
 
 autoSlide();
+
+let chevWrapp = document.querySelector('.main5-slide-chev-wrap');
+
+slideWrapper.addEventListener('mouseenter', () => {
+  clearInterval(timer);
+});
+slideWrapper.addEventListener('mouseleave', () => {
+  autoSlide();
+});
+chevWrapp.addEventListener('mouseenter', () => {
+  clearInterval(timer);
+});
+chevWrapp.addEventListener('mouseleave', () => {
+  autoSlide();
+});
