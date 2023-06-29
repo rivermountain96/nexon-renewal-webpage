@@ -118,6 +118,9 @@ let slideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     prevBtn = document.querySelector('#rc-prev'),
     nextBtn = document.querySelector('#rc-next');
 
+//슬라이드 가로 너비지정
+
+slideContainer.style.width = `${slidesCount*(slideWidth+slideMargin)}px`;
 
 for(let i = 0; i < slidesCount; i++){
   let cloneSlide = slides[i].cloneNode(true);
@@ -140,13 +143,13 @@ slides.forEach((slide,idx)=>{
   slide.style.left = `${idx*(slideWidth+slideMargin)}px`;
 });
 
-// 원래 보는시점을 클론 첫번째말고 오리지날 첫번째로 맞춰
-function setSlide(){
-  // ul {transform:translate(-3000px)}
-  let ulMoveAmt = `${slidesCount*(slideWidth + slideMargin)}px`;
-  slideContainer.style.transform = `translateX(${ulMoveAmt})`;
-}
-
+// // 원래 보는시점을 클론 첫번째말고 오리지날 첫번째로 맞춰
+// function setSlide(){
+//   // ul {transform:translate(-3000px)}
+//   let ulMoveAmt = `${slidesCount*(slideWidth + slideMargin)}px`;
+//   slideContainer.style.transform = `translateX(${ulMoveAmt})`;
+// }
+// setSlide();
 
 
 

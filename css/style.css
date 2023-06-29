@@ -297,18 +297,16 @@ vertical-align: 9px;
 }
 .rc-slide-container{
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
 }
 .rc-slide-container > li{
     float: left;
     width: 305px;
-    /* position: absolute; */
-}
-.rc-slide-container li{
     margin-left: 20px;
 }
-.rc-slide-container li:nth-child(4n+1){
-    margin-left: 0px;
+.rc-slide-container > li:first-child,
+.rc-slide-container > li:last-child{
+    margin-left: 0;
 }
 .rc-slide-container img{
     object-fit:cover;
