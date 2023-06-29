@@ -1,31 +1,31 @@
-/* 이현정 구현 부분*/ 
+/* 이현정 구현 부분*/
 /* main carousel */
 
-let slideWrapper = document.querySelector(".mainslide-wrapper");
-let slideContainer = slideWrapper.querySelector(".mainslide-container");
-let slides = slideContainer.querySelectorAll(".mainslide");
-let slideCount = slides.length;
-let currentSlideIdx = 0;
-let pager = slideWrapper.querySelector(".pager");
-let timer;
-let pagerHTML = "";
-let slideWidth = document.body.offsetWidth;
-let prevBtn = slideWrapper.querySelector("#prev");
-let nextBtn = slideWrapper.querySelector("#next");
+let mainSlideWrapper = document.querySelector(".mainslide-wrapper");
+let mainSlideContainer = mainSlideWrapper.querySelector(".mainslide-container");
+let mainSlides = mainSlideContainer.querySelectorAll(".mainslide");
+let mainSlideCount = mainSlides.length;
+let mainCurrentSlideIdx = 0;
+let mainPager = mainSlideWrapper.querySelector(".pager");
+let mainTimer;
+let mainPagerHTML = "";
+let mainslideWidth = document.body.offsetWidth;
+let mainPrevBtn = mainSlideWrapper.querySelector("#prev");
+let mainNextBtn = mainSlideWrapper.querySelector("#next");
 
-function setSlide() {
-  if (slideCount > 1) {
-    let containerWidth = slideWidth * slideCount;
-    slideContainer.style.width = `${containerWidth}px`;
+function mainSetSlide() {
+  if (mainSlideCount > 1) {
+    let mainContainerWidth = mainslideWidth * mainSlideCount;
+    mainSlideContainer.style.width = `${mainContainerWidth}px`;
 
-    slides.forEach((item, idx) => {
-      item.style.width = `${slideWidth}px`;
+    mainSlides.forEach((item, idx) => {
+      item.style.width = `${mainslideWidth}px`;
       let url = item.getAttribute("data-url");
       let title = item.getAttribute("data-title");
-      console.log(url)
-      console.log(title)
+      // console.log(url);
+      // console.log(title);
 
-      pagerHTML += `<a href="">
+      mainPagerHTML += `<a href="">
       <span>
         <img
           src=${url}
@@ -38,15 +38,15 @@ function setSlide() {
   }
 }
 
-setSlide();
+mainSetSlide();
 
-pager.innerHTML = pagerHTML;
-let pagerBtn = pager.querySelectorAll("a");
+mainPager.innerHTML = mainPagerHTML;
+let mainPagerBtn = mainPager.querySelectorAll("a");
 
-function moveSlide(num) {
-  slideContainer.style.transform = `translateX(${-num * slideWidth}px)`;
-  currentSlideIdx = num;
-  console.log(currentSlideIdx);
+function mainMoveSlide(num) {
+  mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
+  mainCurrentSlideIdx = num;
+  // console.log(mainCurrentSlideIdx);
 
   updateNav();
 }
@@ -54,98 +54,97 @@ function moveSlide(num) {
 updateNav();
 
 function updateNav() {
-  for (let sl of slides) {
+  for (let sl of mainSlides) {
     sl.classList.remove("active");
   }
-  slides[currentSlideIdx].classList.add("active");
+  mainSlides[mainCurrentSlideIdx].classList.add("active");
 
-  for (let pb of pagerBtn) {
+  for (let pb of mainPagerBtn) {
     pb.classList.remove("active");
   }
-  pagerBtn[currentSlideIdx].classList.add("active");
+  mainPagerBtn[mainCurrentSlideIdx].classList.add("active");
 }
 
-nextBtn.addEventListener("click", () => {
-  if (currentSlideIdx < slideCount - 1) {
-    moveSlide(currentSlideIdx + 1);
+mainNextBtn.addEventListener("click", () => {
+  if (mainCurrentSlideIdx < mainSlideCount - 1) {
+    mainMoveSlide(mainCurrentSlideIdx + 1);
   }
 });
 
-prevBtn.addEventListener("click", () => {
-  if (currentSlideIdx > 0) {
-    moveSlide(currentSlideIdx - 1);
+mainPrevBtn.addEventListener("click", () => {
+  if (mainCurrentSlideIdx > 0) {
+    mainMoveSlide(mainCurrentSlideIdx - 1);
   }
 });
 
-pagerBtn.forEach((item, idx) => {
+mainPagerBtn.forEach((item, idx) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
-    moveSlide(idx);
+    mainMoveSlide(idx);
   });
 });
 
 //자동 슬라이드
-function autoSlide() {
-  timer = setInterval(() => {
-    let nextIdx = (currentSlideIdx + 1) % slideCount;
-    moveSlide(nextIdx);
+function mainAutoSlide() {
+  mainTimer = setInterval(() => {
+    let nextIdx = (mainCurrentSlideIdx + 1) % mainSlideCount;
+    mainMoveSlide(nextIdx);
   }, 3000);
 }
 
-autoSlide();
+mainAutoSlide();
 
-slideWrapper.addEventListener("mouseover", () => {
-  clearInterval(timer);
+mainSlideWrapper.addEventListener("mouseover", () => {
+  clearInterval(mainTimer);
 });
 
-slideWrapper.addEventListener("mouseout", () => {
-  autoSlide();
+mainSlideWrapper.addEventListener("mouseout", () => {
+  mainAutoSlide();
 });
 
-//탭이동 
+//탭이동
 let tabMenu = document.querySelectorAll("#tab-menu li a");
 let tabSection = document.querySelectorAll("#tab-contents > section");
 
-tabMenu.forEach((item)=>{
-  item.addEventListener("click",(e)=>{
+tabMenu.forEach((item) => {
+  item.addEventListener("click", (e) => {
     e.preventDefault();
     let tabTargetId = e.target.getAttribute("href");
     let tabTargetOST = document.querySelector(tabTargetId).offsetTop;
-    window.scrollTo({left:0, top:tabTargetOST, behavior:"smooth"});
+    window.scrollTo({ left: 0, top: tabTargetOST, behavior: "smooth" });
   });
 });
-
 
 //BackToTop
 let btnBtt = document.querySelector("#go-top");
 let scrollAmt = 0;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
   scrollAmt = window.scrollY;
 
-  if(scrollAmt > 300){
+  if (scrollAmt > 300) {
     btnBtt.classList.add("active");
-  }else{
+  } else {
     btnBtt.classList.remove("active");
   }
 });
 
-btnBtt.addEventListener("click",(e)=>{
+btnBtt.addEventListener("click", (e) => {
   e.preventDefault();
   window.scrollTo({
-    left:0,top:0, behavior:"smooth"
+    left: 0,
+    top: 0,
+    behavior: "smooth",
   });
-})
+});
 
+/* 이현정 구현 부분 종료*/
 
-/* 이현정 구현 부분 종료*/ 
+/* 이강산 구현 부분 */
 
-/* 이강산 구현 부분 */ 
+/* 이강산 구현 부분 종료*/
 
-/* 이강산 구현 부분 종료*/ 
-
-
-/* 이은서 구현 부분 */ 
+/* 이은서 구현 부분 */
 
 // main5 start
 
@@ -161,4 +160,4 @@ btnBtt.addEventListener("click",(e)=>{
 
 // main5 done
 
-/* 이은서 구현 부분 종료*/ 
+/* 이은서 구현 부분 종료*/
