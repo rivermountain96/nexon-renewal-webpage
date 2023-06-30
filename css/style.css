@@ -1072,81 +1072,114 @@ top: 10px;
 .all-view > li.active {
   display: block;
 }
+/* Banner */
+.bannerWrapper{
+    background: url('https://ifh.cc/g/A0yQqd.jpg') center center/cover no-repeat;
+    width:100%;
+    height: 365px;
+    margin-bottom: 96px;
+}
+.bannerWrapper .banner-content{
+    position: relative;
+    height: 100%;
+}
+.bannerWrapper .banner-content figure{
+    position: absolute;
+    top: 50%;
+    right:0;
+    transform: translateY(-50%);
+}
+.bannerWrapper .banner-content figure iframe{/*되면 지우기 figure*/
+    vertical-align: top;
+    border-radius: 10px;
+    transition: .3s;
+}
+.bannerWrapper figure iframe.active{/*되면 지우기 figure*/
+    filter: brightness(0.7);
+}
+.bannerWrapper .banner-content figure .logo{
+    width: 68px;
+    height: 48px;
+    background: #c00;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.bannerWrapper .banner-content figure .logo:after{
+    content: "";
+    /* width: 18px;height: 20px; */
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 10px);
+    transform: translate(-50%, -50%);
+    border:solid 10px 18px transparent transparent transparent #fff;
+    /* border-style:solid;
+    border-width:10px 18px;
+    border-color: transparent transparent transparent #fff; */
+}
 /* MAIN-06 RECOMMENDED-VIDEO */
-/* FOOTER-01  */
-/* FOOTER-02 */
-.bannerWrapper {
-  width: 100%;
-  background-image: url("https://ifh.cc/g/A0yQqd.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 365px;
-  margin-top: 96px;
+.videoWrapper ul{
+    margin-top: 48px;
 }
-.bannerWrapper .banner-video {
-  width: 1280px;
-  margin: 0 auto;
-  height: 365px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+.videoWrapper li{
+  float: left;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 15px;
 }
-.bannerWrapper iframe {
+.videoWrapper li + li{
+  margin-left: 58px;
+}
+.videoWrapper li .video-img-border{
+  padding: 15px;
+  background: rgba(69, 147, 252, 0.7);
+  border-radius: 15px 15px 0 15px;
+  height: 222px;
+  box-sizing: border-box;  
   position: relative;
-  background: rgba(0, 0, 0, 1);
-  transition: 0.3s;
 }
-.bannerWrapper iframe:hover :after {
-  background: rgba(0, 0, 0, 0.7);
-  content: "";
+.videoWrapper li .video-img-border span{
   position: absolute;
+  width: 10px;
+  height: 10px;
+  top:  100%;
+  right: 0;
+  background: rgba(69, 147, 252, 0.7);
+}
+.videoWrapper li .video-img-border span:after{
+  content: '';
+  width: 10px;
+  height: 10px;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  border-top-right-radius: 100%;
+  background: #f1f1f1;
 }
-
-.videoWrapper li {
-  float: left;
-  text-align: center;
-  background-color: #f1f1f1;
-  border-radius: 10px;
+.videoWrapper li img{
+  border-radius: 15px;
+  display: block;
 }
-.videoWrapper li + li {
-  margin-left: 59px;
-}
-.videoWrapper li figcaption {
-  font-size: 20px;
-  font-weight: bold;
+.videoWrapper li p{
+  font-size: 18px;
+  font-weight: 600;
   text-align: left;
-  padding-bottom: 20px;
   padding: 30px 0 20px 30px;
 }
-.videoWrapper li div {
-  border: 18px solid rgba(69, 147, 252, 0.7);
-  border-radius: 10px;
-}
-.videoWrapper li img {
-  border-radius: 10px;
-}
-.video-btn {
-  padding: 15px 30px;
-  background-color: #4593fc;
-  margin-bottom: 30px;
+.videoWrapper li .video-btn{
+  display: inline-block;
+  background: #4593fc;
   border-radius: 5px;
-}
-.video-btn a {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
   color: #fff;
+  padding: 10px 30px;
+  margin-bottom: 30px;
 }
-/* .allService{
-  margin:0 auto;
-  width: 100%;
-} */
-
-.allService .allService-first-Line {
+/* FOOTER-01  */
+.allService .allService-first-Line{
   background: rgba(176, 184, 193, 0.3);
   margin-top: 48px;
   width: 100%;
@@ -1165,8 +1198,11 @@ top: 10px;
 .allService dl dt {
   margin-bottom: 20px;
 }
-.allService-second-Line li:nth-child(2) dt:last-child {
-  padding-top: 20px;
+.allService-second-Line li:nth-child(2) dt:last-child{
+    padding-top: 20px;
+}
+.allService dl .disable{
+    display: none;
 }
 .allService dl dd {
   line-height: 2.19em;

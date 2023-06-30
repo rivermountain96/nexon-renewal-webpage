@@ -830,9 +830,12 @@
 
     <!-- 한지희 구현 BANNER -->
     <section class="bannerWrapper">  
-      <figure class="banner-video">
-        <iframe width="420" height="223.09" style="border-radius: 10px;" src="https://www.youtube.com/embed/fc2LcqslZio" title="테일즈위버 신규 캐릭 예프넨 티저 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </figure>      
+      <div class="banner-content container">    
+        <figure>
+          <iframe class="bannerImg" width="420" height="223.09" src="https://www.youtube.com/embed/fc2LcqslZio" title="테일즈위버 신규 캐릭 예프넨 티저 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </figure>
+        <div class="logo"></div>
+      </div>      
     </section>
     <!-- 한지희 구현 끝 -->
 
@@ -1876,43 +1879,46 @@
     <!-- 이은서 구현 끝 -->
 
     <!-- 한지희 구현 RECOMMENDED-VIDEO & FOOTER-01 2023.6.27 version 2 -->
-    <section class="videoWrapper container" id="recommend-video">
+    <section class="videoWrapper container">
       <h2 class="main-stt md-pd">추천영상</h2>
       <figure>
         <ul class="cf">
           <li>
-            <div>
+            <div class="video-img-border">
               <img src="https://ifh.cc/g/vGorm9.png" alt="메이플 청각 장애인식 개선 애니메이션 영상 이미지">
+              <span></span>
             </div>
-            <figcaption>
-              메이플스토리와 함께 하는 청각 장애인식<br> 개선 애니메이션 &lsquo;마법달팽이 &middot;&middot;&middot;
-            </figcaption>
-            <button type="button" class="video-btn btn"><a href="#">보러가기</a></button>
+            <p>
+              메이플스토리와 함께 하는 청각 장애인식 개<br>선 애니메이션 &lsquo;마법달팽이 &middot;&middot;&middot;
+            </p>
+            <a href="#" class="video-btn btn">보러가기</a>
           </li>
           <li>
-            <div>
+            <div class="video-img-border">
               <img src="https://ifh.cc/g/ajn8LW.png" alt="원작 감성에 독창적인 게임성을 더한 테일즈위버m 영상 이미지">
+              <span></span>
             </div>
-            <figcaption>
-              원작 감성에 독창적인 게임성을 더한 &#91;<br>테일즈위버m&#93;
-            </figcaption>
-            <button type="button" class="video-btn btn"><a href="#">보러가기</a></button>
+            <p>
+              원작 감성에 독창적인 게임성을 더한 &#91;테일<br>즈위버m&#93;
+            </p>
+            <a href="#" class="video-btn btn">보러가기</a>
           </li>
           <li>
-            <div>
+            <div class="video-img-border">
               <img src="https://ifh.cc/g/FmSsc9.jpg" alt="3D 액션 RGB로 새롭게 탄생한 던전앤 파이터 프로젝트 오버킬 영상 이미지">
+              <span></span>
             </div>
-            <figcaption class="video-underline">
-              3D 액션 RGB로 새롭게 탄생한 던전앤 파<br>이터 &#91;프로젝트 오버킬&#93;
-            </figcaption>
-            <button type="button" class="video-btn btn"><a href="#">보러가기</a></button>
+            <p>
+              3D 액션 RGB로 새롭게 탄생한 던전앤 파이<br>터 &#91;프로젝트 오버킬&#93;
+            </p>
+            <a href="#" class="video-btn btn">보러가기</a>
           </li>
         </ul>
-      </figure>
+      </div>
     </section>
 </main>
-<footer class="">
-    <div class="allService container">
+<footer class="container">
+    <div class="allService ">
       <h2 class="main-stt">전체서비스</h2>
       <div class="allService-first-Line">
         <ul class="container cf">
@@ -1976,6 +1982,7 @@
               <dt class="content-desc-bl"><a href="#">넥슨 플레이</a></dt>
               <dd><a href="#">넥슨 플레이 소개</a></dd>
               <dt class="content-desc-bl"><a href="#">넥슨 플러그</a></dt>
+              <dd class="content-desc-bl disable"></dd>
             </dl>
           </li>
           <li>
