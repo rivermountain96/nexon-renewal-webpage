@@ -103,32 +103,29 @@ mainSlideWrapper.addEventListener("mouseout", () => {
 });
 
 //pager
-
 function setPager() {
+  mainPager.innerHTML = "";
   mainSlides.forEach((item, idx) => {
     let url = item.getAttribute("data-url");
     let title = item.getAttribute("data-title");
-
-    mainPagerHTML += `<a href="#">
+    let pagerItem = document.createElement("a");
+    pagerItem.setAttribute("href", "#");
+    pagerItem.innerHTML = `
       <span>
-        <img src="${url}" />
+        <img src="${url}"/>
       </span>
       <span>${title}</span>
-    </a>`;
-  });
-
-  mainPager.innerHTML = mainPagerHTML;
-
-  let mainPagerBtn = mainPager.querySelectorAll("a");
-
-  mainPagerBtn.forEach((btn, index) => {
-    btn.addEventListener("click", (e) => {
+    `;
+    pagerItem.addEventListener("click", (e) => {
       e.preventDefault();
-      moveSlide(index - mainSlideCount);
+      moveSlide(idx - mainSlideCount);
     });
+    if (idx === mainCurrentSlideIdx) {
+      pagerItem.classList.add("active");
+    }
+    mainPager.appendChild(pagerItem);
   });
 }
-
 setPager();
 
 // function mainSetSlide() {
