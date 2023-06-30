@@ -15,6 +15,32 @@ let mainNextBtn = mainSlideWrapper.querySelector("#next");
 
 // mainSlideContainer.style.width = `${mainSlideCount * mainSlideWidth}px`;
 
+function setPager() {
+  mainPager.innerHTML = "";
+  mainSlides.forEach((item, idx) => {
+    let url = item.getAttribute("data-url");
+    let title = item.getAttribute("data-title");
+    let pagerItem = document.createElement("a");
+    pagerItem.setAttribute("href", "#");
+    pagerItem.innerHTML = `
+      <span>
+        <img src="${url}"/>
+      </span>
+      <span>${title}</span>
+    `;
+    pagerItem.addEventListener("click", (e) => {
+      e.preventDefault();
+      moveSlide(idx);
+    });
+    if (idx === mainCurrentSlideIdx) {
+      pagerItem.classList.add("active");
+    }
+    mainPager.appendChild(pagerItem);
+  });
+}
+setPager();
+
+
 for (let i = 0; i < mainSlideCount; i++) {
   let cloneSlide = mainSlides[i].cloneNode(true);
   cloneSlide.classList.add("clone");
@@ -103,30 +129,6 @@ mainSlideWrapper.addEventListener("mouseout", () => {
 });
 
 //pager
-function setPager() {
-  mainPager.innerHTML = "";
-  mainSlides.forEach((item, idx) => {
-    let url = item.getAttribute("data-url");
-    let title = item.getAttribute("data-title");
-    let pagerItem = document.createElement("a");
-    pagerItem.setAttribute("href", "#");
-    pagerItem.innerHTML = `
-      <span>
-        <img src="${url}"/>
-      </span>
-      <span>${title}</span>
-    `;
-    pagerItem.addEventListener("click", (e) => {
-      e.preventDefault();
-      moveSlide(idx - mainSlideCount);
-    });
-    if (idx === mainCurrentSlideIdx) {
-      pagerItem.classList.add("active");
-    }
-    mainPager.appendChild(pagerItem);
-  });
-}
-setPager();
 
 // function mainSetSlide() {
 //   if (mainSlideCount > 1) {
