@@ -233,7 +233,7 @@ header {
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/ff4defa6-7506-4886-83e7-492c7a82cd9a/image.png");
 }
 
-.mainslide-wrapper .chev-wrap.left,
+/* .mainslide-wrapper .chev-wrap.left,
 .mainslide-wrapper .chev-wrap.right {
   position: absolute;
   top: 50%;
@@ -301,23 +301,26 @@ header {
 .recommend-game > p {
   padding-bottom: 24px;
 }
-.rc-slide-wrapper {
-  height: 404px;
-  position: relative;
+.rc-slide-wrapper{
+    height:440px;
+    position: relative;
+    overflow:hidden;
+
 }
-.rc-slide-container {
-  box-sizing: border-box;
+.rc-slide-container{
+    position: absolute;
+    transition: 0.4s ease-in-out;
 }
-.rc-slide-container > li {
-  float: left;
-  /* width: 305px; */
-  box-sizing: border-box;
+.rc-slide-container > li{
+    float: left;
+    width: 305px;
+    margin-left: 16px;
 }
-.rc-slide-container li + li {
-  margin-left: 16px;
+.rc-slide-container > li:first-child{
+    margin-left: 0;
 }
-.rc-slide-container img {
-  object-fit: cover;
+.rc-slide-container img{
+    object-fit:cover;
 }
 .rc-slide-container a img {
   width: 305px;
@@ -341,9 +344,9 @@ header {
 .rc-slide-container li:hover img {
   transform: translateY(-5px);
 }
-.rc-slide-container li:hover .name-explain {
-  box-shadow: 18px 18px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
+.rc-slide-container li:hover .name-explain{
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
+    transform: translateY(-5px);        
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .rc-slide-container .rc-event {
@@ -361,18 +364,27 @@ header {
   bottom: 15px;
   right: 15px;
 }
-/* chev-wrap 삭제여부 */
+/*chev-wrap 삭제여부*/
 .chev-wrap.left {
     left: -30px;
-    transform:translateX(-100%);
+    transform:translate(-100%, -50%);
 } 
 .chev-wrap.right{
     right: -30px;
-    transform:translateX(100%);
+    transform:translate(100%, -50%);
 }
-.right {
-  right: -30px;
-  transform: translateX(100%);
+.chev-wrap{
+    position: absolute;
+    top:50%;
+    /* transform: translateY(-50%); */
+}
+#rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+}
+#rc-prev.disabled,
+#rc-next.disabled{
+    display: none;
 }
 .chev-wrap {
   position: absolute;
@@ -389,21 +401,23 @@ header {
 .new-game > h2 {
   padding-bottom: 56px;
 }
-.new-slide-wrapper {
-  width: 1280px;
-  margin: 0 auto;
-  height: 252px;
-  position: relative;
+.new-slide-wrapper{
+    position: relative;  
+    height: 410px;
+    overflow: hidden;
 }
-
-/* .new-slide-contanier > li{
-    float: left;
-    box-sizing: border-box;
+.new-slide-container{
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+.new-slide-container > li{
+    margin-left: 14px;
     width: 415px;
-} */
-
-.new-slide-container li + li {
-  margin-left: 16px;
+    float:left;
+    position: relative;
+}
+.new-slide-container > li:first-child{
+    margin-left: 0px;
 }
 .new-slide-container a img {
   width: 415px;
@@ -411,27 +425,15 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* .new-slide1 a img{
-    background-image: url(/nexon-renewal-webpage/img/VeildeExpert.png);
-}
-.new-slide2 a img{
-    background-image: url(/nexon-renewal-webpage/img/DF.png);
-}
-.new-slide3 a img{
-    background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
-} */
-.new-slide-wrapper {
-  margin-bottom: 96px;
-  height: 348px;
-}
-.new-slide-container .name-genre {
-  padding: 25px 28px;
-  border: none;
-  height: 96px;
-  width: 415px;
-  box-sizing: border-box;
-  position: relative;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+
+.new-slide-container .name-genre{
+    /* padding: 25px 28px; */
+    border: none;
+    height: 96px;
+    width: 415px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
 }
 
 .new-name,
@@ -440,14 +442,13 @@ header {
   text-transform: uppercase;
   position: absolute;
 }
-.new-slide-container .new-name {
-  left: 0;
-  top: 0;
+.new-slide-container .new-name{
+left:20px;
+top: 10px;
 }
-.new-slide-container .new-genre {
-  position: absolute;
-  bottom: 23px;
-  left: 26px;
+.new-slide-container .new-genre{
+    bottom:23px;
+    left: 23px;
 }
 .new-slide-container .new-device {
   float: right;
@@ -459,40 +460,28 @@ header {
   right: 20px;
 }
 
-.new-slide-container li {
-  float: left;
-  position: relative;
+.new-slide-container figcaption{
+    width: 415px;
+    height: 260px;
+    position: absolute;
+    opacity: 1;
+    text-align:center;
+    line-height:15px;
+    display: none;
+    overflow: hidden;
 }
-
-.new-slide-container {
-  position: absolute;
-}
-
-.new-slide-container figcaption {
-  width: 100%;
-  /* height: 252px; */
-  height: 69%;
-  position: absolute;
-  opacity: 1;
-  text-align: center;
-  line-height: 15px;
-  display: none;
-  overflow: hidden;
-}
-.new-slide-container > li:hover figcaption {
-  top: 0%;
-  bottom: 0%;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  line-height: 2rem;
-  display: block;
-  padding-top: 100px;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  animation: move 0.3s;
-  animation-fill-mode: both;
+.new-slide-container > li:hover figcaption{
+    top:0;
+    bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    line-height: 2rem;
+    display: block;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    animation: move 0.3s;
+    animation-fill-mode:both;
 }
 @keyframes move {
   from {
@@ -504,8 +493,20 @@ header {
     opacity: 1;
   }
 }
-.new-slide-container li:hover .name-genre {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+.new-slide-container li:hover .name-genre{
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, .2);
+}
+#new-next{
+    right:-23px;
+    transform: translate(100%, -50%);
+}
+/* #rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+} */
+#new-prev.disabled,
+#new-next.disabled{
+    display: none;
 }
 
 /* MAIN-04 BANNER */
@@ -1081,6 +1082,7 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   height: 365px;
+  margin-top: 96px;
 }
 .bannerWrapper .banner-video {
   width: 1280px;

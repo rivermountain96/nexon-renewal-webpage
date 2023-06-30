@@ -254,7 +254,101 @@ btnBtt.addEventListener("click", (e) => {
 });
 
 
-/* 이현정 구현 부분 종료*/
+/* 이강산 구현 부분 */ 
+/* recommend game */
+// 변수 지정
+let rcSlideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
+    rcSlideContainer = rcSlideWrapper.querySelector('.rc-slide-container'), //ul
+    rcSlides = rcSlideContainer.querySelectorAll('li'),
+    rcSlidesCount = rcSlides.length,
+    rcSlidesPerView = 4,
+    rcSlideWidth = 305,
+    rcSlideMargin = 16,
+    rcCurrentSlideIdx = 0,
+    rcPrevBtn = document.querySelector('#rc-prev'),
+    rcNextBtn = document.querySelector('#rc-next');
+
+//슬라이드 가로 너비지정
+rcSlideContainer.style.width = `${rcSlidesCount*(rcSlideWidth+rcSlideMargin)}px`;
+
+// if(rcSlidesCount > 1){
+//   rcSlides.forEach((rcslide,idx)=>{
+//     rcslide.style.left = `${idx*(rcSlideWidth + rcSlideMargin)}px`
+//   });
+// }
+
+//슬라이드 이동함수
+function rcMoveSlide(num){
+  rcSlideContainer.style.left = `${-num*(rcSlideWidth + rcSlideMargin)}px`;
+  rcCurrentSlideIdx = num;
+  console.log(rcCurrentSlideIdx);
+  if (rcCurrentSlideIdx === rcSlidesCount - 1) {
+    rcNextBtn.classList.add('disabled');
+  } else {
+    rcNextBtn.classList.remove('disabled');
+  };
+
+  if(rcCurrentSlideIdx === 0){
+    rcPrevBtn.classList.add('disabled');
+  } else {
+    rcPrevBtn.classList.remove('disabled');
+  }
+}
+
+// 좌우컨트롤
+rcNextBtn.addEventListener('click',()=>{
+  rcMoveSlide(rcCurrentSlideIdx+1);
+});
+rcPrevBtn.addEventListener('click',()=>{
+  rcMoveSlide(rcCurrentSlideIdx-1);
+});
+rcMoveSlide(0);
+/* new game */
+let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
+  newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
+  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li');
+  newSlidesCount = newSlides.length,
+  newCurrentSlideIdx = 0,
+  newSlideMargin = 14,
+  newSlideWidth = 415,
+  newSlidePerView = 3,
+  newPrevBtn = document.querySelector('#new-prev'),
+  newNextBtn = document.querySelector('#new-next');
+  
+//슬라이드 가로 너비지정
+newSlideContainer.style.width = `${newSlidesCount*(newSlideWidth + newSlideMargin)}px`;
+
+// if(newSlidesCount > 1){
+//   newSlides.forEach((newSlide,Idx)=>{
+//     newSlide.style.left = `${Idx*(newSlideWidth + newSlideMargin)}px`;
+//   });
+// }
+
+//슬라이드 이동함수
+function newMoveSlide(num){
+  newSlideContainer.style.left = `${-num*(newSlideWidth + newSlideMargin)}px`;
+  newCurrentSlideIdx = num;
+  console.log(newCurrentSlideIdx);
+  if(newCurrentSlideIdx === newSlidesCount - 1){
+    newNextBtn.classList.add('disabled');
+  } else {
+    newNextBtn.classList.remove('disabled');
+  };
+
+  if(newCurrentSlideIdx === 0){
+    newPrevBtn.classList.add('disabled');
+  } else {
+    newPrevBtn.classList.remove('disabled');
+  }
+}
+newNextBtn.addEventListener('click',()=>{
+  newMoveSlide(newCurrentSlideIdx+1);
+});
+newPrevBtn.addEventListener('click',()=>{
+  newMoveSlide(newCurrentSlideIdx-1);
+});
+newMoveSlide(0);
+
 
 /* 이강산 구현 부분 */
 
