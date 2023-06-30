@@ -26,9 +26,9 @@ for (let i = mainSlideCount - 1; i >= 0; i--) {
   mainSlideContainer.prepend(cloneSlide);
 }
 
-mainNewSlide = document.querySelectorAll(".mainslide-container li");
+let mainNewSlides = document.querySelectorAll(".mainslide-container li");
 
-mainNewSlide.forEach((slide, idx) => {
+mainNewSlides.forEach((slide, idx) => {
   slide.style.left = `${idx * mainSlideWidth}px`;
 });
 
@@ -130,11 +130,11 @@ setPager();
 
 // function mainSetSlide() {
 //   if (mainSlideCount > 1) {
-//     let mainContainerWidth = mainSlideWidth * mainSlideCount;
+//     let mainContainerWidth = mainslideWidth * mainSlideCount;
 //     mainSlideContainer.style.width = `${mainContainerWidth}px`;
 
 //     mainSlides.forEach((item, idx) => {
-//       item.style.width = `${mainSlideWidth}px`;
+//       item.style.width = `${mainslideWidth}px`;
 //       let url = item.getAttribute("data-url");
 //       let title = item.getAttribute("data-title");
 //       // console.log(url);
@@ -159,7 +159,7 @@ setPager();
 // let mainPagerBtn = mainPager.querySelectorAll("a");
 
 // function mainMoveSlide(num) {
-//   mainSlideContainer.style.transform = `translateX(${-num * mainSlideWidth}px)`;
+//   mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
 //   mainCurrentSlideIdx = num;
 //   // console.log(mainCurrentSlideIdx);
 
@@ -306,7 +306,7 @@ rcMoveSlide(0);
 /* new game */
 let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
   newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
-  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li'),
+  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li');
   newSlidesCount = newSlides.length,
   newCurrentSlideIdx = 0,
   newSlideMargin = 14,
@@ -348,6 +348,8 @@ newPrevBtn.addEventListener('click',()=>{
   newMoveSlide(newCurrentSlideIdx-1);
 });
 newMoveSlide(0);
+
+/* 이강산 구현 부분 종료*/
 
 /* 이은서 구현 부분 */
 
@@ -519,17 +521,3 @@ chevWrapp.addEventListener('mouseenter', () => {
 chevWrapp.addEventListener('mouseleave', () => {
   allautoSlide();
 });
-/* 이은서 구현 부분 종료*/ 
-/* 한지희 구현 부분 시작 */
-let bannerImg = document.querySelector('.bannerImg');
-    bannerImg.addEventListener('mouseover', ()=>{
-      bannerImg.classList.add('active');
-    });
-    
-    bannerImg.addEventListener('mouseout', ()=>{
-      if(bannerImg.classList.contains('active')){
-
-        bannerImg.classList.remove('active');
-      }
-    })
-/* 한지희 구현 부분 종료 */

@@ -373,10 +373,9 @@ header {
     right: -30px;
     transform:translate(100%, -50%);
 }
-.chev-wrap{
-    position: absolute;
-    top:50%;
-    /* transform: translateY(-50%); */
+.chev-wrap {
+  position: absolute;
+  top: 50%;
 }
 #rc-next{
     right: -18px;
@@ -385,11 +384,6 @@ header {
 #rc-prev.disabled,
 #rc-next.disabled{
     display: none;
-}
-.chev-wrap {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /* MAIN-03 NEW-GAMES */
@@ -405,6 +399,7 @@ header {
     position: relative;  
     height: 410px;
     overflow: hidden;
+    padding-bottom: 96px;
 }
 .new-slide-container{
     position: absolute;
@@ -460,7 +455,7 @@ top: 10px;
   right: 20px;
 }
 
-.new-slide-container figcaption{
+.new-slide-container .new-marketing{
     width: 415px;
     height: 260px;
     position: absolute;
@@ -470,7 +465,7 @@ top: 10px;
     display: none;
     overflow: hidden;
 }
-.new-slide-container > li:hover figcaption{
+.new-slide-container > li:hover .new-marketing{
     top:0;
     bottom:0; left:0; right:0;
     background:rgba(0,0,0,0.8);
@@ -496,14 +491,14 @@ top: 10px;
 .new-slide-container li:hover .name-genre{
     box-shadow: 12px 12px 12px rgba(0, 0, 0, .2);
 }
+#new-prev{
+  transform: translate(-100%, -140%);
+}
 #new-next{
     right:-23px;
-    transform: translate(100%, -50%);
+    transform: translate(100%, -130%);
 }
-/* #rc-next{
-    right: -18px;
-    transform:translate(100%, -50%);
-} */
+
 #new-prev.disabled,
 #new-next.disabled{
     display: none;
