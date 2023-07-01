@@ -1,1166 +1,1348 @@
 /* HEADER */
-.main-tt {
-    padding-top: 71px;
-    text-align: center;
-  }
-  .main-tt > a {
-    width: 242px;
-    height: 42px;
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/d0b3ab6a-afbb-40f8-aae1-e4678bebdf45/image.png");
-    background-repeat: no-repeat;
-    display: inline-block;
-    text-indent: -9999rem;
-  }
-  /* NAV-BAR */
-  header {
+header .main-tt {
+  padding-top: 71px;
+  text-align: center;
+}
+header .main-tt > a {
+  width: 242px;
+  height: 42px;
+  /* background-image: url("https://velog.velcdn.com/images/hyunny123/post/d0b3ab6a-afbb-40f8-aae1-e4678bebdf45/image.png"); */
+  background-image: url("../images/nexon.png");
+  background-size: 242px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -9999rem;
+}
+/* NAV-BAR */
+header {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+.nav {
+  text-align: center;
+}
+.nav > ul {
+  display: inline-block;
+  vertical-align: top;
+}
+.nav > ul:first-child {
+  position: absolute;
+  right: 0;
+  top: 73px;
+}
+.nav .line {
+  padding: 0 10px;
+}
+.nav > ul > li {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.nav > ul:first-child > li > a:hover:first-child,
+.nav > ul:first-child > li > a:hover:nth-child(5) {
+  color: #1b64da;
+}
+.nav .pc {
+  position: absolute;
+  bottom: 70%;
+  right: 80px;
+}
+
+.nav ul:first-child li a {
+  font-size: 17px;
+}
+.login {
+  margin-left: 10px;
+}
+.menu-bar {
+  margin-top: 81px;
+  display: block;
+  position: relative;
+}
+.menu-bar > ul {
+  box-sizing: border-box;
+}
+.menu-bar > li {
+  padding-left: 198px;
+}
+
+.menu-bar > li > a {
+  display: block;
+  padding-bottom: 33px;
+}
+
+.menu-bar li:hover > a {
+  color: #1b64da;
+  font-weight: bold;
+}
+
+.menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
+  display: block;
+}
+.menu-bar li:hover:last-child > .menu-bar-allservice {
+  display: block;
+}
+.menu-bar > li:first-child {
+  padding-left: 0px;
+}
+
+/* 전체게임 navbar hover imgs */
+.menu-bar-imgsboxwrap {
+  position: absolute;
+  top: 70px;
+  left: -20px;
+  width: 1312px;
+  box-sizing: border-box;
+  padding: 55px;
+  border-top: 5px solid #4593fc;
+  background-color: #fbfbfb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+  font-weight: 500;
+}
+
+.menu-bar-imgsbox {
+  width: 238px;
+  float: left;
+}
+
+.menu-bar-imgsbox > li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 13px;
+}
+
+.menu-bar-imgsbox li a {
+  display: block;
+  position: relative;
+}
+
+.menu-bar-imgsbox a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* float: left; */
+  display: block;
+}
+
+.menu-bar-imgsbox li a span:nth-child(2) {
+  /* display: inline-block;
+  margin-left: 10px; */
+  /* float: right; */
+  position: absolute;
+  top: 0;
+  left: 42px;
+  line-height: 32px;
+}
+
+/*  전체서비스 navbar hover */
+.menu-bar-allservice {
+  position: absolute;
+  top: 70px;
+  right: -50px;
+  width: 211px;
+  box-sizing: border-box;
+  padding: 50px;
+  /* border: 1px solid red; */
+  border-top: 5px solid #4593fc;
+  background-color: #fbfbfb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10;
+  font-weight: 500;
+}
+
+.menu-bar-allservicebox {
+  width: 111px;
+  float: left;
+}
+
+.menu-bar-allservicebox > li {
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 40px;
+  margin-bottom: 13px;
+}
+
+.menu-bar-allservicebox li a {
+  display: block;
+  text-align: center;
+}
+
+/* MAIN-01 CAROUSEL */
+
+.mainslide-wrapper {
+  position: relative;
+  /* height: 500px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mainslide-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* transition: transform 0.5s ease-in; */
+  height: 500px;
+}
+
+.mainslide {
+  position: absolute;
+  /* float: left;
+  position: relative; */
+  /* height: 500px; */
+  /* left: 0;
+  top: 0; */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  list-style: none;
+}
+
+.mainslide.animated {
+  transition: left 0.5s ease-in;
+}
+
+.mainslide1 {
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/d01d3648-404e-4e24-b7ec-d8eb97b207ce/image.png");
+}
+
+.mainslide2 {
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/349e7b97-6330-4e66-8189-da89a0f2b9da/image.png");
+}
+
+.mainslide3 {
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/5778e00f-2352-4b8c-b69d-4dc3dee0be21/image.png");
+}
+
+.mainslide4 {
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/4d632e5b-999a-4183-90d8-68a07ac972cc/image.png");
+}
+
+.mainslide5 {
+  background-image: url("https://velog.velcdn.com/images/hyunny123/post/ff4defa6-7506-4886-83e7-492c7a82cd9a/image.png");
+}
+
+/* .mainslide-wrapper .chev-wrap.left,
+.mainslide-wrapper .chev-wrap.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  opacity:0.7;
+}
+*/
+.mainslide-wrapper .chev-wrap.left {
+  left: 230px;
+}
+.mainslide-wrapper .chev-wrap.right {
+  right: 230px;
+}
+
+.mainslide-wrapper .pager {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 1280px;
+  height: 54px;
+  margin: 0 auto 25px;
+  background-color: #000;
+  border-radius: 35px;
+  opacity: 0.7;
+}
+
+.pager a {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  margin: 10px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.pager > a > span > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pager > a > span:nth-child(2) {
+  vertical-align: 9px;
+  left: 47px;
+  height: 32px;
+  color: rgba(250, 250, 250, 0.5);
+}
+
+.pager a.active > span:nth-child(2) {
+  color: rgba(250, 250, 250, 1);
+  font-weight: bold;
+}
+/* MAIN-02 RECOMMENDED-GAMES */
+.recommend-game {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+.recommend-game > h2 {
+  padding-bottom: 36px;
+}
+.recommend-game > p {
+  padding-bottom: 24px;
+}
+.rc-slide-wrapper{
+    height:440px;
     position: relative;
-    width: 1280px;
-    margin: 0 auto;
-  }
-  .nav{
-    text-align: center;
-  }
-  .nav> ul{
-    display: inline-block;
-    vertical-align: top;
-  }
-  .nav > ul:first-child {
+    overflow:hidden;
+
+}
+.rc-slide-container{
     position: absolute;
-    right:0;
-    top: 73px;
-  }
-  .nav .line {
-    padding: 0 10px;
-  }
-  .nav > ul > li {
-    display: inline-block;
-    position: relative;
-    font-weight: bold;
-  }
-  
-  .nav > ul:first-child>  li > a:hover:first-child,
-  .nav > ul:first-child>  li > a:hover:nth-child(5){
-      color:#1b64da;
-  }
-  .nav .pc {
-    position: absolute;
-    bottom: 70%;
-    right: 80px;
-  }
-  
-  .nav ul:first-child li a {
-    font-size: 17px;
-  }
-  .login {
-    margin-left: 10px;
-  }
-  .menu-bar {
-    margin-top: 81px;
-    display: block;
-    position: relative;
-  }
-  .menu-bar > ul {
-    box-sizing: border-box;
-  }
-  .menu-bar > li {
-    padding-left: 198px;
-  }
-  
-  .menu-bar > li > a {
-    display: block;
-    padding-bottom: 33px;
-  }
-  
-  .menu-bar  li:hover > a {
-    color: #1b64da;
-  }
-  
-  .menu-bar li:hover:first-child > .menu-bar-imgsboxwrap {
-    display: block;
-  }
-  .menu-bar li:hover:last-child > .menu-bar-allservice {
-    display: block;
-  }
-  .menu-bar > li:first-child {
-    padding-left: 0px;
-  }
-  
-  /* 전체게임 navbar hover imgs */
-  .menu-bar-imgsboxwrap {
-    position: absolute;
-    top: 70px;
-    left: -20px;
-    width: 1312px;
-    box-sizing: border-box;
-    padding: 55px;
-    border-top: 5px solid #4593fc;
-    background-color: #fbfbfb;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    display: none;
-  
-  }
-  
-  .menu-bar-imgsbox {
-    width: 238px;
+    transition: 0.4s ease-in-out;
+}
+.rc-slide-container > li{
     float: left;
-  }
-  
-  .menu-bar-imgsbox > li {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 13px;
-  }
-  
-  .menu-bar-imgsbox li a {
-    display: block;
-    position: relative;
-  
-  }
-  
-  .menu-bar-imgsbox a img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    /* float: left; */
-    display: block;
-  }
-  .menu-bar-imgsbox li a span:nth-child(1) {
-    /* display: inline-block; */
-  }
-  
-  .menu-bar-imgsbox li a span:nth-child(2) {
-    /* display: inline-block;
-    margin-left: 10px; */
-    /* float: right; */
+    width: 305px;
+    margin-left: 16px;
+}
+.rc-slide-container > li:first-child{
+    margin-left: 0;
+}
+.rc-slide-container img{
+    object-fit:cover;
+}
+.rc-slide-container a img {
+  width: 305px;
+  height: 290px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s;
+}
+.rc-name,
+.rc-explain {
+  padding: 20px 0 0 20px;
+}
+.rc-slide-container .name-explain {
+  border: none;
+  height: 114px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.rc-slide-container li:hover img {
+  transform: translateY(-5px);
+}
+.rc-slide-container li:hover .name-explain{
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
+    transform: translateY(-5px);        
+}
+/*event tag는 hidden 속성 적용시 사라짐*/
+.rc-slide-container .rc-event {
+  float: right;
+  width: 50px;
+  display: block;
+  font-size: 10px;
+  color: #fff;
+  background-color: #4593fc;
+  line-height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+/*chev-wrap 삭제여부*/
+.chev-wrap.left {
+    left: -30px;
+    transform:translate(-100%, -50%);
+} 
+.chev-wrap.right{
+    right: -30px;
+    transform:translate(100%, -50%);
+}
+.chev-wrap{
     position: absolute;
-    top: 0;
-    left: 42px;
-    line-height: 32px;
-  }
-  
-  /*  전체서비스 navbar hover */
-  .menu-bar-allservice {
-    position: absolute;
-    top: 70px;
-    right: -50px;
-    width: 211px;
-    box-sizing: border-box;
-    padding: 50px;
-    /* border: 1px solid red; */
-    border-top: 5px solid #4593fc;
-    background-color: #fbfbfb;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    top:50%;
+    /* transform: translateY(-50%); */
+}
+#rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+}
+#rc-prev.disabled,
+#rc-next.disabled{
     display: none;
-    z-index: 10;
-  }
-  
-  .menu-bar-allservicebox {
-    width: 111px;
-    float: left;
-  }
-  
-  .menu-bar-allservicebox > li {
-    width: 100%;
-    /* border: 1px solid blue; */
-    height: 40px;
-    margin-bottom: 13px;
-  }
-  
-  .menu-bar-allservicebox  li a {
-    display: block;
-    text-align: center;
-  }
-  
-  /* MAIN-01 CAROUSEL */
-  
-  .mainslide-wrapper {
-    position: relative;
-    /* height: 500px; */
-    width: 100%;
-    /* margin: 0 auto; */
+}
+.chev-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* MAIN-03 NEW-GAMES */
+.new-game {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+.new-game > h2 {
+  padding-bottom: 56px;
+}
+.new-slide-wrapper{
+    position: relative;  
+    height: 410px;
     overflow: hidden;
-    box-sizing: border-box;
-  }
-  
-  .mainslide-container {
-      /* position:relative; */
-    margin: 0;
-    padding: 0;
-    transition: transform 0.5s ease-in;
-    height: 500px;
-  }
-  
-  .mainslide {
-    float: left;
+}
+.new-slide-container{
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+.new-slide-container > li{
+    margin-left: 14px;
+    width: 415px;
+    float:left;
     position: relative;
-    /* height: 500px; */
-    height: 100%;
-    width: 100%;
+}
+.new-slide-container > li:first-child{
+    margin-left: 0px;
+}
+.new-slide-container a img {
+  width: 415px;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.new-slide-container .name-genre{
+    /* padding: 25px 28px; */
+    border: none;
+    height: 96px;
+    width: 415px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
+}
+
+.new-name,
+.new-genre,
+.new-device {
+  text-transform: uppercase;
+  position: absolute;
+}
+.new-slide-container .new-name{
+left:20px;
+top: 10px;
+}
+.new-slide-container .new-genre{
+    bottom:23px;
+    left: 23px;
+}
+.new-slide-container .new-device {
+  float: right;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 23px;
+  right: 20px;
+}
+
+.new-slide-container figcaption{
+    width: 415px;
+    height: 260px;
+    position: absolute;
+    opacity: 1;
+    text-align:center;
+    line-height:15px;
+    display: none;
+    overflow: hidden;
+}
+.new-slide-container > li:hover figcaption{
+    top:0;
+    bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    line-height: 2rem;
+    display: block;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    animation: move 0.3s;
+    animation-fill-mode:both;
+}
+@keyframes move {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.new-slide-container li:hover .name-genre{
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, .2);
+}
+#new-next{
+    right:-23px;
+    transform: translate(100%, -50%);
+}
+/* #rc-next{
+    right: -18px;
+    transform:translate(100%, -50%);
+} */
+#new-prev.disabled,
+#new-next.disabled{
+    display: none;
+}
+
+/* MAIN-04 BANNER */
+/* MAIN-05 ALL-GAMES */
+
+.all-game{
+    width: 1280px;
+}
+
+.all-game > .all-game-header {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.all-game > .main-stt {
+  font-weight: 600;
+}
+
+.field {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.all-game > .tag-list-wrapper {
+  position: relative;
+  width: 1280px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+}
+
+.tag-list-wrapper > .see{
+    background-color: #fff;
+    width: 230px;
+    line-height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-weight: 600;
+    box-sizing: border-box;
+    position: absolute;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, .15);
     text-align: center;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    list-style: none;
-  }
-  
-  .mainslide1 {
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/d01d3648-404e-4e24-b7ec-d8eb97b207ce/image.png");
-  }
-  
-  
-  .mainslide2 {
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/349e7b97-6330-4e66-8189-da89a0f2b9da/image.png");
-  }
-  
-  .mainslide3 {
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/5778e00f-2352-4b8c-b69d-4dc3dee0be21/image.png");
-  }
-  
-  .mainslide4 {
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/4d632e5b-999a-4183-90d8-68a07ac972cc/image.png");
-  }
-  
-  .mainslide5 {
-    background-image: url("https://velog.velcdn.com/images/hyunny123/post/ff4defa6-7506-4886-83e7-492c7a82cd9a/image.png");
-  }
-  
-  .mainslide-wrapper .chev-wrap.left,
-  .mainslide-wrapper .chev-wrap.right {
+    transition: 0.3s ease-in;
+}
+
+.tag-list-wrapper > .see:hover {
+  color: #3182f6;
+}
+
+.tag-list-wrapper > .see.active {
+  background-color: #eeeeee;
+}
+
+.see.type-slide {
+  right: 0;
+  transform: translateX(-100%);
+  bottom: 100%;
+}
+
+.see.type-all {
+  right: 0;
+  bottom: 100%;
+}
+
+.tag-list-wrapper > .tag-list {
+  text-align: center;
+  background-color: #eeeeee;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.tag-list li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px 20px 10px;
+}
+.tag-list-2 li {
+  margin-bottom: 0;
+}
+
+.event-banner{
+    background-color: rgba(176, 184, 193, .2);
+    width: 1280px;
+    border-radius: 35px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: 0.3s ease-in;
+}
+
+.event-banner:hover {
+  background-color: rgba(176, 184, 193, 0.4);
+}
+
+.event-banner:hover > span {
+  background-color: #1b64da;
+}
+
+.event-banner:hover > .circle {
+  border: 3px solid #1b64da;
+}
+.event-banner:hover > .circle > i {
+  color: #1b64da;
+}
+
+.event-banner span {
+  color: #fff;
+  font-weight: 600;
+  line-height: 35px;
+  padding: 0 23px;
+  border-radius: 17.5px;
+  display: inline-block;
+  margin-left: 30px;
+}
+.event-banner a {
+  line-height: 70px;
+  margin-left: 30px;
+}
+.event-banner .circle {
+  width: 38.4px;
+  height: 38.4px;
+  border: 3px solid #4593fc;
+  text-align: center;
+  line-height: 32.4px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  font-size: 23px;
+}
+.event-banner .circle i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.all-game > .view-wrapper {
+  position: relative;
+}
+
+.all-game > .view-wrapper > .main5-slide-wrapper{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+.main5-slide-chev-wrap{
+    display: none;
+}
+.main5-slide-chev-wrap.active{
+    display: block;
+}
+
+.main5-big-slide-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    left:0;
+    transition: left .6s ease-in;
+}
+
+.main5-slide-wrapper,
+.tag-view-wrapper,
+.all-view-wrapper {
+  display: none;
+}
+.main5-slide-wrapper.active,
+.tag-view-wrapper.active,
+.all-view-wrapper.active {
+  display: block;
+}
+
+
+.page-num{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 30px;
+    line-height: 33px;
+    border-radius: 16.5px;
+}
+
+
+
+
+.main5-slide-wrapper > .page-num{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    z-index: 11;
+}
+
+.main5-slide-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: left 0.5s ease-in;
+  left: 0;
+  display: none;
+}
+
+.main5-slide-container.active {
+  display: block;
+}
+
+.main5-slide-container > .main5-slide {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 320px;
+  text-align: center;
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  background-size: contain;
+  list-style: none;
+  overflow: hidden;
+}
+
+.main5-slide > .slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in;
+}
+
+.main5-slide-container > .main5-slide:hover > .slide-img {
+  transform: scale(105%);
+}
+
+.main5-slide-container > .main5-slide:after {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.main5-slide-container > .main5-slide.s1 {
+  left: 0;
+}
+
+.main5-slide-container > .main5-slide.s2 {
+  left: 320px;
+}
+
+.main5-slide-container > .main5-slide.s3 {
+  left: 640px;
+}
+
+.main5-slide-container > .main5-slide.s4 {
+  left: 960px;
+}
+
+.main5-slide-container > .main5-slide > .contents > * {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+
+.main5-slide-container > .main5-slide > .contents > .content-tt {
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+}
+
+.main5-slide-container > .main5-slide > .contents > .tag-container {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 64px;
+  bottom: 0;
+}
+
+.main5-slide-container > .main5-slide > .contents > .tag-container > span{
+    background-color: rgba(0, 0, 0, .5);
+    line-height: 33px;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 16.5px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.main5-slide-container > .main5-slide > .contents > .tag-container > span+span{
+    margin-left: 10px;
+}
+
+.main5-slide > .contents > .content-tt {
+  white-space: nowrap;
+}
+
+.main5-slide-container > .slide1.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/fd4d269d-b87e-406e-8a39-4106bb916c2b/image.png");
+}
+.main5-slide-container > .slide1.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/6e1facbf-9e6b-464a-bc20-6d273ffcbbab/image.png");
+}
+.main5-slide-container > .slide1.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/dae2fd14-30b5-4a78-940c-24800db3671a/image.png");
+}
+.main5-slide-container > .slide1.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/4421f83d-9082-450d-b834-8fe1aff148a1/image.png");
+}
+.main5-slide-container > .slide2.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/3588ab7e-ae6d-4c60-9ac3-49d3fd2db949/image.png");
+}
+.main5-slide-container > .slide2.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/235b6cf6-b806-4329-8b6b-082d610e2bd9/image.png");
+}
+.main5-slide-container > .slide2.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/67758ae0-4ebc-4a7a-9fe3-caf24fd15d78/image.png");
+}
+.main5-slide-container > .slide2.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/efedd996-3306-4e4f-9302-3338ca03d4db/image.png");
+}
+.main5-slide-container > .slide3.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/77c6c745-a13d-4940-a33f-91f0b0ff20e5/image.png");
+}
+.main5-slide-container > .slide3.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/3ced81fa-f9ea-42d7-9db0-5f912023b73c/image.png");
+}
+.main5-slide-container > .slide3.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/6eb2396d-d47a-4ca8-bcc6-7699245320e6/image.png");
+}
+.main5-slide-container > .slide3.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/aa98b32b-a9e9-488b-8a14-65da1383e765/image.png");
+}
+.main5-slide-container > .slide4.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/1d43da59-807a-4ec7-8dce-f3361d5d0839/image.png");
+}
+.main5-slide-container > .slide4.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/f5a640ff-5ba6-4936-b2e6-4eccaf56c82d/image.png");
+}
+.main5-slide-container > .slide4.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/a6a6c089-060a-44fd-8ba4-3066ee62ded4/image.png");
+}
+.main5-slide-container > .slide4.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/36892b61-6042-4ec8-9c87-f4000b312c77/image.png");
+}
+.main5-slide-container > .slide5.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/a72c60f0-780f-4552-b113-576d8d8fbbbc/image.png");
+}
+.main5-slide-container > .slide5.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/9727a2da-7393-4008-9189-ab94a43e509e/image.png");
+}
+.main5-slide-container > .slide5.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/b1edd95c-7ab0-40af-8c6b-05aa670b424a/image.png");
+}
+.main5-slide-container > .slide5.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/43663036-a1b0-4977-a2aa-c5e0c05f603b/image.png");
+}
+.main5-slide-container > .slide6.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/3692e261-9bf0-408d-8d22-5b85d9eb42ee/image.png");
+}
+.main5-slide-container > .slide6.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/5a2fbd1e-defb-458b-bacb-a1cce5155c34/image.png");
+}
+.main5-slide-container > .slide6.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/7388cd40-3e96-471e-a046-51c382e7a24d/image.png");
+}
+.main5-slide-container > .slide6.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/762ab1f6-c618-45c7-b761-ab5859411ac6/image.png");
+}
+.main5-slide-container > .slide7.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/bae219ff-c23f-4f7e-9c7e-46d1389eed2c/image.png");
+}
+.main5-slide-container > .slide7.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/30b0b3eb-798e-479b-98bb-b9b17f52cba2/image.png");
+}
+.main5-slide-container > .slide7.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/ed623660-5eee-45df-893f-869dc6ea2f27/image.png");
+}
+.main5-slide-container > .slide7.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/494269f3-6385-4a09-8c9a-5bc540f0e34f/image.png");
+}
+.main5-slide-container > .slide8.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/0d2c91f8-645b-4701-93ef-ba4a12d7b5e0/image.png");
+}
+.main5-slide-container > .slide8.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/0b887f5d-4e3b-4e60-8f0c-27241d328ab4/image.png");
+}
+.main5-slide-container > .slide8.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/9815c532-7f88-4dcc-8025-e37841019286/image.png");
+}
+.main5-slide-container > .slide8.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/a92e328b-018b-4e45-9050-805b16959999/image.png");
+}
+
+.main5-slide-container > .slide9.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/2b9b5cbe-794b-44a6-8d1b-a803e29c2128/image.png");
+}
+.main5-slide-container > .slide9.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/5b160c06-0c6f-4dd7-a5c0-63cf80093ba1/image.png");
+}
+.main5-slide-container > .slide9.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/72331210-2d26-468b-8a77-f0bfd10b28ff/image.png");
+}
+.main5-slide-container > .slide9.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/08876727-fe67-47e5-a89d-dd8d7901bfb0/image.png");
+}
+.main5-slide-container > .slide10.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/b09e5596-6202-40ed-aae6-32c004fc977d/image.png");
+}
+.main5-slide-container > .slide10.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/8100259d-852c-4d73-928d-63c992da14ac/image.png");
+}
+.main5-slide-container > .slide10.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/1b864350-0f89-47e0-8514-f678e4845320/image.png");
+}
+.main5-slide-container > .slide10.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/57f8d286-dbe4-4cb3-8d25-202991bf2d88/image.png");
+}
+.main5-slide-container > .slide11.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/33b45473-610b-4a6b-a4d2-1616161105ae/image.png");
+}
+.main5-slide-container > .slide11.s2 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/dd84087f-0da0-433a-838d-18810b04e2fb/image.png");
+}
+.main5-slide-container > .slide11.s3 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/a9e5b2e4-7229-4789-8658-c90c45a760f0/image.png");
+}
+.main5-slide-container > .slide11.s4 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/d96ba958-14e6-42d5-bb28-6e22d34cca59/image.png");
+}
+.main5-slide-container > .slide12.s1 > .slide-img {
+  background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
+}
+
+.left.disabled,
+.right.disabled {
+    display: none;
+}
+
+.tag-view-wrapper{
+    position: relative;
+    top: 0%;
+}
+
+.game-card {
+  width: 308px;
+  height: 409px;
+  background-color: #fff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  float: left;
+  margin: 0 16px 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:nth-child(4n) {
+  margin-right: 0;
+}
+
+.game-card > img {
+  width: 308px;
+  height: 265px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in;
+}
+
+.game-card:hover > img {
+  transform: scale(1.1);
+}
+
+.game-card:hover > .ta-wrapper > .game-title {
+  color: #3182f6;
+}
+
+.game-card > .ta-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 308px;
+  height: 145px;
+  background-color: #fff;
+  padding: 30px 30px;
+  box-sizing: border-box;
+}
+
+.game-card > .ta-wrapper > .game-title {
+  font-weight: 600;
+  top: 0;
+  left: 0;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.game-card > .ta-wrapper > * {
+  font-weight: 600;
+}
+.game-card > .ta-wrapper > .gameGenre {
+  top: 65px;
+  left: 30px;
+}
+
+.game-card > .ta-wrapper > .gameAttribute > span {
+  float: right;
+}
+
+.game-card > .ta-wrapper > .gameAttribute > span + span {
+  margin-right: 20px;
+}
+
+.all-view-wrapper{
+    position: relative;
+    top:0;
+}
+
+.all-view-wrapper > .pager {
+  text-align: center;
+  margin: 46px auto auto 0;
+}
+
+.all-view-wrapper > .pager a {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s ease-in;
+}
+
+.all-view-wrapper > .pager a + a {
+  margin-left: 30px;
+}
+
+.all-view-wrapper > .pager a.active {
+  background: #3182f6;
+}
+
+.all-view-wrapper > .pager a:hover {
+  background: #3182f6;
+}
+
+.all-view-wrapper > .page-num {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.all-view > li {
+  display: none;
+}
+
+.all-view > li.active {
+  display: block;
+}
+/* Banner */
+.bannerWrapper{
+    background: url('https://ifh.cc/g/A0yQqd.jpg') center center/cover no-repeat;
+    width:100%;
+    height: 365px;
+    margin-bottom: 96px;
+}
+.bannerWrapper .banner-content{
+    position: relative;
+    height: 100%;
+}
+.bannerWrapper .banner-content figure{
     position: absolute;
     top: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-  }
-  
-  
-  
-  .pager {
+    right:0;
+    transform: translateY(-50%);
+}
+.bannerWrapper .banner-content figure iframe{/*되면 지우기 figure*/
+    vertical-align: top;
+    border-radius: 10px;
+    transition: .3s;
+}
+.bannerWrapper figure iframe.active{/*되면 지우기 figure*/
+    filter: brightness(0.7);
+}
+.bannerWrapper .banner-content figure .logo{
+    width: 68px;
+    height: 48px;
+    background: #c00;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    width: 1280px;
-    height: 54px;
-    margin: 0 auto 25px;
-    background-color: #000;
-    border-radius: 35px;
-    opacity: 0.7;
-  }
-  
-  
-  .pager a {
-    display: inline-block;
-    width: 200px;
-   
-    height: 54px;
-    margin: 10px 10px 0px 10px;
-    cursor: pointer;
-  
-  }
-  
-  .pager > a > span > img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right:10px;
-  }
-  
-  .pager > a > span:nth-child(2) {
-  vertical-align: 9px;
-    left: 47px;
-    height: 32px;
-    color: rgba(250, 250, 250, 0.5);
-  }
-  
-  .pager a.active > span:nth-child(2) {
-    color: rgba(250, 250, 250, 1);
-    font-weight: bold;
-  }
-  /* MAIN-02 RECOMMENDED-GAMES */
-  .recommend-game{
-      width: 1280px;
-      margin: 0 auto;
-      position: relative;
-  }
-  .recommend-game > h2{
-      padding-bottom: 36px;
-  }
-  .recommend-game > p{
-      padding-bottom: 24px;
-  }
-  .rc-slide-wrapper{
-      height: 404px;
-      position: relative;  
-  }
-  .rc-slide-container{
-      box-sizing: border-box;
-  }
-  .rc-slide-container > li{
-      float: left;
-      /* width: 305px; */
-      box-sizing: border-box;
-      
-  }
-  .rc-slide-container li + li{
-      margin-left: 16px;
-  }
-  .rc-slide-container img{
-      object-fit:cover;
-  }
-  .rc-slide-container a img{
-      width: 305px;
-      height: 290px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transition: 0.3s;
-  }
-  .rc-name,
-  .rc-explain{
-      padding:20px 0 0 20px;
-  }
-  .rc-slide-container .name-explain{
-      border: none;
-      height: 114px;
-      box-sizing: border-box;
-      position: relative;
-      box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
-      transition: 0.3s;
-  }
-  .rc-slide-container li:hover img{
-      transform: translateY(-5px);
-  }
-  .rc-slide-container li:hover .name-explain{
-      box-shadow: 18px 18px 15px rgba(0, 0, 0, .2);
-      transform: translateY(-5px);        
-  }
-  /*event tag는 hidden 속성 적용시 사라짐*/
-  .rc-slide-container .rc-event{
-      float: right;
-      width: 50px;
-      display: block;
-      font-size: 10px;
-      color: #fff;
-      background-color: #4593fc;
-      line-height: 20px;
-      border-radius: 10px;
-      text-align: center;
-      text-transform: uppercase;
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-  }
-  /*chev-wrap 삭제여부*/
-  .left {
-      left: 0px;
-      transform:translateX(-100%);
-  } 
-  .right{
-      right: -30px;
-      transform:translateX(100%);
-  }
-  .chev-wrap{
-      position: absolute;
-      top:50%;
-      transform: translateY(-50%);
-  }
-  /* MAIN-03 NEW-GAMES */
-  .new-game{
-      width: 1280px;
-      margin: 0 auto;
-      position: relative;
-  }
-  .new-game > h2{
-      padding-bottom: 56px;
-  }
-  .new-slide-wrapper{
-      width:1280px;
-      margin: 0 auto;
-      height: 252px;
-      position: relative;  
-  }
-  
-  /* .new-slide-contanier > li{
-      float: left;
-      box-sizing: border-box;
-      width: 415px;
-  } */
-  
-  .new-slide-container li + li{
-      margin-left: 16px;
-  }
-  .new-slide-container a img{
-      width: 415px;
-      height: 260px;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  /* .new-slide1 a img{
-      background-image: url(/nexon-renewal-webpage/img/VeildeExpert.png);
-  }
-  .new-slide2 a img{
-      background-image: url(/nexon-renewal-webpage/img/DF.png);
-  }
-  .new-slide3 a img{
-      background-image: url(/nexon-renewal-webpage/img/Blue.jpg);
-  } */
-  .new-slide-wrapper{
-    margin-bottom: 96px;
-    height: 348px;
-  }
-  .new-slide-container .name-genre{
-      padding: 25px 28px;
-      border: none;
-      height: 96px;
-      width: 415px;
-      box-sizing: border-box;
-      position: relative;
-      box-shadow: 15px 15px 15px rgba(0, 0, 0, .1);
-  }
-  
-  .new-name,
-  .new-genre,
-  .new-device{
-      text-transform: uppercase;
-      position: absolute;
-  }
-  .new-slide-container .new-name{
-    left:0;
-    top:0;
-  }
-  .new-slide-container .new-genre{
-      position: absolute;
-      bottom:23px;
-      left: 26px;
-  }
-  .new-slide-container .new-device{
-      float: right;
-      line-height: 20px;
-      text-align: center;
-      text-transform: uppercase;
-      position: absolute;
-      bottom: 23px;
-      right: 20px;
-  }
-  
-  .new-slide-container li{
-      float: left;
-      position: relative;
-      
-  }
-  
-  .new-slide-container{
-      position: absolute;
-  
-  }
-  
-  .new-slide-container figcaption{
-      width: 100%;
-      /* height: 252px; */
-      height: 69%;
-      position: absolute;
-      opacity: 1;
-      text-align:center;
-      line-height:15px;
-      display: none;
-      overflow: hidden;
-  }
-  .new-slide-container > li:hover figcaption{
-      top:0%;
-      bottom:0%; left:0; right:0;
-      background:rgba(0,0,0,0.8);
-      color:#fff;
-      line-height: 2rem;
-      display: block;
-      padding-top: 100px;
-      box-sizing: border-box;
-      font-size: 1.5rem;
-      animation: move 0.3s;
-      animation-fill-mode:both;
-  }
-  @keyframes move {
-      from {transform: translateY(10%);opacity: 0;}
-      to {transform: translateY(0%); opacity: 1;}
-  }
-  .new-slide-container li:hover .name-genre{
-      box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
-  }
-  
-  /* MAIN-04 BANNER */
-  /* MAIN-05 ALL-GAMES */
-  
-  .all-game{
-      width: 1280px;
-      margin: 0 auto 96px auto;
-  }
-  
-  .all-game > .all-game-header{
-      width: 100%;
-      height: 45px;
-      margin-bottom: 100px;
-      position: relative;
-  }
-  .all-game > .main-stt{
-      font-weight: 600;
-  }
-  
-  .field{
-      position:absolute;
-      right:0;
-      bottom:0;
-  }
-  
-  .all-game > .tag-list-wrapper{
-      position:relative;
-      width: 1280px;
-      box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
-      margin-bottom: 50px;
-  }
-  
-  .tag-list-wrapper > .see{
-      background-color: #fff;
-      width: 230px;
-      line-height: 50px;
-      border-top-right-radius: 15px;
-      border-top-left-radius: 15px;
-      font-weight: 600;
-      box-sizing: border-box;
-      position: absolute;
-      box-shadow: 3px 4px 10px rgba(0, 0, 0, .15);
-      text-align: center;
-  }
-  
-  .tag-list-wrapper > .see:hover{
-      color:#3182f6;
-  }
-  
-  .tag-list-wrapper > .see.active{
-      background-color: #eeeeee;
-  }
-  
-  .see.type-slide{
-      right:0;
-      transform:translateX(-100%);
-      bottom:100%;
-  }
-  
-  .see.type-all{
-      right:0;
-      bottom:100%;
-  }
-  
-  .tag-list-wrapper > .tag-list{
-      text-align: center;
-      background-color: #eeeeee;
-      width: 100%;
-      padding: 20px 20px 20px 20px;
-      box-sizing: border-box;
-      position: relative;
-  }
-  
-  .tag-list li{
-      display: inline-block;
-      text-align: center;
-      margin: 0 10px 20px 10px;
-  }
-  .tag-list-2 li{
-      margin-bottom: 0;
-  }
-  
-  .event-banner{
-      background-color: rgba(176, 184, 193, .2);
-      width: 1280px;
-      border-radius: 35px;
-      position: relative;
-      margin-bottom: 50px;
-  }
-  
-  .event-banner:hover{
-      background-color: rgba(176, 184, 193, .4);
-  }
-  
-  .event-banner:hover > span{
-      background-color: #1b64da;
-  }
-  
-  .event-banner:hover > .circle{
-      border: 3px solid #1b64da;
-  }
-  .event-banner:hover > .circle > i{
-      color:#1b64da;
-  }
-  
-  .event-banner span{
-      color:#fff;
-      font-weight: 600;
-      line-height: 35px;
-      padding:0 23px;
-      border-radius: 17.5px;
-      display: inline-block;
-      margin-left: 30px;
-  }
-  .event-banner a{
-      line-height: 70px;
-      margin-left: 30px;
-  }
-  .event-banner .circle{
-      width: 38.4px;
-      height: 38.4px;
-      border: 3px solid #4593fc;
-      text-align: center;
-      line-height: 32.4px;
-      box-sizing: border-box;
-      border-radius: 50%;
-      position:absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right:30px;
-      font-size: 23px;
-  }
-  .event-banner .circle i{
-      position:absolute;
-      left:50%;
-      top:50%;
-      transform: translate(-50%,-50%);
-  }
-  
-  .all-game > .view-wrapper{
-      position: relative;
-  }
-  
-  .all-game > .view-wrapper > .main5-slide-wrapper{
-      position: relative;
-      width: 100%;
-      height: 450px;
-  }
-  
-  .main5-slide-wrapper, .tag-view-wrapper, .all-view-wrapper{
-      display: none;
-  }
-  .main5-slide-wrapper.active, .tag-view-wrapper.active, .all-view-wrapper.active{
-      display: block;
-  }
-  
-  
-  .main5-slide-wrapper .page-num{
-      color:#fff;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 0 30px;
-      line-height: 33px;
-      border-radius: 16.5px;
-  }
-  
-  .main5-slide-wrapper > .page-num{
-      position: absolute;
-      top:30px;
-      right: 30px;
-      z-index: 11;
-  }
-  
-  .main5-slide-container{
-      position:absolute;
-      width: 100%;
-      height: 100%;
-      margin:0;
-      padding:0;
-      transition: left 0.5s ease-in;
-      left: 0;
-      display: none;
-  }
-  
-  .main5-slide-container.active{
-      display: block;
-  }
-  
-  .main5-slide-container > .main5-slide{
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 320px;
-      text-align: center;
-      background-repeat: no-repeat;
-      /* background-position: center center; */
-      background-size: contain;
-      list-style: none;
-      overflow: hidden;
-  }
-  
-  .main5-slide > .slide-img{
-      position: absolute;
-      top:0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      transition: 0.3s ease-in
-  }
-  
-  .main5-slide-container > .main5-slide:hover > .slide-img{
-      transform: scale(105%);
-  }
-  
-  .main5-slide-container> .main5-slide:after{
-      position: absolute;
-      z-index: 1;
-      left:0;
-      top:0;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1));
-  }
-  
-  .main5-slide-container> .main5-slide.s1{
-      left:0;
-  }
-  
-  .main5-slide-container> .main5-slide.s2{
-      left:320px;
-  }
-  
-  .main5-slide-container> .main5-slide.s3{
-      left:640px;
-  }
-  
-  .main5-slide-container> .main5-slide.s4{
-      left:960px;
-  }
-  
-  .main5-slide-container > .main5-slide > .contents > *{
-      position:absolute;
-      color:#fff;
-      z-index: 2;
-  }
-  
-  .main5-slide-container > .main5-slide > .contents > .content-tt{
-      bottom: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: 600;
-  }
-  
-  .main5-slide-container > .main5-slide > .contents > .tag-container{
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 64px;
-      bottom:0;
-  }
-  
-  .main5-slide-container > .main5-slide > .contents > .tag-container > label{
-      background-color: rgba(0, 0, 0, .5);
-      line-height: 33px;
-      display: inline-block;
-      padding: 0 20px;
-      border-radius: 16.5px;
-      margin: 0 auto;
-      font-size: 14px;
-  }
-  
-  .main5-slide-container > .main5-slide > .contents > .tag-container > label+label{
-      margin-left: 10px;
-  }
-  
-  .main5-slide > .contents > .content-tt{
-      white-space: nowrap;
-  }
-  
-  .main5-slide-container > .slide1.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/fd4d269d-b87e-406e-8a39-4106bb916c2b/image.png");
-  }
-  .main5-slide-container > .slide1.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/6e1facbf-9e6b-464a-bc20-6d273ffcbbab/image.png");
-  }
-  .main5-slide-container > .slide1.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/dae2fd14-30b5-4a78-940c-24800db3671a/image.png");
-  }
-  .main5-slide-container > .slide1.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/4421f83d-9082-450d-b834-8fe1aff148a1/image.png");
-  }
-  .main5-slide-container > .slide2.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/3588ab7e-ae6d-4c60-9ac3-49d3fd2db949/image.png");
-  }
-  .main5-slide-container > .slide2.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/235b6cf6-b806-4329-8b6b-082d610e2bd9/image.png");
-  }
-  .main5-slide-container > .slide2.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/67758ae0-4ebc-4a7a-9fe3-caf24fd15d78/image.png");
-  }
-  .main5-slide-container > .slide2.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/efedd996-3306-4e4f-9302-3338ca03d4db/image.png");
-  }
-  .main5-slide-container > .slide3.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/77c6c745-a13d-4940-a33f-91f0b0ff20e5/image.png");
-  }
-  .main5-slide-container > .slide3.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/3ced81fa-f9ea-42d7-9db0-5f912023b73c/image.png");
-  }
-  .main5-slide-container > .slide3.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/6eb2396d-d47a-4ca8-bcc6-7699245320e6/image.png");
-  }
-  .main5-slide-container > .slide3.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/aa98b32b-a9e9-488b-8a14-65da1383e765/image.png");
-  }
-  .main5-slide-container > .slide4.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/1d43da59-807a-4ec7-8dce-f3361d5d0839/image.png");
-  }
-  .main5-slide-container > .slide4.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/f5a640ff-5ba6-4936-b2e6-4eccaf56c82d/image.png");
-  }
-  .main5-slide-container > .slide4.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/a6a6c089-060a-44fd-8ba4-3066ee62ded4/image.png");
-  }
-  .main5-slide-container > .slide4.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/36892b61-6042-4ec8-9c87-f4000b312c77/image.png");
-  }
-  .main5-slide-container > .slide5.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/a72c60f0-780f-4552-b113-576d8d8fbbbc/image.png");
-  }
-  .main5-slide-container > .slide5.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/9727a2da-7393-4008-9189-ab94a43e509e/image.png");
-  }
-  .main5-slide-container > .slide5.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/b1edd95c-7ab0-40af-8c6b-05aa670b424a/image.png");
-  }
-  .main5-slide-container > .slide5.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/43663036-a1b0-4977-a2aa-c5e0c05f603b/image.png");
-  }
-  .main5-slide-container > .slide6.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/3692e261-9bf0-408d-8d22-5b85d9eb42ee/image.png");
-  }
-  .main5-slide-container > .slide6.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/5a2fbd1e-defb-458b-bacb-a1cce5155c34/image.png");
-  }
-  .main5-slide-container > .slide6.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/7388cd40-3e96-471e-a046-51c382e7a24d/image.png");
-  }
-  .main5-slide-container > .slide6.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/762ab1f6-c618-45c7-b761-ab5859411ac6/image.png");
-  }
-  .main5-slide-container > .slide7.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/bae219ff-c23f-4f7e-9c7e-46d1389eed2c/image.png");
-  }
-  .main5-slide-container > .slide7.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/30b0b3eb-798e-479b-98bb-b9b17f52cba2/image.png");
-  }
-  .main5-slide-container > .slide7.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/ed623660-5eee-45df-893f-869dc6ea2f27/image.png");
-  }
-  .main5-slide-container > .slide7.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/494269f3-6385-4a09-8c9a-5bc540f0e34f/image.png");
-  }
-  .main5-slide-container > .slide8.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/0d2c91f8-645b-4701-93ef-ba4a12d7b5e0/image.png");
-  }
-  .main5-slide-container > .slide8.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/0b887f5d-4e3b-4e60-8f0c-27241d328ab4/image.png");
-  }
-  .main5-slide-container > .slide8.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/9815c532-7f88-4dcc-8025-e37841019286/image.png");
-  }
-  .main5-slide-container > .slide8.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/a92e328b-018b-4e45-9050-805b16959999/image.png");
-  }
-  
-  .main5-slide-container > .slide9.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/2b9b5cbe-794b-44a6-8d1b-a803e29c2128/image.png");
-  }
-  .main5-slide-container > .slide9.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/5b160c06-0c6f-4dd7-a5c0-63cf80093ba1/image.png");
-  }
-  .main5-slide-container > .slide9.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/72331210-2d26-468b-8a77-f0bfd10b28ff/image.png");
-  }
-  .main5-slide-container > .slide9.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/08876727-fe67-47e5-a89d-dd8d7901bfb0/image.png");
-  }
-  .main5-slide-container > .slide10.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/b09e5596-6202-40ed-aae6-32c004fc977d/image.png");
-  }
-  .main5-slide-container > .slide10.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/8100259d-852c-4d73-928d-63c992da14ac/image.png");
-  }
-  .main5-slide-container > .slide10.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/1b864350-0f89-47e0-8514-f678e4845320/image.png");
-  }
-  .main5-slide-container > .slide10.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/57f8d286-dbe4-4cb3-8d25-202991bf2d88/image.png");
-  }
-  .main5-slide-container > .slide11.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/33b45473-610b-4a6b-a4d2-1616161105ae/image.png");
-  }
-  .main5-slide-container > .slide11.s2 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/dd84087f-0da0-433a-838d-18810b04e2fb/image.png");
-  }
-  .main5-slide-container > .slide11.s3 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/a9e5b2e4-7229-4789-8658-c90c45a760f0/image.png");
-  }
-  .main5-slide-container > .slide11.s4 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/d96ba958-14e6-42d5-bb28-6e22d34cca59/image.png");
-  }
-  .main5-slide-container > .slide12.s1 > .slide-img{
-      background-image: url("https://velog.velcdn.com/images/sungegun/post/1027198f-48c4-4db4-bb56-4da6123f8408/image.png");
-  }
-  /* 
-  .chev-wrap{
-      position:absolute;
-      top:50%;
-      transform: translate(-50%);
-  }
-  
-  .chev-wrap.left{
-      right: calc(100% + 30px);
-  }
-  .chev-wrap.right{
-      left: calc(100% + 30px);
-      transform: translateX(50%);
-  } */
-  
-  .tag-view-wrapper{
-      position: absolute;
-      top: 0%;
-  }
-  
-  .game-card{
-      width: 308px;
-      height: 409px;
-      background-color: #fff;
-      box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
-      float: left;
-      margin:0 16px 16px 0;
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .game-card:nth-child(4n){
-      margin-right:0;
-  }
-  
-  .game-card > img{
-      width: 308px;
-      height: 265px;
-      position:absolute;
-      top:0;
-      left:0;
-      object-fit: cover;
-      transition: 0.3s ease-in;
-  }
-  
-  .game-card:hover > img{
-      transform: scale(1.1);
-  }
-  
-  .game-card:hover > .ta-wrapper > .game-title{
-      color:#3182f6;
-  }
-  
-  .game-card > .ta-wrapper{
-      position: absolute;
-      bottom:0;
-      left:0;
-      width: 308px;
-      height: 145px;
-      background-color: #fff;
-      padding: 30px 30px;
-      box-sizing: border-box;
-  }
-  
-  .game-card > .ta-wrapper > .game-title{
-      font-weight: 600;
-      top:0;
-      left:0;
-      letter-spacing: -1px;
-      white-space: nowrap;
-  }
-  
-  .game-card > .ta-wrapper > *{
-      font-weight: 600;
-  }
-  .game-card > .ta-wrapper > .gameGenre{
-      top: 65px;
-      left: 30px;
-  }
-  
-  .game-card > .ta-wrapper > .gameAttribute > span{
-      float: right;
-  }
-  
-  .game-card > .ta-wrapper > .gameAttribute > span+span{
-      margin-right: 20px;
-  }
-  
-  .all-view-wrapper{
-      position: absolute;
-      top:0;
-  }
-  
-  .all-view-wrapper > .pager {
-      text-align: center;
-      margin: 46px auto auto 0;
-  }
-  
-  .all-view-wrapper > .pager a {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: inline-block;
-  }
-  
-  .all-view-wrapper > .pager a+a{
-      margin-left: 30px;
-  }
-  
-  .all-view-wrapper > .pager a.active {
-      background: #3182f6;
-  }
-  
-  .all-view-wrapper > .pager a:hover {
-      background: #3182f6;
-  }
-  
-  .all-view-wrapper > .page-num{
-      position: absolute;
-      bottom:0;
-      right:0;
-  }
-  
-  .all-view > li{
-      display: none;
-  }
-  
-  .all-view > li.active{
-      display: block;
-  }
-  /* Banner */
-  .bannerWrapper{
-      background: url('https://ifh.cc/g/A0yQqd.jpg') center center/cover no-repeat;
-      width:100%;
-      height: 365px;
-      margin-bottom: 96px;
-      position: relative;
-  }
-  .bannerWrapper figure{
-      position: absolute;
-      top: 50%;
-      left:calc(50% + 430px);
-      transform: translate(-50%, -50%);
-  }
-  .bannerWrapper figure iframe{/*되면 지우기 figure*/
-      vertical-align: top;
-      border-radius: 10px;
-      transition: .3s;
-  }
-  .bannerWrapper figure iframe.active{/*되면 지우기 figure*/
-      filter: brightness(0.7);
-  }
-  .bannerWrapper .logo{
-      width: 68px;
-      height: 48px;
-      background: #c00;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 15px;
-  }
-  .bannerWrapper .logo:after{
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: calc(50% + 10px);
-      transform: translate(-50%, -50%);
-      border-style:solid;
-      border-width:10px 18px;
-      border-color: transparent transparent transparent #fff;
-  }
-  /* MAIN-06 RECOMMENDED-VIDEO */
-  .videoWrapper ul{
-      margin-top: 48px;
-  }
-  .videoWrapper li{
-    float: left;
-    background: #f1f1f1;
-    text-align: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 15px;
-  }
-  .videoWrapper li + li{
-    margin-left: 58px;
-  }
-  .videoWrapper li .video-img-border{
-    padding: 15px;
-    background: rgba(69, 147, 252, 0.7);
-    border-radius: 15px 15px 0 15px;
-    height: 222px;
-    box-sizing: border-box;  
-    position: relative;
-  }
-  .videoWrapper li .video-img-border span{
+}
+.bannerWrapper .banner-content figure .logo:after{
+    content: "";
+    /* width: 18px;height: 20px; */
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top:  100%;
-    right: 0;
-    background: rgba(69, 147, 252, 0.7);
-  }
-  .videoWrapper li .video-img-border span:after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    top: 0;
-    right: 0;
-    position: absolute;
-    border-top-right-radius: 100%;
-    background: #f1f1f1;
-  }
-  .videoWrapper li img{
-    border-radius: 15px;
-    display: block;
-  }
-  .videoWrapper li p{
-    font-size: 18px;
-    font-weight: 600;
-    text-align: left;
-    padding: 30px 0 20px 30px;
-  }
-  .videoWrapper li .video-btn{
-    display: inline-block;
-    background: #4593fc;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 16px;
-    color: #fff;
-    padding: 10px 30px;
-    margin-bottom: 30px;
-  }
-  /* FOOTER-01  */
-  .allService .allService-first-Line{
-    background: rgba(176, 184, 193, 0.3);
+    top: 50%;
+    left: calc(50% + 10px);
+    transform: translate(-50%, -50%);
+    border:solid 10px 18px transparent transparent transparent #fff;
+    /* border-style:solid;
+    border-width:10px 18px;
+    border-color: transparent transparent transparent #fff; */
+}
+/* MAIN-06 RECOMMENDED-VIDEO */
+.videoWrapper ul{
     margin-top: 48px;
-    width: 100%;
-  }
-  .allService .allService-second-Line{
-    background: rgba(176, 184, 193, 0.4);
-    width: 100%;
-  }
-  .allService li{
-    float: left;
-    width: 20%;
-    height: 308px;
-    padding: 50px;
-    box-sizing: border-box;
-  }
-  .allService dl dt{
-    margin-bottom: 20px;
-  }
-  .allService-second-Line li:nth-child(2) dt:last-child{
-      padding-top: 20px;
-  }
-  .allService dl .disable{
-      display: none;
-  }
-  .allService dl dd{
-    line-height: 2.19em;
-  }
-  /* FOOTER-02 */
+}
+.videoWrapper li{
+  float: left;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 15px;
+}
+.videoWrapper li + li{
+  margin-left: 58px;
+}
+.videoWrapper li .video-img-border{
+  padding: 15px;
+  background: rgba(69, 147, 252, 0.7);
+  border-radius: 15px 15px 0 15px;
+  height: 222px;
+  box-sizing: border-box;  
+  position: relative;
+}
+.videoWrapper li .video-img-border span{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top:  100%;
+  right: 0;
+  background: rgba(69, 147, 252, 0.7);
+}
+.videoWrapper li .video-img-border span:after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-top-right-radius: 100%;
+  background: #f1f1f1;
+}
+.videoWrapper li img{
+  border-radius: 15px;
+  display: block;
+}
+.videoWrapper li p{
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  padding: 30px 0 20px 30px;
+}
+.videoWrapper li .video-btn{
+  display: inline-block;
+  background: #4593fc;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+}
+/* FOOTER-01  */
+.allService .allService-first-Line{
+  background: rgba(176, 184, 193, 0.3);
+  margin-top: 48px;
+  width: 100%;
+}
+.allService .allService-second-Line {
+  background: rgba(176, 184, 193, 0.4);
+  width: 100%;
+}
+.allService li {
+  float: left;
+  width: 20%;
+  height: 308px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.allService dl dt {
+  margin-bottom: 20px;
+}
+.allService-second-Line li:nth-child(2) dt:last-child{
+    padding-top: 20px;
+}
+.allService dl .disable{
+    display: none;
+}
+.allService dl dd {
+  line-height: 2.19em;
+}
+
+/* footer -2 */
+
+.containerWrap {
+  width: 100%;
+}
+
+.footerwrap {
+  padding-top: 76px;
+  padding-bottom: 67px;
+}
+
+.footer-logo.main-tt > a {
+  width: 200px;
+
+  background-image: url("../images/nexon.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  display: inline-block;
+  text-indent: -9999rem;
+  line-height: 35px;
+}
+
+.footer-logowrap {
+  /* float: left; */
+  position: relative;
+  margin-bottom: 30px;
+}
+.snsnlangs {
+  /* float: right; */
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.snswrap {
+  float: left;
+  /* width: 400px; */
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  margin-right: 35px;
+  padding: 0 30px;
+}
+
+.snswrap:hover,
+.langswrap:hover {
+  background-color: #2272eb;
+}
+
+.snswrap span:hover i,
+.langswrap span:hover:last-child {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.snswrap span:first-child {
+  margin-right: 45px;
+}
+.snswrap span {
+  margin-right: 15px;
+}
+
+.snswrap span:last-child {
+  margin-right: 0px;
+}
+
+.langswrap {
+  float: left;
+  width: 290px;
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+}
+
+.langswrap span {
+  display: inline-block;
+  padding: 0px 15px;
+}
+.footer-info {
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 35px;
+}
+
+.footer-info > li {
+  box-sizing: border-box;
+  float: left;
+  list-style: none;
+  margin-left: 32px;
+  font-weight: 600;
+}
+
+.footer-info > li:first-child {
+  margin-left: 0px;
+}
+
+.footer-info > li:hover a {
+  color: #2272eb;
+}
+
+address {
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+/* go-top */
+#go-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  color: #4593fc;
+  font-size: 36px;
+  box-shadow: 0 3px 10px 0.15;
+  position: fixed;
+  bottom: 65px;
+  right: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fbfbfb;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+#go-top:hover {
+  border: 3px solid #4593fc;
+}
+
+#go-top.active {
+  opacity: 1;
+  visibility: visible;
+}

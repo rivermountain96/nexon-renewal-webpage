@@ -202,6 +202,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   position: relative;
+  transition: 0.3s ease-in;
 }
 
 .chev-btn i {
@@ -256,16 +257,16 @@ body {
   line-height: 40px;
   text-align: center;
   font-weight: 600;
+  transition: 0.3s ease-in;
 }
 
 .tag:hover {
   color: #3182f6;
 }
 
-.tag:focus {
+.tag.clicked {
   background-color: #3182f6;
   color: #fff;
-  box-shadow: 0 0 0 3px #1b64da inset;
 }
 
 /*footer btn*/
