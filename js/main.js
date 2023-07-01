@@ -1,4 +1,41 @@
 /* 이현정 구현 부분*/
+/* popup */
+
+let popup = document.querySelector(".popup");
+let pCloseBtn = popup.querySelector("#close");
+let dayCheck = popup.querySelector("#daycheck");
+
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+// setCookie("team", "marathon", 1);
+
+function cookieCheck(name) {
+  let cookieArr = document.cookie.split(";");
+  let visited = false;
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
+    }
+  }
+  if (!visited) {
+    popup.setAttribute("open", "");
+  }
+}
+cookieCheck("team");
+
+pCloseBtn.addEventListener("click", () => {
+  popup.removeAttribute("open");
+  if (dayCheck.checked) {
+    setCookie("team", "marathon", 1);
+  } else {
+    setCookie("team", "marathon", -1);
+  }
+});
+
 /* main carousel */
 
 let mainSlideWrapper = document.querySelector(".mainslide-wrapper");
