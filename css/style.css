@@ -208,7 +208,6 @@ header {
   width: 211px;
   box-sizing: border-box;
   padding: 50px;
-  /* border: 1px solid red; */
   border-top: 5px solid #4593fc;
   background-color: #fbfbfb;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -224,7 +223,6 @@ header {
 
 .menu-bar-allservicebox > li {
   width: 100%;
-  /* border: 1px solid blue; */
   height: 40px;
   margin-bottom: 13px;
 }
@@ -249,7 +247,7 @@ header {
   position: relative;
   margin: 0;
   padding: 0;
-  /* transition: transform 0.5s ease-in; */
+  transition: transform 0.5s ease-in;
   height: 500px;
 }
 
@@ -350,7 +348,10 @@ header {
 .pager a.active > span:nth-child(2) {
   color: rgba(250, 250, 250, 1);
   font-weight: bold;
+  transition: 0.3s ease-in;
 }
+
+
 /* MAIN-02 RECOMMENDED-GAMES */
 .recommend-game {
   width: 1280px;
