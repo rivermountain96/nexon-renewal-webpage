@@ -38,13 +38,21 @@
   color: #4593fc;
 }
 
-.pp-close input {
-  font-size: 1.5rem;
+.pp_close {
+  float:right;
 }
+
+input[type=checkbox] {
+margin: 0 5px;
+transform: scale(1.5);
+}
+
+
 
 #close {
   position: absolute;
   right: 40px;
+  top:33px;
   font-size: 1.5rem;
 }
 
