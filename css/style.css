@@ -1097,9 +1097,10 @@ top: 10px;
 .banner-wrapper figure .video-logo:active{
   display: none;
 }
-.banner-wrapper figure .video-logo:active + iframe{
-  display: none;
-}
+/* .banner-wrapper figure .video-logo:active + iframe{
+  
+} */
+
 .banner-wrapper figure .video-logo{
   position: absolute;
   top: 50%;
@@ -1109,6 +1110,7 @@ top: 10px;
   border-radius: 15px;
   background: #c00;
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 .banner-wrapper figure .video-logo:after{
   content: '';
@@ -1129,14 +1131,15 @@ top: 10px;
   border-radius: 15px;
   background: #f1f1f1;
   text-align: center;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.15);/* 그림자 수치 고민 중 */
 }
 .video-wrapper li + li{
-  margin-left: 58px;
+  margin-left: 61px;
 }
 .video-wrapper li .video-img-border{
   position: relative;
-  height: 222px;
-  padding: 15px;
+  height: 228px;
+  padding: 17px;
   border-radius: 15px 15px 0;
   background: rgba(69,147,252,0.7);
   box-sizing: border-box;
@@ -1168,6 +1171,7 @@ top: 10px;
   font-weight: 600;
   font-size: 18px;
   text-align: left;
+  /* word-spacing: 1px; */
 }
 .video-wrapper li .video-btn{
   display: inline-block;
@@ -1178,6 +1182,9 @@ top: 10px;
   font-weight: 600;
   font-size: 16px;
   color: #fff;
+}
+.video-wrapper li .video-btn:focus{
+  box-shadow: 0 0 0 3px #1b64da inset;
 }
 /* FOOTER-01 */
 .all-service .first-line{
