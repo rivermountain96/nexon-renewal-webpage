@@ -3,7 +3,7 @@
   position: fixed;
   top: 15%;
   left: 5%;
-  border: 5px solid #4593fc;
+  /* border: 5px solid #4593fc; */
   background-color: #fbfbfb;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   padding: 40px 40px;
@@ -11,6 +11,8 @@
   z-index: 3000;
   margin: 0;
   letter-spacing: 0.02em;
+  border:none;
+ 
 }
 
 .popup .main-tt {
@@ -21,6 +23,8 @@
   background-repeat: no-repeat;
   display: inline-block;
   text-indent: -9999rem;
+  transform: translateX(100%);
+  padding:15px 0;
 }
 .popup .content-tt {
   text-transform: uppercase;
@@ -322,8 +326,11 @@ header {
   border-radius: 35px;
   opacity: 0.7;
 }
-
+.pager li{
+  display: inline-block;
+}
 .pager a {
+  /* float:left; */
   display: inline-block;
   width: 200px;
   height: 54px;
@@ -331,21 +338,21 @@ header {
   cursor: pointer;
 }
 
-.pager > a > span > img {
+.pager  li a  span  img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.pager > a > span:nth-child(2) {
+.pager li a  span:nth-child(2) {
   vertical-align: 9px;
   left: 47px;
   height: 32px;
   color: rgba(250, 250, 250, 0.5);
 }
 
-.pager a.active > span:nth-child(2) {
+.pager li.active  span:nth-child(2) {
   color: rgba(250, 250, 250, 1);
   font-weight: bold;
   transition: 0.3s ease-in;
