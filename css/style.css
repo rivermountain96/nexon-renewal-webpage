@@ -455,11 +455,6 @@ header {
 #rc-next.disabled {
   display: none;
 }
-.chev-wrap {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 /* MAIN-03 NEW-GAMES */
 .new-game {
@@ -470,10 +465,11 @@ header {
 .new-game > h2 {
   padding-bottom: 56px;
 }
-.new-slide-wrapper {
-  position: relative;
-  height: 410px;
-  overflow: hidden;
+.new-slide-wrapper{
+    position: relative;  
+    height: 410px;
+    overflow: hidden;
+    padding-bottom: 96px;
 }
 .new-slide-container {
   position: absolute;
@@ -529,30 +525,28 @@ header {
   right: 20px;
 }
 
-.new-slide-container figcaption {
-  width: 415px;
-  height: 260px;
-  position: absolute;
-  opacity: 1;
-  text-align: center;
-  line-height: 15px;
-  display: none;
-  overflow: hidden;
+.new-slide-container .new-marketing{
+    width: 415px;
+    height: 260px;
+    position: absolute;
+    opacity: 1;
+    text-align:center;
+    line-height:15px;
+    display: none;
+    overflow: hidden;
 }
-.new-slide-container > li:hover figcaption {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  line-height: 2rem;
-  display: block;
-  padding-top: 100px;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  animation: move 0.3s;
-  animation-fill-mode: both;
+.new-slide-container > li:hover .new-marketing{
+    top:0;
+    bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    line-height: 2rem;
+    display: block;
+    padding-top: 100px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    animation: move 0.3s;
+    animation-fill-mode:both;
 }
 @keyframes move {
   from {
@@ -567,14 +561,14 @@ header {
 .new-slide-container li:hover .name-genre {
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
 }
-#new-next {
-  right: -23px;
-  transform: translate(100%, -50%);
+#new-prev{
+  transform: translate(-100%, -140%);
 }
-/* #rc-next{
-    right: -18px;
-    transform:translate(100%, -50%);
-} */
+#new-next{
+    right:-23px;
+    transform: translate(100%, -130%);
+}
+
 #new-prev.disabled,
 #new-next.disabled {
   display: none;

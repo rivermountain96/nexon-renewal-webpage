@@ -84,9 +84,9 @@ for (let i = mainSlideCount - 1; i >= 0; i--) {
   mainSlideContainer.prepend(cloneSlide);
 }
 
-mainNewSlide = document.querySelectorAll(".mainslide-container li");
+let mainNewSlides = document.querySelectorAll(".mainslide-container li");
 
-mainNewSlide.forEach((slide, idx) => {
+mainNewSlides.forEach((slide, idx) => {
   slide.style.left = `${idx * mainSlideWidth}px`;
 });
 
@@ -176,6 +176,96 @@ mainSlideWrapper.addEventListener("mouseout", () => {
   }, 5000);
 });
 
+//pager
+
+// function mainSetSlide() {
+//   if (mainSlideCount > 1) {
+//     let mainContainerWidth = mainslideWidth * mainSlideCount;
+//     mainSlideContainer.style.width = `${mainContainerWidth}px`;
+
+//     mainSlides.forEach((item, idx) => {
+//       item.style.width = `${mainslideWidth}px`;
+//       let url = item.getAttribute("data-url");
+//       let title = item.getAttribute("data-title");
+//       // console.log(url);
+//       // console.log(title);
+
+//       mainPagerHTML += `<a href="">
+//       <span>
+//         <img
+//           src=${url}
+//         />
+//       </span>
+//       <span>${title}</span>
+//     </a>
+//     `;
+//     });
+//   }
+// }
+
+// mainSetSlide();
+
+// mainPager.innerHTML = mainPagerHTML;
+// let mainPagerBtn = mainPager.querySelectorAll("a");
+
+// function mainMoveSlide(num) {
+//   mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
+//   mainCurrentSlideIdx = num;
+//   // console.log(mainCurrentSlideIdx);
+
+//   updateNav();
+// }
+
+// updateNav();
+
+// function updateNav() {
+//   for (let sl of mainSlides) {
+//     sl.classList.remove("active");
+//   }
+//   mainSlides[mainCurrentSlideIdx].classList.add("active");
+
+//   for (let pb of mainPagerBtn) {
+//     pb.classList.remove("active");
+//   }
+//   mainPagerBtn[mainCurrentSlideIdx].classList.add("active");
+// }
+
+// mainNextBtn.addEventListener("click", () => {
+//   if (mainCurrentSlideIdx < mainSlideCount - 1) {
+//     mainMoveSlide(mainCurrentSlideIdx + 1);
+//   }
+// });
+
+// mainPrevBtn.addEventListener("click", () => {
+//   if (mainCurrentSlideIdx > 0) {
+//     mainMoveSlide(mainCurrentSlideIdx - 1);
+//   }
+// });
+
+// mainPagerBtn.forEach((item, idx) => {
+//   item.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     mainMoveSlide(idx);
+//   });
+// });
+
+// //자동 슬라이드
+// function mainAutoSlide() {
+//   mainTimer = setInterval(() => {
+//     let nextIdx = (mainCurrentSlideIdx + 1) % mainSlideCount;
+//     mainMoveSlide(nextIdx);
+//   }, 3000);
+// }
+
+// mainAutoSlide();
+
+// mainSlideWrapper.addEventListener("mouseover", () => {
+//   clearInterval(mainTimer);
+// });
+
+// mainSlideWrapper.addEventListener("mouseout", () => {
+//   mainAutoSlide();
+// });
 
 //탭이동
 let tabMenu = document.querySelectorAll("#tab-menu li a");
@@ -266,7 +356,7 @@ rcMoveSlide(0);
 /* new game */
 let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
   newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
-  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li'),
+  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li');
   newSlidesCount = newSlides.length,
   newCurrentSlideIdx = 0,
   newSlideMargin = 14,
@@ -308,6 +398,8 @@ newPrevBtn.addEventListener('click',()=>{
   newMoveSlide(newCurrentSlideIdx-1);
 });
 newMoveSlide(0);
+
+/* 이강산 구현 부분 종료*/
 
 /* 이은서 구현 부분 */
 
@@ -479,17 +571,3 @@ chevWrapp.addEventListener('mouseenter', () => {
 chevWrapp.addEventListener('mouseleave', () => {
   allautoSlide();
 });
-/* 이은서 구현 부분 종료*/ 
-/* 한지희 구현 부분 시작 */
-let bannerImg = document.querySelector('.bannerImg');
-    bannerImg.addEventListener('mouseover', ()=>{
-      bannerImg.classList.add('active');
-    });
-    
-    bannerImg.addEventListener('mouseout', ()=>{
-      if(bannerImg.classList.contains('active')){
-
-        bannerImg.classList.remove('active');
-      }
-    })
-/* 한지희 구현 부분 종료 */
