@@ -423,11 +423,14 @@ header {
 .chev-wrap {
   position: absolute;
   top: 50%;
-  
+}
+#rc-prev{
+  left:-30px;
+  transform: translate(-100%, 50%);
 }
 #rc-next {
   right: -18px;
-  transform: translate(100%, -50%);
+  transform: translate(100%, 50%);
 }
 #rc-prev.disabled,
 #rc-next.disabled {
@@ -539,11 +542,11 @@ header {
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
 }
 #new-prev{
-  transform: translate(-100%, -140%);
+  transform: translate(-100%, -50%);
 }
 #new-next{
     right:-23px;
-    transform: translate(100%, -130%);
+    transform: translate(100%, -50%);
 }
 
 #new-prev.disabled,
