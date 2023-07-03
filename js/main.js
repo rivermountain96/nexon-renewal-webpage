@@ -613,15 +613,13 @@ chevWrapp.addEventListener('mouseleave', () => {
 
 /* 이은서 구현 부분 종료*/ 
 /* 한지희 구현 부분 시작 */
-let bannerImg = document.querySelector('.bannerImg');
-    bannerImg.addEventListener('mouseover', ()=>{
-      bannerImg.classList.add('active');
-    });
-    
-    bannerImg.addEventListener('mouseout', ()=>{
-      if(bannerImg.classList.contains('active')){
-
-        bannerImg.classList.remove('active');
-      }
-    })
+let bannerImg = document.querySelector('.banner-wrapper iframe');
+  bannerImg.addEventListener('mouseover', ()=>{
+    bannerImg.classList.add('active');
+  });
+  bannerImg.addEventListener('mouseout', ()=>{
+    if(bannerImg.classList.contains('active')){
+      bannerImg.classList.remove('active');
+    }
+  })
 /* 한지희 구현 부분 종료 */
