@@ -411,9 +411,14 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     })
   })
 
+ function pagerNone(){
+  allpager.style.display = 'none';
+  allPageNum.style.display = 'none';
+ }
 
 tags.forEach((tag) => {
   tag.addEventListener('click', (e) => {
+    pagerNone();
     for (tag of tags) {
       tag.classList.remove('clicked');
     }
@@ -460,6 +465,9 @@ seeTypeSlide.addEventListener('click', () => {
 })
 
 seeTypeAll.addEventListener('click', () => {
+  for (let tag of tags) {
+    tag.classList.remove('clicked');
+  }
   activeMaster();
   allViewWrapper.classList.add('active');
   allpager.style.display = 'block';
