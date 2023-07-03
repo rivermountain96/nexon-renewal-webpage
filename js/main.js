@@ -65,9 +65,16 @@ function setPager() {
   mainPager.innerHTML = pagerHTML;
 }
 setPager();
+
 let mainPagers = mainPager.querySelectorAll("li");
 console.log(mainPagers);
 
+mainPagers.forEach((mainPagerli,idx)=>{
+  mainPagerli.addEventListener('click',(e)=>{
+    e.preventDefault();
+    moveSlide(idx);
+})
+});
 
 for (let i = 0; i < mainSlideCount; i++) {
   let cloneSlide = mainSlides[i].cloneNode(true);
@@ -117,8 +124,6 @@ function moveSlide(num) {
     pageIdx= mainCurrentSlideIdx + mainSlideCount;
   }else if(mainCurrentSlideIdx>4){
     pageIdx = mainCurrentSlideIdx - mainSlideCount;
-    
-  
   }
   mainPagers.forEach((item)=>{
     item.classList.remove("active");
@@ -129,6 +134,7 @@ console.log(pageIdx);
 }
 
 moveSlide(0);
+
 function debounce(callback, time) {
   let slideTrigger = true;
   return () => {
@@ -141,6 +147,7 @@ function debounce(callback, time) {
     }
   };
 }
+
 
 //좌우 컨트롤
 mainNextBtn.addEventListener(
@@ -524,4 +531,3 @@ let bannerImg = document.querySelector('.banner-wrapper iframe');
       bannerImg.classList.remove('active');
     }
   })
-/* 한지희 구현 부분 종료 */
