@@ -1037,9 +1037,9 @@ header {
   overflow: hidden;
 }
 
-.game-card:nth-child(4n) {
+/* .game-card:nth-child(4n) {
   margin-right: 0;
-}
+} */
 
 .game-card > img {
   width: 308px;
@@ -1102,6 +1102,7 @@ header {
 .all-view-wrapper > .pager {
   text-align: center;
   margin: 46px auto auto 0;
+  display: none;
 }
 
 .all-view-wrapper > .pager a {
@@ -1131,13 +1132,13 @@ header {
   right: 0;
 }
 
-.all-view > li {
+/* .all-view > li {
   display: none;
 }
 
 .all-view > li.active {
   display: block;
-}
+} */
 /* Banner */
 .bannerWrapper {
   background: url("https://ifh.cc/g/A0yQqd.jpg") center center/cover no-repeat;

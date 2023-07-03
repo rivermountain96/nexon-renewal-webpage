@@ -38,6 +38,8 @@ pCloseBtn.addEventListener("click", () => {
 
 /* main carousel */
 
+
+
 let mainSlideWrapper = document.querySelector(".mainslide-wrapper");
 let mainSlideContainer = mainSlideWrapper.querySelector("ul");
 let mainSlides = mainSlideContainer.querySelectorAll("li");
@@ -307,6 +309,7 @@ btnBtt.addEventListener("click", (e) => {
 /* 이강산 구현 부분 */ 
 /* recommend game */
 // 변수 지정
+
 let rcSlideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
     rcSlideContainer = rcSlideWrapper.querySelector('.rc-slide-container'), //ul
     rcSlides = rcSlideContainer.querySelectorAll('li'),
@@ -354,9 +357,10 @@ rcPrevBtn.addEventListener('click',()=>{
 });
 rcMoveSlide(0);
 /* new game */
+
 let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
   newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
-  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li');
+  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li'),
   newSlidesCount = newSlides.length,
   newCurrentSlideIdx = 0,
   newSlideMargin = 14,
@@ -411,43 +415,83 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     allSlideWrapper = document.querySelector('.view-wrapper .main5-slide-wrapper'),
     allslideChev = document.querySelector('.view-wrapper .main5-slide-chev-wrap'),
     allViewWrapper = document.querySelector('.view-wrapper .all-view-wrapper'),
-    tagViewWrapper = document.querySelector('.view-wrapper .tag-view-wrapper'),
+    gameCards = document.querySelectorAll('.all-view > li'),
+    tagArr = [],
+    tagCounter = 1,
+    PerPage = 12,
+    gameCardsCount = gameCards.length,
+    pageCount = Math.ceil(gameCardsCount/PerPage),
     tags = document.querySelectorAll('.tag-list-wrapper .tag-list ul li'),
     allPageNum = allViewWrapper.querySelector('.page-num'),
-    allViewPages = allViewWrapper.querySelectorAll('.all-view > li'),
     allpager = allViewWrapper.querySelector('.pager'),
     allpagerHTML = '',
-    pageCount = allViewPages.length,
+    allWidth = 1280,
+    gameCardMargin = 16,
     currentPageIdx = 0;
-    
-console.log(currentPageIdx);
+
+    for(let i = 0; i<pageCount; i++){
+      allpagerHTML += `<a href="" class="mono-light2-bg"></a>`;
+    }
+    allpager.innerHTML = allpagerHTML;
   
-allViewPages.forEach((page) => {
-  allpagerHTML += `<a href="" class="mono-light2-bg"></a>`;
-})
+  let pagerBtns = allpager.querySelectorAll('a');
+  console.log(pagerBtns);
+  
+  function display(idx){
+    let start = idx*PerPage;
+    let end = start+PerPage;
+    let gameCardArray = [...gameCards];
+    for(ra of gameCardArray){
+      ra.style.display = 'none';
+    }
+    let newGameCards = gameCardArray.slice(start,end);
+    for(ngc of newGameCards){
+      ngc.style.display = 'block';
+    }
+    currentPageIdx = idx;
+    if (currentPageIdx == 3) {
+      allPageNum.innerText = `${gameCardsCount} / ${gameCardsCount}`;
+    } else {
+      allPageNum.innerText = `${ (idx+1) * PerPage} / ${gameCardsCount}`;
+    }
+  } //display
 
-allpager.innerHTML = allpagerHTML;
-
-let pagerBtns = allpager.querySelectorAll('a');
-
-function movepage(numb) {
-  currentPageIdx = numb;
-  for (let page of allViewPages) {
-    page.classList.remove('active');
-  } allViewPages[currentPageIdx].classList.add('active');
-  if (currentPageIdx == 3) {
-    allPageNum.innerText = `45 / 45`;
-  } else {
-    allPageNum.innerText = `${ (numb+1) * 12} / 45`;
-  }
-}
-movepage(0);
-
-pagerBtns.forEach((pagerBtn, idx) => {
-  pagerBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    movepage(idx)
+  pagerBtns.forEach((pb, idx)=>{
+    pb.addEventListener('click',(e)=>{
+      e.preventDefault();
+      display(idx);
     })
+  })
+
+ function pagerNone(){
+  allpager.style.display = 'none';
+  allPageNum.style.display = 'none';
+ }
+
+tags.forEach((tag) => {
+  tag.addEventListener('click', (e) => {
+    pagerNone();
+    for (tag of tags) {
+      tag.classList.remove('clicked');
+    }
+    e.currentTarget.classList.add('clicked');
+    activeMaster();
+    allViewWrapper.classList.add('active');
+    seeTypeBtn.forEach(item => {
+      item.classList.remove('active');
+    })
+    let target = e.target.dataset.filter;
+    console.log(target);
+    for(let gameCard of gameCards){
+      gameCard.style.display = 'none';
+    }
+    allViewWrapper.style.marginRight = `-${gameCardMargin}px`;
+
+    let targetList = document.querySelectorAll(target);
+				for(let list of targetList){
+					list.style.display = 'block';
+    }
+  })
 })
 
 seeTypeBtn.forEach((item, idx) => {
@@ -464,7 +508,6 @@ function activeMaster() {
   allSlideWrapper.classList.remove('active');
   allslideChev.classList.remove('active');
   allViewWrapper.classList.remove('active');
-  tagViewWrapper.classList.remove('active');
 };
 
 seeTypeSlide.addEventListener('click', () => {
@@ -474,24 +517,19 @@ seeTypeSlide.addEventListener('click', () => {
 })
 
 seeTypeAll.addEventListener('click', () => {
+  for (let tag of tags) {
+    tag.classList.remove('clicked');
+  }
   activeMaster();
   allViewWrapper.classList.add('active');
+  allpager.style.display = 'block';
+  allPageNum.style.display = 'block';
+  allViewWrapper.style.marginRight = `-${gameCardMargin}px`;
+  display(0);
 })
 
-tags.forEach((tag) => {
-  tag.addEventListener('click', (e) => {
-    for (tag of tags) {
-      tag.classList.remove('clicked');
-    }
-    e.currentTarget.classList.add('clicked');
-    activeMaster();
-    tagViewWrapper.classList.add('active');
-    seeTypeBtn.forEach(item => {
-      item.classList.remove('active');
-    })
-  })
-})
 
+// 슬라이드 파트-----------------------------------------
 
 let allslideContainer = allSlideWrapper.querySelector('.main5-big-slide-container'),
     allslides = allslideContainer.querySelectorAll('.main5-slide-container'),
@@ -524,9 +562,9 @@ function allmoveSlide(num) {
     allprevBtn.classList.remove('disabled');
   }
   if (allcurrentSlideIdx == 11) {
-    slidePageNum.innerText = `45 / 45`;
+    slidePageNum.innerText = `${gameCardsCount} / ${gameCardsCount}`;
   } else {
-    slidePageNum.innerText = `${(allcurrentSlideIdx + 1) * 4} / 45`;
+    slidePageNum.innerText = `${(allcurrentSlideIdx + 1) * 4} / ${gameCardsCount}`;
   }
   allslides[allcurrentSlideIdx].classList.add('active');
 }
@@ -571,3 +609,19 @@ chevWrapp.addEventListener('mouseenter', () => {
 chevWrapp.addEventListener('mouseleave', () => {
   allautoSlide();
 });
+
+
+/* 이은서 구현 부분 종료*/ 
+/* 한지희 구현 부분 시작 */
+let bannerImg = document.querySelector('.bannerImg');
+    bannerImg.addEventListener('mouseover', ()=>{
+      bannerImg.classList.add('active');
+    });
+    
+    bannerImg.addEventListener('mouseout', ()=>{
+      if(bannerImg.classList.contains('active')){
+
+        bannerImg.classList.remove('active');
+      }
+    })
+/* 한지희 구현 부분 종료 */
