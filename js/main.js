@@ -10,7 +10,6 @@ function setCookie(name, value, day) {
   date.setDate(date.getDate() + day);
   document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
 }
-// setCookie("team", "marathon", 1);
 
 function cookieCheck(name) {
   let cookieArr = document.cookie.split(";");
@@ -38,8 +37,6 @@ pCloseBtn.addEventListener("click", () => {
 
 /* main carousel */
 
-
-
 let mainSlideWrapper = document.querySelector(".mainslide-wrapper");
 let mainSlideContainer = mainSlideWrapper.querySelector("ul");
 let mainSlides = mainSlideContainer.querySelectorAll("li");
@@ -52,15 +49,12 @@ let mainSlideWidth = document.body.offsetWidth;
 let mainPrevBtn = mainSlideWrapper.querySelector("#prev");
 let mainNextBtn = mainSlideWrapper.querySelector("#next");
 
-// mainSlideContainer.style.width = `${mainSlideCount * mainSlideWidth}px`;
 
 function setPager() {
   let pagerHTML ="";
   mainSlides.forEach((item, idx) => {
     let url = item.getAttribute("data-url");
     let title = item.getAttribute("data-title");
-    // let pagerItem = document.createElement("a");
-    // pagerItem.setAttribute("href", "#");
     pagerHTML += `<li>
     <a href=""> <span>
     <img src="${url}"/>
@@ -93,7 +87,6 @@ mainNewSlides.forEach((slide, idx) => {
 });
 
 function setSlide() {
-  // ul {transform:translateX(-3000px)}
   let ulMoveAmt = mainSlideWidth * -mainSlideCount + "px";
   mainSlideContainer.style.transform = `translateX(${ulMoveAmt})`;
   mainSlideContainer.classList.add("animated");
@@ -178,96 +171,6 @@ mainSlideWrapper.addEventListener("mouseout", () => {
   }, 5000);
 });
 
-//pager
-
-// function mainSetSlide() {
-//   if (mainSlideCount > 1) {
-//     let mainContainerWidth = mainslideWidth * mainSlideCount;
-//     mainSlideContainer.style.width = `${mainContainerWidth}px`;
-
-//     mainSlides.forEach((item, idx) => {
-//       item.style.width = `${mainslideWidth}px`;
-//       let url = item.getAttribute("data-url");
-//       let title = item.getAttribute("data-title");
-//       // console.log(url);
-//       // console.log(title);
-
-//       mainPagerHTML += `<a href="">
-//       <span>
-//         <img
-//           src=${url}
-//         />
-//       </span>
-//       <span>${title}</span>
-//     </a>
-//     `;
-//     });
-//   }
-// }
-
-// mainSetSlide();
-
-// mainPager.innerHTML = mainPagerHTML;
-// let mainPagerBtn = mainPager.querySelectorAll("a");
-
-// function mainMoveSlide(num) {
-//   mainSlideContainer.style.transform = `translateX(${-num * mainslideWidth}px)`;
-//   mainCurrentSlideIdx = num;
-//   // console.log(mainCurrentSlideIdx);
-
-//   updateNav();
-// }
-
-// updateNav();
-
-// function updateNav() {
-//   for (let sl of mainSlides) {
-//     sl.classList.remove("active");
-//   }
-//   mainSlides[mainCurrentSlideIdx].classList.add("active");
-
-//   for (let pb of mainPagerBtn) {
-//     pb.classList.remove("active");
-//   }
-//   mainPagerBtn[mainCurrentSlideIdx].classList.add("active");
-// }
-
-// mainNextBtn.addEventListener("click", () => {
-//   if (mainCurrentSlideIdx < mainSlideCount - 1) {
-//     mainMoveSlide(mainCurrentSlideIdx + 1);
-//   }
-// });
-
-// mainPrevBtn.addEventListener("click", () => {
-//   if (mainCurrentSlideIdx > 0) {
-//     mainMoveSlide(mainCurrentSlideIdx - 1);
-//   }
-// });
-
-// mainPagerBtn.forEach((item, idx) => {
-//   item.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     mainMoveSlide(idx);
-//   });
-// });
-
-// //자동 슬라이드
-// function mainAutoSlide() {
-//   mainTimer = setInterval(() => {
-//     let nextIdx = (mainCurrentSlideIdx + 1) % mainSlideCount;
-//     mainMoveSlide(nextIdx);
-//   }, 3000);
-// }
-
-// mainAutoSlide();
-
-// mainSlideWrapper.addEventListener("mouseover", () => {
-//   clearInterval(mainTimer);
-// });
-
-// mainSlideWrapper.addEventListener("mouseout", () => {
-//   mainAutoSlide();
-// });
 
 //탭이동
 let tabMenu = document.querySelectorAll("#tab-menu li a");
@@ -324,11 +227,6 @@ let rcSlideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
 //슬라이드 가로 너비지정
 rcSlideContainer.style.width = `${rcSlidesCount*(rcSlideWidth+rcSlideMargin)}px`;
 
-// if(rcSlidesCount > 1){
-//   rcSlides.forEach((rcslide,idx)=>{
-//     rcslide.style.left = `${idx*(rcSlideWidth + rcSlideMargin)}px`
-//   });
-// }
 
 //슬라이드 이동함수
 function rcMoveSlide(num){
@@ -372,11 +270,6 @@ let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
 //슬라이드 가로 너비지정
 newSlideContainer.style.width = `${newSlidesCount*(newSlideWidth + newSlideMargin)}px`;
 
-// if(newSlidesCount > 1){
-//   newSlides.forEach((newSlide,Idx)=>{
-//     newSlide.style.left = `${Idx*(newSlideWidth + newSlideMargin)}px`;
-//   });
-// }
 
 //슬라이드 이동함수
 function newMoveSlide(num){
@@ -429,6 +322,8 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     gameCardMargin = 16,
     currentPageIdx = 0;
 
+    // 페이저 생성
+
     for(let i = 0; i<pageCount; i++){
       allpagerHTML += `<a href="" class="mono-light2-bg"></a>`;
     }
@@ -436,6 +331,8 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
   
   let pagerBtns = allpager.querySelectorAll('a');
   console.log(pagerBtns);
+
+  // 전체게임보기 페이저
   
   function display(idx){
     let start = idx*PerPage;
@@ -454,7 +351,7 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
     } else {
       allPageNum.innerText = `${ (idx+1) * PerPage} / ${gameCardsCount}`;
     }
-  } //display
+  } 
 
   pagerBtns.forEach((pb, idx)=>{
     pb.addEventListener('click',(e)=>{
@@ -467,6 +364,8 @@ let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
   allpager.style.display = 'none';
   allPageNum.style.display = 'none';
  }
+
+ // 태그 필터
 
 tags.forEach((tag) => {
   tag.addEventListener('click', (e) => {
@@ -493,6 +392,8 @@ tags.forEach((tag) => {
     }
   })
 })
+
+// 보기 버튼 전환
 
 seeTypeBtn.forEach((item, idx) => {
   item.addEventListener('click', (e) => {
@@ -529,7 +430,7 @@ seeTypeAll.addEventListener('click', () => {
 })
 
 
-// 슬라이드 파트-----------------------------------------
+// 슬라이드
 
 let allslideContainer = allSlideWrapper.querySelector('.main5-big-slide-container'),
     allslides = allslideContainer.querySelectorAll('.main5-slide-container'),
@@ -612,6 +513,7 @@ chevWrapp.addEventListener('mouseleave', () => {
 
 
 /* 이은서 구현 부분 종료*/ 
+
 /* 한지희 구현 부분 시작 */
 let bannerImg = document.querySelector('.banner-wrapper iframe');
   bannerImg.addEventListener('mouseover', ()=>{

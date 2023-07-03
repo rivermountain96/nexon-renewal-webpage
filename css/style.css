@@ -3,7 +3,6 @@
   position: fixed;
   top: 15%;
   left: 5%;
-  /* border: 5px solid #4593fc; */
   background-color: #fbfbfb;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   padding: 40px 40px;
@@ -190,14 +189,10 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  /* float: left; */
   display: block;
 }
 
 .menu-bar-imgsbox li a span:nth-child(2) {
-  /* display: inline-block;
-  margin-left: 10px; */
-  /* float: right; */
   position: absolute;
   top: 0;
   left: 42px;
@@ -240,9 +235,7 @@ header {
 
 .mainslide-wrapper {
   position: relative;
-  /* height: 500px; */
   width: 100%;
-  /* margin: 0 auto; */
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -257,11 +250,6 @@ header {
 
 .mainslide {
   position: absolute;
-  /* float: left;
-  position: relative; */
-  /* height: 500px; */
-  /* left: 0;
-  top: 0; */
   left: 0;
   top: 0;
   height: 100%;
@@ -297,15 +285,6 @@ header {
   background-image: url("https://velog.velcdn.com/images/hyunny123/post/ff4defa6-7506-4886-83e7-492c7a82cd9a/image.png");
 }
 
-/* .mainslide-wrapper .chev-wrap.left,
-.mainslide-wrapper .chev-wrap.right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  opacity:0.7;
-}
-*/
 .mainslide-wrapper .chev-wrap.left {
   left: 230px;
 }
@@ -330,7 +309,6 @@ header {
   display: inline-block;
 }
 .pager a {
-  /* float:left; */
   display: inline-block;
   width: 200px;
   height: 54px;
@@ -445,7 +423,7 @@ header {
 .chev-wrap {
   position: absolute;
   top: 50%;
-  /* transform: translateY(-50%); */
+  
 }
 #rc-next {
   right: -18px;
@@ -492,7 +470,6 @@ header {
 }
 
 .new-slide-container .name-genre {
-  /* padding: 25px 28px; */
   border: none;
   height: 96px;
   width: 415px;
@@ -788,7 +765,6 @@ header {
   width: 320px;
   text-align: center;
   background-repeat: no-repeat;
-  /* background-position: center center; */
   background-size: contain;
   list-style: none;
   overflow: hidden;
@@ -1037,9 +1013,6 @@ header {
   overflow: hidden;
 }
 
-/* .game-card:nth-child(4n) {
-  margin-right: 0;
-} */
 
 .game-card > img {
   width: 308px;
@@ -1132,19 +1105,11 @@ header {
   right: 0;
 }
 
-/* .all-view > li {
-  display: none;
-}
-
-.all-view > li.active {
-  display: block;
-} */
 /* Banner */
 .banner-wrapper{
   position: relative;
   width: 100%;
   height: 365px;
-  /* margin-bottom: 96px; */
   background: url(https://ifh.cc/g/A0yQqd.jpg) no-repeat 50% 50%/cover;
 }
 .banner-wrapper figure{
@@ -1164,9 +1129,6 @@ header {
 .banner-wrapper figure .video-logo:active{
   display: none;
 }
-/* .banner-wrapper figure .video-logo:active + iframe{
-  
-} */
 
 .banner-wrapper figure .video-logo{
   position: absolute;
@@ -1305,12 +1267,10 @@ header {
 }
 
 .footer-logowrap {
-  /* float: left; */
   position: relative;
   margin-bottom: 30px;
 }
 .snsnlangs {
-  /* float: right; */
   position: absolute;
   top: 8px;
   right: 0;
@@ -1318,7 +1278,6 @@ header {
 
 .snswrap {
   float: left;
-  /* width: 400px; */
   height: 50px;
   border-radius: 25px;
   color: #fff;
