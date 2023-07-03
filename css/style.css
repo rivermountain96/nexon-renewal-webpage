@@ -1144,7 +1144,7 @@ header {
   position: relative;
   width: 100%;
   height: 365px;
-  margin-bottom: 96px;
+  /* margin-bottom: 96px; */
   background: url(https://ifh.cc/g/A0yQqd.jpg) no-repeat 50% 50%/cover;
 }
 .banner-wrapper figure{
