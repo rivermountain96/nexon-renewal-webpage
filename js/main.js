@@ -66,7 +66,6 @@ function setPager() {
 setPager();
 
 let mainPagers = mainPager.querySelectorAll("li");
-console.log(mainPagers);
 
 mainPagers.forEach((mainPagerli, idx) => {
   mainPagerli.addEventListener("click", (e) => {
@@ -235,7 +234,7 @@ rcSlideContainer.style.width = `${
 function rcMoveSlide(num) {
   rcSlideContainer.style.left = `${-num * (rcSlideWidth + rcSlideMargin)}px`;
   rcCurrentSlideIdx = num;
-  console.log(rcCurrentSlideIdx);
+
   if (rcCurrentSlideIdx === rcSlidesCount - 1) {
     rcNextBtn.classList.add("disabled");
   } else {
@@ -279,7 +278,7 @@ newSlideContainer.style.width = `${
 function newMoveSlide(num) {
   newSlideContainer.style.left = `${-num * (newSlideWidth + newSlideMargin)}px`;
   newCurrentSlideIdx = num;
-  console.log(newCurrentSlideIdx);
+
   if (newCurrentSlideIdx === newSlidesCount - 1) {
     newNextBtn.classList.add("disabled");
   } else {
@@ -336,7 +335,6 @@ for (let i = 0; i < pageCount; i++) {
 allpager.innerHTML = allpagerHTML;
 
 let pagerBtns = allpager.querySelectorAll("a");
-console.log(pagerBtns);
 
 // 전체게임보기 페이저
 
@@ -386,7 +384,7 @@ tags.forEach((tag) => {
       item.classList.remove("active");
     });
     let target = e.target.dataset.filter;
-    console.log(target);
+
     for (let gameCard of gameCards) {
       gameCard.style.display = "none";
     }
