@@ -416,6 +416,9 @@ function activeMaster() {
 }
 
 seeTypeSlide.addEventListener("click", () => {
+  for (let tag of tags) {
+    tag.classList.remove("clicked");
+  }
   activeMaster();
   allSlideWrapper.classList.add("active");
   allslideChev.classList.add("active");
