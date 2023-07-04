@@ -184,13 +184,13 @@ body {
   box-shadow: inset 0px 0px 15px rgba(69, 147, 252, 0.4);
 }
 
-.field:hover:after{
-  content:'';
+.field:hover:after {
+  content: "";
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
   width: 300px;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   height: 100%;
 }
 
@@ -203,6 +203,7 @@ body {
   border-radius: 50%;
   position: relative;
   transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .chev-btn i {
@@ -237,6 +238,7 @@ body {
   border-radius: 23.5px;
   color: #fff;
   line-height: 47px;
+  cursor: pointer;
 }
 
 .btn.login:hover {

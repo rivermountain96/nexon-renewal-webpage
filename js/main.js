@@ -49,9 +49,8 @@ let mainSlideWidth = document.body.offsetWidth;
 let mainPrevBtn = mainSlideWrapper.querySelector("#prev");
 let mainNextBtn = mainSlideWrapper.querySelector("#next");
 
-
 function setPager() {
-  let pagerHTML ="";
+  let pagerHTML = "";
   mainSlides.forEach((item, idx) => {
     let url = item.getAttribute("data-url");
     let title = item.getAttribute("data-title");
@@ -69,11 +68,11 @@ setPager();
 let mainPagers = mainPager.querySelectorAll("li");
 console.log(mainPagers);
 
-mainPagers.forEach((mainPagerli,idx)=>{
-  mainPagerli.addEventListener('click',(e)=>{
+mainPagers.forEach((mainPagerli, idx) => {
+  mainPagerli.addEventListener("click", (e) => {
     e.preventDefault();
     moveSlide(idx);
-})
+  });
 });
 
 for (let i = 0; i < mainSlideCount; i++) {
@@ -103,10 +102,10 @@ setSlide();
 function moveSlide(num) {
   mainSlideContainer.style.left = -num * mainSlideWidth + "px";
   mainCurrentSlideIdx = num;
-  console.log(mainCurrentSlideIdx);
+  // console.log(mainCurrentSlideIdx);
   if (
     mainCurrentSlideIdx == -mainSlideCount ||
-    mainCurrentSlideIdx == mainSlideCount+4
+    mainCurrentSlideIdx == mainSlideCount + 4
   ) {
     setTimeout(() => {
       mainSlideContainer.classList.remove("animated");
@@ -117,18 +116,18 @@ function moveSlide(num) {
       mainSlideContainer.classList.add("animated");
     }, 600);
   }
-//pager
-  let pageIdx =mainCurrentSlideIdx;
+  //pager
+  let pageIdx = mainCurrentSlideIdx;
 
-  if(mainCurrentSlideIdx<0){
-    pageIdx= mainCurrentSlideIdx + mainSlideCount;
-  }else if(mainCurrentSlideIdx>4){
+  if (mainCurrentSlideIdx < 0) {
+    pageIdx = mainCurrentSlideIdx + mainSlideCount;
+  } else if (mainCurrentSlideIdx > 4) {
     pageIdx = mainCurrentSlideIdx - mainSlideCount;
   }
-  mainPagers.forEach((item)=>{
+  mainPagers.forEach((item) => {
     item.classList.remove("active");
   });
-console.log(pageIdx);
+  // console.log(pageIdx);
   mainPagers[pageIdx].classList.add("active");
   // console.log(mainCurrentSlideIdx);
 }
@@ -147,7 +146,6 @@ function debounce(callback, time) {
     }
   };
 }
-
 
 //좌우 컨트롤
 mainNextBtn.addEventListener(
@@ -177,7 +175,6 @@ mainSlideWrapper.addEventListener("mouseout", () => {
     moveSlide(mainCurrentSlideIdx + 1);
   }, 5000);
 });
-
 
 //탭이동
 let tabMenu = document.querySelectorAll("#tab-menu li a");
@@ -215,91 +212,92 @@ btnBtt.addEventListener("click", (e) => {
   });
 });
 
-
-/* 이강산 구현 부분 */ 
+/* 이강산 구현 부분 */
 /* recommend game */
 // 변수 지정
 
-let rcSlideWrapper = document.querySelector('.rc-slide-wrapper'), //ul의 부모
-    rcSlideContainer = rcSlideWrapper.querySelector('.rc-slide-container'), //ul
-    rcSlides = rcSlideContainer.querySelectorAll('li'),
-    rcSlidesCount = rcSlides.length,
-    rcSlidesPerView = 4,
-    rcSlideWidth = 305,
-    rcSlideMargin = 16,
-    rcCurrentSlideIdx = 0,
-    rcPrevBtn = document.querySelector('#rc-prev'),
-    rcNextBtn = document.querySelector('#rc-next');
+let rcSlideWrapper = document.querySelector(".rc-slide-wrapper"), //ul의 부모
+  rcSlideContainer = rcSlideWrapper.querySelector(".rc-slide-container"), //ul
+  rcSlides = rcSlideContainer.querySelectorAll("li"),
+  rcSlidesCount = rcSlides.length,
+  rcSlidesPerView = 4,
+  rcSlideWidth = 305,
+  rcSlideMargin = 16,
+  rcCurrentSlideIdx = 0,
+  rcPrevBtn = document.querySelector("#rc-prev"),
+  rcNextBtn = document.querySelector("#rc-next");
 
 //슬라이드 가로 너비지정
-rcSlideContainer.style.width = `${rcSlidesCount*(rcSlideWidth+rcSlideMargin)}px`;
-
+rcSlideContainer.style.width = `${
+  rcSlidesCount * (rcSlideWidth + rcSlideMargin)
+}px`;
 
 //슬라이드 이동함수
-function rcMoveSlide(num){
-  rcSlideContainer.style.left = `${-num*(rcSlideWidth + rcSlideMargin)}px`;
+function rcMoveSlide(num) {
+  rcSlideContainer.style.left = `${-num * (rcSlideWidth + rcSlideMargin)}px`;
   rcCurrentSlideIdx = num;
   console.log(rcCurrentSlideIdx);
   if (rcCurrentSlideIdx === rcSlidesCount - 1) {
-    rcNextBtn.classList.add('disabled');
+    rcNextBtn.classList.add("disabled");
   } else {
-    rcNextBtn.classList.remove('disabled');
-  };
+    rcNextBtn.classList.remove("disabled");
+  }
 
-  if(rcCurrentSlideIdx === 0){
-    rcPrevBtn.classList.add('disabled');
+  if (rcCurrentSlideIdx === 0) {
+    rcPrevBtn.classList.add("disabled");
   } else {
-    rcPrevBtn.classList.remove('disabled');
+    rcPrevBtn.classList.remove("disabled");
   }
 }
 
 // 좌우컨트롤
-rcNextBtn.addEventListener('click',()=>{
-  rcMoveSlide(rcCurrentSlideIdx+1);
+rcNextBtn.addEventListener("click", () => {
+  rcMoveSlide(rcCurrentSlideIdx + 1);
 });
-rcPrevBtn.addEventListener('click',()=>{
-  rcMoveSlide(rcCurrentSlideIdx-1);
+rcPrevBtn.addEventListener("click", () => {
+  rcMoveSlide(rcCurrentSlideIdx - 1);
 });
 rcMoveSlide(0);
 /* new game */
 
-let newSlideWrapper = document.querySelector('.new-slide-wrapper'),
-  newSlideContainer = newSlideWrapper.querySelector('.new-slide-container'),
-  newSlides = newSlideContainer.querySelectorAll('.new-slide-container > li'),
+let newSlideWrapper = document.querySelector(".new-slide-wrapper"),
+  newSlideContainer = newSlideWrapper.querySelector(".new-slide-container"),
+  newSlides = newSlideContainer.querySelectorAll(".new-slide-container > li"),
   newSlidesCount = newSlides.length,
   newCurrentSlideIdx = 0,
   newSlideMargin = 14,
   newSlideWidth = 415,
   newSlidePerView = 3,
-  newPrevBtn = document.querySelector('#new-prev'),
-  newNextBtn = document.querySelector('#new-next');
-  
-//슬라이드 가로 너비지정
-newSlideContainer.style.width = `${newSlidesCount*(newSlideWidth + newSlideMargin)}px`;
+  newPrevBtn = document.querySelector("#new-prev"),
+  newNextBtn = document.querySelector("#new-next");
 
+//슬라이드 가로 너비지정
+newSlideContainer.style.width = `${
+  newSlidesCount * (newSlideWidth + newSlideMargin)
+}px`;
 
 //슬라이드 이동함수
-function newMoveSlide(num){
-  newSlideContainer.style.left = `${-num*(newSlideWidth + newSlideMargin)}px`;
+function newMoveSlide(num) {
+  newSlideContainer.style.left = `${-num * (newSlideWidth + newSlideMargin)}px`;
   newCurrentSlideIdx = num;
   console.log(newCurrentSlideIdx);
-  if(newCurrentSlideIdx === newSlidesCount - 1){
-    newNextBtn.classList.add('disabled');
+  if (newCurrentSlideIdx === newSlidesCount - 1) {
+    newNextBtn.classList.add("disabled");
   } else {
-    newNextBtn.classList.remove('disabled');
-  };
+    newNextBtn.classList.remove("disabled");
+  }
 
-  if(newCurrentSlideIdx === 0){
-    newPrevBtn.classList.add('disabled');
+  if (newCurrentSlideIdx === 0) {
+    newPrevBtn.classList.add("disabled");
   } else {
-    newPrevBtn.classList.remove('disabled');
+    newPrevBtn.classList.remove("disabled");
   }
 }
-newNextBtn.addEventListener('click',()=>{
-  newMoveSlide(newCurrentSlideIdx+1);
+newNextBtn.addEventListener("click", () => {
+  newMoveSlide(newCurrentSlideIdx + 1);
 });
-newPrevBtn.addEventListener('click',()=>{
-  newMoveSlide(newCurrentSlideIdx-1);
+newPrevBtn.addEventListener("click", () => {
+  newMoveSlide(newCurrentSlideIdx - 1);
 });
 newMoveSlide(0);
 
@@ -309,188 +307,195 @@ newMoveSlide(0);
 
 // main5 start
 
-let seeTypeBtn = document.querySelectorAll('.tag-list-wrapper .see'),
-    seeTypeSlide = document.querySelector('.tag-list-wrapper .type-slide'),
-    seeTypeAll = document.querySelector('.tag-list-wrapper .type-all'),
-    allSlideWrapper = document.querySelector('.view-wrapper .main5-slide-wrapper'),
-    allslideChev = document.querySelector('.view-wrapper .main5-slide-chev-wrap'),
-    allViewWrapper = document.querySelector('.view-wrapper .all-view-wrapper'),
-    gameCards = document.querySelectorAll('.all-view > li'),
-    tagArr = [],
-    tagCounter = 1,
-    PerPage = 12,
-    gameCardsCount = gameCards.length,
-    pageCount = Math.ceil(gameCardsCount/PerPage),
-    tags = document.querySelectorAll('.tag-list-wrapper .tag-list ul li'),
-    allPageNum = allViewWrapper.querySelector('.page-num'),
-    allpager = allViewWrapper.querySelector('.pager'),
-    allpagerHTML = '',
-    allWidth = 1280,
-    gameCardMargin = 16,
-    currentPageIdx = 0;
+let seeTypeBtn = document.querySelectorAll(".tag-list-wrapper .see"),
+  seeTypeSlide = document.querySelector(".tag-list-wrapper .type-slide"),
+  seeTypeAll = document.querySelector(".tag-list-wrapper .type-all"),
+  allSlideWrapper = document.querySelector(
+    ".view-wrapper .main5-slide-wrapper"
+  ),
+  allslideChev = document.querySelector(".view-wrapper .main5-slide-chev-wrap"),
+  allViewWrapper = document.querySelector(".view-wrapper .all-view-wrapper"),
+  gameCards = document.querySelectorAll(".all-view > li"),
+  tagArr = [],
+  tagCounter = 1,
+  PerPage = 12,
+  gameCardsCount = gameCards.length,
+  pageCount = Math.ceil(gameCardsCount / PerPage),
+  tags = document.querySelectorAll(".tag-list-wrapper .tag-list ul li"),
+  allPageNum = allViewWrapper.querySelector(".page-num"),
+  allpager = allViewWrapper.querySelector(".pager"),
+  allpagerHTML = "",
+  allWidth = 1280,
+  gameCardMargin = 16,
+  currentPageIdx = 0;
 
-    // 페이저 생성
+// 페이저 생성
 
-    for(let i = 0; i<pageCount; i++){
-      allpagerHTML += `<a href="" class="mono-light2-bg"></a>`;
-    }
-    allpager.innerHTML = allpagerHTML;
-  
-  let pagerBtns = allpager.querySelectorAll('a');
-  console.log(pagerBtns);
+for (let i = 0; i < pageCount; i++) {
+  allpagerHTML += `<a href="" class="mono-light2-bg"></a>`;
+}
+allpager.innerHTML = allpagerHTML;
 
-  // 전체게임보기 페이저
-  
-  function display(idx){
-    let start = idx*PerPage;
-    let end = start+PerPage;
-    let gameCardArray = [...gameCards];
-    for(ra of gameCardArray){
-      ra.style.display = 'none';
-    }
-    let newGameCards = gameCardArray.slice(start,end);
-    for(ngc of newGameCards){
-      ngc.style.display = 'block';
-    }
-    currentPageIdx = idx;
-    if (currentPageIdx == 3) {
-      allPageNum.innerText = `${gameCardsCount} / ${gameCardsCount}`;
-    } else {
-      allPageNum.innerText = `${ (idx+1) * PerPage} / ${gameCardsCount}`;
-    }
-  } 
+let pagerBtns = allpager.querySelectorAll("a");
+console.log(pagerBtns);
 
-  pagerBtns.forEach((pb, idx)=>{
-    pb.addEventListener('click',(e)=>{
-      e.preventDefault();
-      display(idx);
-    })
-  })
+// 전체게임보기 페이저
 
- function pagerNone(){
-  allpager.style.display = 'none';
-  allPageNum.style.display = 'none';
- }
+function display(idx) {
+  let start = idx * PerPage;
+  let end = start + PerPage;
+  let gameCardArray = [...gameCards];
+  for (ra of gameCardArray) {
+    ra.style.display = "none";
+  }
+  let newGameCards = gameCardArray.slice(start, end);
+  for (ngc of newGameCards) {
+    ngc.style.display = "block";
+  }
+  currentPageIdx = idx;
+  if (currentPageIdx == 3) {
+    allPageNum.innerText = `${gameCardsCount} / ${gameCardsCount}`;
+  } else {
+    allPageNum.innerText = `${(idx + 1) * PerPage} / ${gameCardsCount}`;
+  }
+}
 
- // 태그 필터
+pagerBtns.forEach((pb, idx) => {
+  pb.addEventListener("click", (e) => {
+    e.preventDefault();
+    display(idx);
+  });
+});
+
+function pagerNone() {
+  allpager.style.display = "none";
+  allPageNum.style.display = "none";
+}
+
+// 태그 필터
 
 tags.forEach((tag) => {
-  tag.addEventListener('click', (e) => {
+  tag.addEventListener("click", (e) => {
     pagerNone();
     for (tag of tags) {
-      tag.classList.remove('clicked');
+      tag.classList.remove("clicked");
     }
-    e.currentTarget.classList.add('clicked');
+    e.currentTarget.classList.add("clicked");
     activeMaster();
-    allViewWrapper.classList.add('active');
-    seeTypeBtn.forEach(item => {
-      item.classList.remove('active');
-    })
+    allViewWrapper.classList.add("active");
+    seeTypeBtn.forEach((item) => {
+      item.classList.remove("active");
+    });
     let target = e.target.dataset.filter;
     console.log(target);
-    for(let gameCard of gameCards){
-      gameCard.style.display = 'none';
+    for (let gameCard of gameCards) {
+      gameCard.style.display = "none";
     }
     allViewWrapper.style.marginRight = `-${gameCardMargin}px`;
 
     let targetList = document.querySelectorAll(target);
-				for(let list of targetList){
-					list.style.display = 'block';
+    for (let list of targetList) {
+      list.style.display = "block";
     }
-  })
-})
+  });
+});
 
 // 보기 버튼 전환
 
 seeTypeBtn.forEach((item, idx) => {
-  item.addEventListener('click', (e) => {
+  item.addEventListener("click", (e) => {
     e.preventDefault();
     for (item of seeTypeBtn) {
-      item.classList.remove('active');
+      item.classList.remove("active");
     }
-    e.currentTarget.classList.add('active');
-  })
-})
+    e.currentTarget.classList.add("active");
+  });
+});
 
 function activeMaster() {
-  allSlideWrapper.classList.remove('active');
-  allslideChev.classList.remove('active');
-  allViewWrapper.classList.remove('active');
-};
+  allSlideWrapper.classList.remove("active");
+  allslideChev.classList.remove("active");
+  allViewWrapper.classList.remove("active");
+}
 
-seeTypeSlide.addEventListener('click', () => {
+seeTypeSlide.addEventListener("click", () => {
   activeMaster();
-  allSlideWrapper.classList.add('active');
-  allslideChev.classList.add('active');
-})
+  allSlideWrapper.classList.add("active");
+  allslideChev.classList.add("active");
+});
 
-seeTypeAll.addEventListener('click', () => {
+seeTypeAll.addEventListener("click", () => {
   for (let tag of tags) {
-    tag.classList.remove('clicked');
+    tag.classList.remove("clicked");
   }
   activeMaster();
-  allViewWrapper.classList.add('active');
-  allpager.style.display = 'block';
-  allPageNum.style.display = 'block';
+  allViewWrapper.classList.add("active");
+  allpager.style.display = "block";
+  allPageNum.style.display = "block";
   allViewWrapper.style.marginRight = `-${gameCardMargin}px`;
   display(0);
-})
-
+});
 
 // 슬라이드
 
-let allslideContainer = allSlideWrapper.querySelector('.main5-big-slide-container'),
-    allslides = allslideContainer.querySelectorAll('.main5-slide-container'),
-    slides1 = allslideContainer.querySelector('.main5-slide-container:first-child'),
-    allslideCount = allslides.length,
-    allcurrentSlideIdx = 0,
-    alltimer,
-    allprevBtn = document.querySelector('.view-wrapper .chev-wrap.left'),
-    allnextBtn = document.querySelector('.view-wrapper .chev-wrap.right')
-    slidePageNum = allSlideWrapper.querySelector('.page-num');
+let allslideContainer = allSlideWrapper.querySelector(
+    ".main5-big-slide-container"
+  ),
+  allslides = allslideContainer.querySelectorAll(".main5-slide-container"),
+  slides1 = allslideContainer.querySelector(
+    ".main5-slide-container:first-child"
+  ),
+  allslideCount = allslides.length,
+  allcurrentSlideIdx = 0,
+  alltimer,
+  allprevBtn = document.querySelector(".view-wrapper .chev-wrap.left"),
+  allnextBtn = document.querySelector(".view-wrapper .chev-wrap.right");
+slidePageNum = allSlideWrapper.querySelector(".page-num");
 
-
-if(allslideCount > 1){
+if (allslideCount > 1) {
   allslides.forEach((item, idx) => {
     item.style.left = `${idx * 100}%`;
-  })
-};
+  });
+}
 
 function allmoveSlide(num) {
-  allslideContainer.style.left = `${-num * 100}%`
+  allslideContainer.style.left = `${-num * 100}%`;
   allcurrentSlideIdx = num;
+  console.log(allcurrentSlideIdx);
   if (allcurrentSlideIdx === allslideCount - 1) {
-    allnextBtn.classList.add('disabled');
+    allnextBtn.classList.add("disabled");
   } else {
-    allnextBtn.classList.remove('disabled');
+    allnextBtn.classList.remove("disabled");
   }
   if (allcurrentSlideIdx === 0) {
-    allprevBtn.classList.add('disabled');
+    allprevBtn.classList.add("disabled");
   } else {
-    allprevBtn.classList.remove('disabled');
+    allprevBtn.classList.remove("disabled");
   }
   if (allcurrentSlideIdx == 11) {
     slidePageNum.innerText = `${gameCardsCount} / ${gameCardsCount}`;
   } else {
-    slidePageNum.innerText = `${(allcurrentSlideIdx + 1) * 4} / ${gameCardsCount}`;
+    slidePageNum.innerText = `${
+      (allcurrentSlideIdx + 1) * 4
+    } / ${gameCardsCount}`;
   }
-  allslides[allcurrentSlideIdx].classList.add('active');
+  allslides[allcurrentSlideIdx].classList.add("active");
 }
 
 allmoveSlide(0);
 
-allnextBtn.addEventListener('click', () => {
+allnextBtn.addEventListener("click", () => {
   if (allcurrentSlideIdx != allslideCount - 1) {
-    allmoveSlide(allcurrentSlideIdx + 1)
+    allmoveSlide(allcurrentSlideIdx + 1);
   }
 });
 
-allprevBtn.addEventListener('click', () => {
-  if (allcurrentSlideIdx > 0) {
-    allmoveSlide(allcurrentSlideIdx - 1)
-  }
-  if (allcurrentSlideIdx = allslideCount - 1) {
+allprevBtn.addEventListener("click", () => {
+  if (allcurrentSlideIdx == allslideCount - 1) {
     allmoveSlide(0);
+  }
+  if (allcurrentSlideIdx > 0) {
+    allmoveSlide(allcurrentSlideIdx - 1);
   }
 });
 
@@ -503,31 +508,30 @@ function allautoSlide() {
 
 allautoSlide();
 
-let chevWrapp = document.querySelector('.main5-slide-chev-wrap');
+let chevWrapp = document.querySelector(".main5-slide-chev-wrap");
 
-allSlideWrapper.addEventListener('mouseenter', () => {
+allSlideWrapper.addEventListener("mouseenter", () => {
   clearInterval(alltimer);
 });
-allSlideWrapper.addEventListener('mouseleave', () => {
+allSlideWrapper.addEventListener("mouseleave", () => {
   allautoSlide();
 });
-chevWrapp.addEventListener('mouseenter', () => {
+chevWrapp.addEventListener("mouseenter", () => {
   clearInterval(alltimer);
 });
-chevWrapp.addEventListener('mouseleave', () => {
+chevWrapp.addEventListener("mouseleave", () => {
   allautoSlide();
 });
 
-
-/* 이은서 구현 부분 종료*/ 
+/* 이은서 구현 부분 종료*/
 
 /* 한지희 구현 부분 시작 */
-let bannerImg = document.querySelector('.banner-wrapper iframe');
-  bannerImg.addEventListener('mouseover', ()=>{
-    bannerImg.classList.add('active');
-  });
-  bannerImg.addEventListener('mouseout', ()=>{
-    if(bannerImg.classList.contains('active')){
-      bannerImg.classList.remove('active');
-    }
-  })
+let bannerImg = document.querySelector(".banner-wrapper iframe");
+bannerImg.addEventListener("mouseover", () => {
+  bannerImg.classList.add("active");
+});
+bannerImg.addEventListener("mouseout", () => {
+  if (bannerImg.classList.contains("active")) {
+    bannerImg.classList.remove("active");
+  }
+});
