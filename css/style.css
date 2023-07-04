@@ -229,7 +229,9 @@ header {
 }
 
 /* MAIN-01 CAROUSEL */
-
+.main-carousel-tt{
+  display: none;
+}
 .mainslide-wrapper {
   position: relative;
   width: 100%;
@@ -1220,6 +1222,9 @@ header {
 }
 .all-service dl dd {
   line-height: 2.19em;
+}
+.shoppinghidden{
+  display: none;
 }
 /* footer -2 */
 
