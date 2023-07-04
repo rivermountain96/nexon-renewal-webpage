@@ -102,7 +102,7 @@ setSlide();
 function moveSlide(num) {
   mainSlideContainer.style.left = -num * mainSlideWidth + "px";
   mainCurrentSlideIdx = num;
-  // console.log(mainCurrentSlideIdx);
+
   if (
     mainCurrentSlideIdx == -mainSlideCount ||
     mainCurrentSlideIdx == mainSlideCount + 4
@@ -127,9 +127,8 @@ function moveSlide(num) {
   mainPagers.forEach((item) => {
     item.classList.remove("active");
   });
-  // console.log(pageIdx);
+
   mainPagers[pageIdx].classList.add("active");
-  // console.log(mainCurrentSlideIdx);
 }
 
 moveSlide(0);
@@ -461,7 +460,7 @@ if (allslideCount > 1) {
 function allmoveSlide(num) {
   allslideContainer.style.left = `${-num * 100}%`;
   allcurrentSlideIdx = num;
-  console.log(allcurrentSlideIdx);
+
   if (allcurrentSlideIdx === allslideCount - 1) {
     allnextBtn.classList.add("disabled");
   } else {
