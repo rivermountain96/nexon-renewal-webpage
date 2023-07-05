@@ -10,7 +10,7 @@
   z-index: 3000;
   margin: 0;
   letter-spacing: 0.02em;
-  border: none;
+  border: 3px solid #1b64da;
 }
 
 .popup .main-tt {
@@ -19,6 +19,7 @@
   background-image: url("../images/nexon.png");
   background-size: 160px;
   background-repeat: no-repeat;
+  margin-left: 30px;
   display: inline-block;
   text-indent: -9999rem;
   transform: translateX(120%);
@@ -381,22 +382,31 @@ header {
 }
 .rc-name,
 .rc-explain {
-  padding: 20px 0 0 20px;
+  padding: 10px 0 0 20px;
+}
+.rc-new-tt {
+  font-size: 1.4rem;
+  line-height: 1.6em;
+  color: #191f28;
+  font-weight: 700;
 }
 .rc-slide-container .name-explain {
   border: none;
   height: 114px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 .rc-slide-container li:hover img {
   transform: translateY(-5px);
 }
 .rc-slide-container li:hover .name-explain {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
+}
+.rc-slide-container li:hover .rc-name {
+  color:#1b64da
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .rc-slide-container .rc-event {
@@ -465,14 +475,17 @@ header {
   float: left;
   position: relative;
 }
+.new-slide-container > li a:first-child{
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
 .new-slide-container > li:first-child {
   margin-left: 0px;
 }
 .new-slide-container a img {
   width: 415px;
   height: 260px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .new-slide-container .name-genre {
@@ -481,7 +494,7 @@ header {
   width: 415px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .new-name,
@@ -512,40 +525,30 @@ header {
   width: 415px;
   height: 260px;
   position: absolute;
-  opacity: 1;
-  text-align: center;
-  line-height: 15px;
-  display: none;
-  overflow: hidden;
-}
-.new-slide-container > li:hover .new-marketing {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  opacity: 0;
   line-height: 2rem;
-  display: block;
   padding-top: 100px;
   box-sizing: border-box;
   font-size: 1.5rem;
-  animation: move 0.3s;
-  animation-fill-mode: both;
+  text-align: center;
+  transition: 0.4s;
+  transform: translateY(100%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  
 }
-@keyframes move {
-  from {
-    transform: translateY(10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+.new-slide-container > li:hover .new-marketing {
+  opacity: 1;
+  transform: translateY(0);
 }
+
 .new-slide-container li:hover .name-genre {
-  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
+.new-slide-container li:hover .new-name {
+  color:#1b64da
+}
+
 #new-prev {
   transform: translate(-100%, -50%);
 }
