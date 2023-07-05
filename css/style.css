@@ -14,18 +14,19 @@
 }
 
 .popup .main-tt {
-  width: 242px;
+  width: 160px;
   height: 42px;
   background-image: url("../images/nexon.png");
-  background-size: 242px;
+  background-size: 160px;
   background-repeat: no-repeat;
   display: inline-block;
   text-indent: -9999rem;
-  transform: translateX(100%);
+  transform: translateX(120%);
   padding: 15px 0;
 }
-.popup .content-tt {
+.popup .content-stt {
   text-transform: uppercase;
+  font-size: 1rem;
 }
 .pp-top,
 .pp-date,
@@ -37,7 +38,7 @@
 }
 .pp-date p em,
 .pp-team p em {
-  color: #4593fc;
+  color: #3182f6;
 }
 
 .pp_close {
@@ -229,7 +230,7 @@ header {
 }
 
 /* MAIN-01 CAROUSEL */
-.main-carousel-tt{
+.main-carousel-tt {
   display: none;
 }
 .mainslide-wrapper {
@@ -1223,7 +1224,7 @@ header {
 .all-service dl dd {
   line-height: 2.19em;
 }
-.shoppinghidden{
+.shoppinghidden {
   display: none;
 }
 /* footer -2 */
