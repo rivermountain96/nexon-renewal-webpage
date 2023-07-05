@@ -308,11 +308,15 @@ header {
 .pager li {
   display: inline-block;
 }
+
+.pager li + li {
+  margin-left: 30px;
+}
+
 .pager a {
   display: inline-block;
   width: 200px;
-  height: 54px;
-  margin: 10px 10px 0px 10px;
+  line-height: 54px;
   cursor: pointer;
 }
 
@@ -1351,6 +1355,7 @@ address {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;
+  border: 3px solid transparent;
   z-index: 10;
   border: 3px solid transparent;
 }
