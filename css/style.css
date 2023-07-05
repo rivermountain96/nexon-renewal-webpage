@@ -1170,7 +1170,23 @@ header {
   border-top-right-radius: 100%;
   background: #f1f1f1;
 }
-.video-wrapper li img {
+.video-wrapper .video-img-border a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.video-wrapper .video-img-border a:hover .hover-img{
+  opacity: 0;
+} 
+.video-wrapper .video-img-border .hover-img{
+  width: 352px;
+  height: 192px;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;left: 0;bottom: 0;right: 0;
+  transition: .4s ease-out;
+}
+.video-wrapper .video-img-border a img {
   display: block;
   border-radius: 15px;
 }
@@ -1189,6 +1205,9 @@ header {
   font-weight: 600;
   font-size: 16px;
   color: #fff;
+}
+.video-wrapper li .video-btn:hover {
+  background-color: #1b64da;
 }
 .video-wrapper li .video-btn:focus {
   box-shadow: 0 0 0 3px #1b64da inset;
