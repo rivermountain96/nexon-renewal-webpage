@@ -360,6 +360,10 @@ function display(idx) {
 pagerBtns.forEach((pb, idx) => {
   pb.addEventListener("click", (e) => {
     e.preventDefault();
+    for (pb of pagerBtns) {
+      pb.classList.remove('active');
+    }
+    e.currentTarget.classList.add('active');
     display(idx);
   });
 });
