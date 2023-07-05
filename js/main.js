@@ -182,8 +182,11 @@ tabMenu.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
     let tabTargetId = e.target.getAttribute("href");
-    let tabTargetOST = document.querySelector(tabTargetId).offsetTop;
-    window.scrollTo({ left: 0, top: tabTargetOST, behavior: "smooth" });
+
+    if (tabTargetId && tabTargetId !== "#") {
+      let tabTargetOST = document.querySelector(tabTargetId).offsetTop;
+      window.scrollTo({ left: 0, top: tabTargetOST, behavior: "smooth" });
+    }
   });
 });
 
