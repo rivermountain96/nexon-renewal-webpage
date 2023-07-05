@@ -471,11 +471,10 @@ header {
   float: left;
   position: relative;
 }
-.new-slide-container > li + a{
+.new-slide-container > li a:first-child{
   display: block;
   position: relative;
   overflow: hidden;
-  
 }
 .new-slide-container > li:first-child {
   margin-left: 0px;
@@ -483,8 +482,6 @@ header {
 .new-slide-container a img {
   width: 415px;
   height: 260px;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .new-slide-container .name-genre {
