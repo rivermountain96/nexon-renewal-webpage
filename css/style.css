@@ -104,12 +104,13 @@ header {
   font-weight: bold;
 }
 
-.nav > ul:first-child > li:hover > a:nth-child(3) {
-  pointer-events: none;
-}
 .nav > ul:first-child > li > a:hover:first-child,
 .nav > ul:first-child > li > a:hover:nth-child(5) {
   color: #1b64da;
+}
+
+.nav > ul:first-child > li:hover > a:nth-child(3) {
+  pointer-events: none;
 }
 .nav .pc {
   position: absolute;
