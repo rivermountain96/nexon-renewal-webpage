@@ -104,6 +104,9 @@ header {
   font-weight: bold;
 }
 
+.nav > ul:first-child > li:hover > a:nth-child(3) {
+  pointer-events: none;
+}
 .nav > ul:first-child > li > a:hover:first-child,
 .nav > ul:first-child > li > a:hover:nth-child(5) {
   color: #1b64da;
@@ -406,7 +409,7 @@ header {
   transform: translateY(-5px);
 }
 .rc-slide-container li:hover .rc-name {
-  color:#1b64da
+  color: #1b64da;
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .rc-slide-container .rc-event {
@@ -475,7 +478,7 @@ header {
   float: left;
   position: relative;
 }
-.new-slide-container > li a:first-child{
+.new-slide-container > li a:first-child {
   display: block;
   position: relative;
   overflow: hidden;
@@ -533,9 +536,8 @@ header {
   text-align: center;
   transition: 0.4s;
   transform: translateY(100%);
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  
 }
 .new-slide-container > li:hover .new-marketing {
   opacity: 1;
@@ -546,7 +548,7 @@ header {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 .new-slide-container li:hover .new-name {
-  color:#1b64da
+  color: #1b64da;
 }
 
 #new-prev {
@@ -805,10 +807,10 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
-.main5-slide-container > .main5-slide:hover:after{
+.main5-slide-container > .main5-slide:hover:after {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
