@@ -378,20 +378,29 @@ header {
 .rc-explain {
   padding: 20px 0 0 20px;
 }
+.rc-new-tt {
+  font-size: 1.4rem;
+  line-height: 1.6em;
+  color: #191f28;
+  font-weight: 700;
+}
 .rc-slide-container .name-explain {
   border: none;
   height: 114px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 .rc-slide-container li:hover img {
   transform: translateY(-5px);
 }
 .rc-slide-container li:hover .name-explain {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
+}
+.rc-slide-container li:hover .rc-name {
+  color:#1b64da
 }
 /*event tag는 hidden 속성 적용시 사라짐*/
 .rc-slide-container .rc-event {
@@ -476,7 +485,7 @@ header {
   width: 415px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .new-name,
@@ -527,20 +536,23 @@ header {
   font-size: 1.5rem;
   animation: move 0.3s;
   animation-fill-mode: both;
+  overflow: hidden;
 }
 @keyframes move {
   from {
-    transform: translateY(10%);
     opacity: 0;
   }
   to {
-    transform: translateY(0%);
     opacity: 1;
   }
 }
 .new-slide-container li:hover .name-genre {
-  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
+.new-slide-container li:hover .new-name {
+  color:#1b64da
+}
+
 #new-prev {
   transform: translate(-100%, -50%);
 }
