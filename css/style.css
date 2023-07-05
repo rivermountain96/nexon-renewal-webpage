@@ -1352,6 +1352,7 @@ address {
   visibility: hidden;
   transition: opacity 0.3s;
   z-index: 10;
+  border: 3px solid transparent;
 }
 
 #go-top:hover {
