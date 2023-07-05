@@ -104,7 +104,7 @@ function moveSlide(num) {
 
   if (
     mainCurrentSlideIdx == -mainSlideCount ||
-    mainCurrentSlideIdx == mainSlideCount + 4
+    mainCurrentSlideIdx == mainSlideCount + (mainSlideCount - 1)
   ) {
     setTimeout(() => {
       mainSlideContainer.classList.remove("animated");
@@ -361,9 +361,9 @@ pagerBtns.forEach((pb, idx) => {
   pb.addEventListener("click", (e) => {
     e.preventDefault();
     for (pb of pagerBtns) {
-      pb.classList.remove('active');
+      pb.classList.remove("active");
     }
-    e.currentTarget.classList.add('active');
+    e.currentTarget.classList.add("active");
     display(idx);
   });
 });
