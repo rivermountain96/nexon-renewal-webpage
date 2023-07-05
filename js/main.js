@@ -120,7 +120,7 @@ function moveSlide(num) {
 
   if (mainCurrentSlideIdx < 0) {
     pageIdx = mainCurrentSlideIdx + mainSlideCount;
-  } else if (mainCurrentSlideIdx > 4) {
+  } else if (mainCurrentSlideIdx > mainSlideCount - 1) {
     pageIdx = mainCurrentSlideIdx - mainSlideCount;
   }
   mainPagers.forEach((item) => {
