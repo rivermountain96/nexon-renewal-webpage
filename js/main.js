@@ -434,6 +434,7 @@ seeTypeAll.addEventListener("click", () => {
   }
   activeMaster();
   allViewWrapper.classList.add("active");
+  pagerBtns[0].classList.add("active");
   allpager.style.display = "block";
   allPageNum.style.display = "block";
   allViewWrapper.style.marginRight = `-${gameCardMargin}px`;
