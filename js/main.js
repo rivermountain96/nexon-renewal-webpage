@@ -93,6 +93,7 @@ mainNewSlides.forEach((slide, idx) => {
 
 function setSlide() {
   let ulMoveAmt = mainSlideWidth * -mainSlideCount + "px";
+  mainSlideContainer.style.left = ulMoveAmt;
   mainSlideContainer.style.transform = `translateX(${ulMoveAmt})`;
   mainSlideContainer.classList.add("animated");
 }
