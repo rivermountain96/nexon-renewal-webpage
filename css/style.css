@@ -489,6 +489,7 @@ header {
 .new-slide-container a img {
   width: 415px;
   height: 260px;
+  vertical-align: top;
 }
 
 .new-slide-container .name-genre {
